@@ -50,7 +50,6 @@ public class MenuScene : MonoBehaviour
             case 3:
                 desiredMenuPosition = Vector3.up * 800;
                 break;
-
         }
     }
 
