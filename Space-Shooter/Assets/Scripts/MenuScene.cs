@@ -73,6 +73,12 @@ public class MenuScene : MonoBehaviour
         Debug.Log("SettingButton has been clicked");
     }
 
+    public void OnExitClick()
+    {
+        Application.Quit();
+        Debug.Log("ExitButton has been clicked");
+    }
+
     public void OnBackClick()
     {
         NavigateTo(0);
