@@ -21,5 +21,21 @@ public class MenuScene : MonoBehaviour
         // Fade-in
         fadeGroup.alpha = 1 - Time.timeSinceLevelLoad * fadeInSpeed;
     }
+
+    // Buttons
+    public void OnPlayClick()
+    {
+        Debug.Log("PlayButton has been clicked");
+    }
+
+    public void OnShopClick()
+    {
+        Debug.Log("ShopButton has been clicked");
+    }
+
+    public void OnShopBackClick()
+    {
+        Debug.Log("ShopBackButton has been clicked");
+    }
 	
 }
