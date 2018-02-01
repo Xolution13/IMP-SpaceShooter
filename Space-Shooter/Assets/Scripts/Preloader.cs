@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Preloader : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Preloader : MonoBehaviour
         // Grab the only CanvasGroup in the scene
         fadeGroup = FindObjectOfType<CanvasGroup>();
 
-        // Start with a black screen
+        // Start with a white screen
         fadeGroup.alpha = 1;
 
         //Pre load the game
@@ -46,6 +47,7 @@ public class Preloader : MonoBehaviour
             if (fadeGroup.alpha >= 1)
             {
                 Debug.Log("Changing the scene!");
+                SceneManager.LoadScene("MainMenu");
             }
         }
     }
