@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScene : MonoBehaviour
 {
@@ -83,5 +84,10 @@ public class MenuScene : MonoBehaviour
         NavigateTo(0);
         Debug.Log("BackButton has been clicked");
     }
-	
+
+    public void OnPlayTestClick()
+    {
+        SceneManager.LoadScene("Test");
+        Debug.Log("Loading Play Test");
+    }
 }
