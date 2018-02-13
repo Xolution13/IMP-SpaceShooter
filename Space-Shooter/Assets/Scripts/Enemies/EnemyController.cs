@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
 
     // Variables
-    private Rigidbody enemyRigidbody;
+    //private Rigidbody enemyRigidbody;
     public float moveSpeed;
 
     private AccelerometerTest player;
