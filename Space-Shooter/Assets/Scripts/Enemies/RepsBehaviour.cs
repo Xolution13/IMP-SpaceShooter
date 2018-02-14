@@ -14,7 +14,7 @@ public class RepsBehaviour : MonoBehaviour
     private bool onWayToStart = true;
     private bool onWayToEnd = false;
 
-    private AccelerometerTest player;
+    private AccelerometerMovement player;
 
     private bool collisionEnabled = false;
     private float spawnTime = 1.5f;
@@ -22,7 +22,7 @@ public class RepsBehaviour : MonoBehaviour
 
     private void Start()
     {
-        player = FindObjectOfType<AccelerometerTest>();
+        player = FindObjectOfType<AccelerometerMovement>();
 
         // Disable enemy collider so player can not get destroyed during spawn animation
         enemyCollider = GetComponent<BoxCollider>();

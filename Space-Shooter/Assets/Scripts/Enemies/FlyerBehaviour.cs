@@ -7,7 +7,7 @@ public class FlyerBehaviour : MonoBehaviour
     // Variables
     public float moveSpeed;
 
-    private AccelerometerTest player;
+    private AccelerometerMovement player;
 
     private bool collisionEnabled = false;
     private float spawnTime = 1.5f;
@@ -15,7 +15,7 @@ public class FlyerBehaviour : MonoBehaviour
     
     private void Start()
     {
-        player = FindObjectOfType<AccelerometerTest>();
+        player = FindObjectOfType<AccelerometerMovement>();
 
         // Disable enemy collider so player can not get destroyed during spawn animation
         enemyCollider = GetComponent<BoxCollider>();
@@ -24,17 +24,24 @@ public class FlyerBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Enable collider after spawn animation
+        // Enable collider after spawn animation and move forwards
         spawnTime -= Time.deltaTime;
         if (spawnTime <= 0)
         {
             collisionEnabled = true;
             spawnTime = 0;
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
         if (collisionEnabled)
         {
             enemyCollider.enabled = true;
         }
+    }
+
+    // Look at the player (for transform.Translate -> forward)
+    private void Update()
+    {
+        transform.LookAt(player.transform.position);
     }
 
     // Check if enemy is colliding with player
