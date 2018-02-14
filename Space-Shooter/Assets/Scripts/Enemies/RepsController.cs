@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepsController : MonoBehaviour {
-    
+public class RepsController : MonoBehaviour
+{
     // Variables
     private Vector3 startPos;
     private Vector3 endPos;
@@ -16,15 +16,32 @@ public class RepsController : MonoBehaviour {
 
     private AccelerometerTest player;
 
+    private bool collisionEnabled = false;
+    private float spawnTime = 1.5f;
+    private BoxCollider enemyCollider;
+
     private void Start()
     {
         player = FindObjectOfType<AccelerometerTest>();
+
+        // Disable enemy collider so player can not get destroyed during spawn animation
+        enemyCollider = GetComponent<BoxCollider>();
+        enemyCollider.enabled = false;
+
         startPos = new Vector3(transform.position.x + Random.Range(5, 10), transform.position.y, transform.position.z + Random.Range(5, 10));
         endPos = new Vector3(transform.position.x - Random.Range(5, 10), transform.position.y, transform.position.z - Random.Range(5, 10));
     }
 
     private void Update()
     {
+        // Enable collider after spawn animation
+        spawnTime -= Time.deltaTime;
+        if(spawnTime <= 0)
+        {
+            collisionEnabled = true;
+            spawnTime = 0;
+        }
+
         if (onWayToStart && distance <= 1)
         {
             onWayToEnd = true;
