@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpSpawner : MonoBehaviour {
-
-	// Variables
+public class PowerUpSpawner : MonoBehaviour
+{
+    // Variables
 	public GameObject[] powerUps;
 	public Vector3 spawnValues;
 	private float spawnWait;
