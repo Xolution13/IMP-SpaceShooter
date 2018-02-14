@@ -48,12 +48,12 @@ public class RepsController : MonoBehaviour
             enemyCollider.enabled = true;
 
             // Check which way the enemy is going and change the direction after a specific distance has been reached
-            if (onWayToStart && distance <= 0.5)
+            if (onWayToStart && distance <= 1)
             {
                 onWayToEnd = true;
                 onWayToStart = false;
             }
-            else if (onWayToEnd && distance <= 0.5)
+            else if (onWayToEnd && distance <= 1)
             {
                 onWayToStart = true;
                 onWayToEnd = false;
