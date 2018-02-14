@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepsController : MonoBehaviour
+public class RepsBehaviour : MonoBehaviour
 {
     // Variables
     private Vector3 startPos;
@@ -11,8 +11,8 @@ public class RepsController : MonoBehaviour
     public float moveSpeed = 2.5f;
     private float distance;
 
-    public bool onWayToStart = true;
-    public bool onWayToEnd = false;
+    private bool onWayToStart = true;
+    private bool onWayToEnd = false;
 
     private AccelerometerTest player;
 
@@ -77,13 +77,16 @@ public class RepsController : MonoBehaviour
         }
     }
 
-    // Collision with player
+    // Check if enemy is colliding with player
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Player")
+        if (collisionEnabled)
         {
-            Debug.Log("Booooooom... Player destroyed");
-            Destroy(gameObject);
+            if (other.gameObject.tag == "Player")
+            {
+                Debug.Log("Booooooom... Player destroyed");
+                Destroy(gameObject);
+            }
         }
     }
 }
