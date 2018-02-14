@@ -19,12 +19,13 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<AccelerometerMovement>();
+        //spawnArea = gameObject;
     }
 
     private void Update()
     {
         // TODO: Spawn Logic (when do the enemies spawn?)
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyUp(KeyCode.X))
         {
             SpawnEnemy();
         }
@@ -38,15 +39,15 @@ public class EnemySpawner : MonoBehaviour
 
         center = spawnArea.transform.position;
         size = spawnArea.transform.localScale;
-        pos = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), 0.5f, Random.Range(-size.z / 2, size.z));
+        pos = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), 0.5f, Random.Range(-size.z / 2, size.z / 2));
 
         // Make sure that the enemies are not spawning on top of player
         if (Vector3.Distance(player.transform.position, pos) >= 4)
         {
-            for (int i = 0; i > randomEnemyAmount; i++)
+            for (int i = 0; i < randomEnemyAmount; i++)
             {
-                randomEnemyType = randomEnemyType = Random.Range(0, enemies.Length);
-                pos = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), 0.5f, Random.Range(-size.z / 2, size.z));
+                randomEnemyType = Random.Range(0, enemies.Length);
+                pos = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), 0.5f, Random.Range(-size.z / 2, size.z / 2));
                 Instantiate(enemies[randomEnemyType], pos, Quaternion.identity);
             }
         }

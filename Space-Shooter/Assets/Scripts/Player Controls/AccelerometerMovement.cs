@@ -22,7 +22,7 @@ public class AccelerometerMovement : MonoBehaviour
     {
         _InputDir = GetAccelerometer(Input.acceleration);
         transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
-        transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
     }
 
     // Method for calibration
