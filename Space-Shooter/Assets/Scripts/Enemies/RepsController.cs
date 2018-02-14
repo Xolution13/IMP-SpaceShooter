@@ -28,8 +28,9 @@ public class RepsController : MonoBehaviour
         enemyCollider = GetComponent<BoxCollider>();
         enemyCollider.enabled = false;
 
-        startPos = new Vector3(transform.position.x + Random.Range(5, 10), transform.position.y, transform.position.z + Random.Range(5, 10));
-        endPos = new Vector3(transform.position.x - Random.Range(5, 10), transform.position.y, transform.position.z - Random.Range(5, 10));
+        // Border values: x-Min = -23, x-Max = 23, z-Min = -16, z-Max = 16
+        startPos = new Vector3(Random.Range(-23, 23), transform.position.y, Random.Range(-16, 16));
+        endPos = new Vector3(Random.Range(-23, 23), transform.position.y, Random.Range(-16, 16));
     }
 
     private void Update()
@@ -58,6 +59,7 @@ public class RepsController : MonoBehaviour
                 onWayToEnd = false;
             }
 
+            // Movement: Rotate towards target, then move towards it
             if (onWayToStart)
             {
                 onWayToEnd = false;
@@ -75,6 +77,7 @@ public class RepsController : MonoBehaviour
         }
     }
 
+    // Collision with player
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
