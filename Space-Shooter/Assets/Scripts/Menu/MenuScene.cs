@@ -46,6 +46,8 @@ public class MenuScene : MonoBehaviour
             case 0:
                 desiredMenuPosition = Vector3.zero;
                 break;
+
+
             // 1 = Play Menu
             case 1:
                 desiredMenuPosition = Vector3.right * 1280;
@@ -103,6 +105,8 @@ public class MenuScene : MonoBehaviour
     public void OnSurvivalClick()
     {
         SURVIVAL.SetActive(true);
+        ENDLESS.SetActive(false);
+        STORY.SetActive(false);
         NavigateTo(4);
         lastIndex = 1;
         Debug.Log("SurvivaButton has been clicked");
@@ -111,6 +115,8 @@ public class MenuScene : MonoBehaviour
     public void OnEndlessClick()
     {
         ENDLESS.SetActive(true);
+        SURVIVAL.SetActive(false);
+        STORY.SetActive(false);
         NavigateTo(5);
         lastIndex = 1;
         Debug.Log("EndlessButton has been clicked");
@@ -119,6 +125,8 @@ public class MenuScene : MonoBehaviour
     public void OnStoryClick()
     {
         STORY.SetActive(true);
+        SURVIVAL.SetActive(false);
+        ENDLESS.SetActive(false);
         NavigateTo(6);
         lastIndex = 1;
         Debug.Log("StoryButton has been clicked");
@@ -126,7 +134,8 @@ public class MenuScene : MonoBehaviour
 
     public void OnExitClick()
     {
-        Application.Quit();
+        NavigateTo(0);
+        //Application.Quit();
         Debug.Log("ExitButton has been clicked");
     }
 
@@ -134,9 +143,6 @@ public class MenuScene : MonoBehaviour
     {
         NavigateTo(lastIndex);
         lastIndex = 0;
-        SURVIVAL.SetActive(false);
-        ENDLESS.SetActive(false);
-        STORY.SetActive(false);
         Debug.Log("BackButton has been clicked");
     }
 
