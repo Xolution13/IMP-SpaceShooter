@@ -152,7 +152,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1282252360425658, guid: c99abd75db65e424ea3b1899c100de4c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114892007341912604, guid: c99abd75db65e424ea3b1899c100de4c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c99abd75db65e424ea3b1899c100de4c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &37305639
@@ -395,6 +400,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da7dedc1edee3084aa7ea66c167336aa, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &523250066 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282252360425658, guid: c99abd75db65e424ea3b1899c100de4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 5937605}
+--- !u!114 &523250068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523250066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8d090b8aedb0d42960c34dad912f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2.5
 --- !u!1 &914476689
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,21 +570,19 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1095348289
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114913829933324458, guid: ac9c725029c9fa344a8295758c283bc7,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1095348288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8247571c6884fdc4b8433458b3a00983, type: 3}
+  m_Script: {fileID: 11500000, guid: 76b096a8890f95243bc391504f21ec4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 50
-  afterBurnerPrefab: {fileID: 0}
 --- !u!54 &1095348290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -739,7 +759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b354ed54481e70d4ba26d7ddeed3c922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1408462703}
   startSmoothness: 1.5
   endSmoothness: 0.3
   height: 25

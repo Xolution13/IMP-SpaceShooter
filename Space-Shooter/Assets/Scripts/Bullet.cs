@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour {
     public float speed;
     public float travelTime;
     private float maxTravelDistance;
-    private GameObject playerDirection;
+    private TurretMovement playerDirection;
     private Vector3 touchPosition;
     public int damageValue;
 
     private void Start()
     {
-        playerDirection = GameObject.FindGameObjectWithTag("PlayerFace");
+        playerDirection = FindObjectOfType<TurretMovement>();
         touchPosition = playerDirection.transform.forward;
     }
 

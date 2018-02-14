@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
 
-	// Variables
-	public Transform player;
+    // Variables
+    private AccelerometerMovement player;
 
     public float startSmoothness = 1.5f;
 	public float endSmoothness = 0.3f;
     private float smoothness;
 
 	public float height;
-    private float changeValue = 15;
 
 	private Vector3 velocity = Vector3.zero;
 	
+    private void Start()
+    {
+        player = FindObjectOfType<AccelerometerMovement>();
+    }
 
 	private void Update ()
     {
 		Vector3 pos = new Vector3 ();
-		pos.x = player.position.x;
-		pos.z = player.position.z;
-		pos.y = player.position.y + height;
+		pos.x = player.transform.position.x;
+		pos.z = player.transform.position.z;
+		pos.y = player.transform.position.y + height;
 
-        // Change the smoothness after height of changeValue has been reached for nice speed transition
+        // Change the smoothness after height has been reached for speed transition
         if (transform.position.y < height)
         {
             smoothness = startSmoothness;
@@ -33,6 +36,8 @@ public class CameraMovement : MonoBehaviour {
         {
             smoothness = endSmoothness;
         }
-		transform.position = Vector3.SmoothDamp (transform.position, pos, ref velocity, smoothness);
-	}
+
+		// Follow the player but stop at the border
+        transform.position = Vector3.SmoothDamp(new Vector3 (Mathf.Clamp(transform.position.x, -8, 8), transform.position.y, Mathf.Clamp(transform.position.z, -8, 8)), pos, ref velocity, smoothness);
+    }
 }
