@@ -41,31 +41,37 @@ public class RepsController : MonoBehaviour
             collisionEnabled = true;
             spawnTime = 0;
         }
+        
+        if (collisionEnabled)
+        {
+            enemyCollider.enabled = true;
 
-        if (onWayToStart && distance <= 1)
-        {
-            onWayToEnd = true;
-            onWayToStart = false;
-        }
-        else if (onWayToEnd && distance <= 1)
-        {
-            onWayToStart = true;
-            onWayToEnd = false;
-        }
+            // Check which way the enemy is going and change the direction after a specific distance has been reached
+            if (onWayToStart && distance <= 0.5)
+            {
+                onWayToEnd = true;
+                onWayToStart = false;
+            }
+            else if (onWayToEnd && distance <= 0.5)
+            {
+                onWayToStart = true;
+                onWayToEnd = false;
+            }
 
-        if (onWayToStart)
-        {
-            onWayToEnd = false;
-            distance = Vector3.Distance(transform.position, startPos);
-            transform.LookAt(startPos);
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        }
-        else if (onWayToEnd)
-        {
-            onWayToStart = false;
-            distance = Vector3.Distance(transform.position, endPos);
-            transform.LookAt(endPos);
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            if (onWayToStart)
+            {
+                onWayToEnd = false;
+                distance = Vector3.Distance(transform.position, startPos);
+                transform.LookAt(startPos);
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            }
+            else if (onWayToEnd)
+            {
+                onWayToStart = false;
+                distance = Vector3.Distance(transform.position, endPos);
+                transform.LookAt(endPos);
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            }
         }
     }
 
