@@ -38,7 +38,7 @@ public class FlyerBehaviour : MonoBehaviour
         }
     }
 
-    // Look at the player (for transform.Translate -> forward)
+    // Look at the player (for transform.Translate forward)
     private void Update()
     {
         transform.LookAt(player.transform.position);
