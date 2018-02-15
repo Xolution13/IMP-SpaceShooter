@@ -78,7 +78,7 @@ public class RepsBehaviour : MonoBehaviour
     }
 
     // Check if enemy is colliding with player
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (collisionEnabled)
         {

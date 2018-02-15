@@ -37,7 +37,10 @@ public class CameraMovement : MonoBehaviour {
             smoothness = endSmoothness;
         }
 
-		// Follow the player but stop at the border
-        transform.position = Vector3.SmoothDamp(new Vector3 (Mathf.Clamp(transform.position.x, -8, 8), transform.position.y, Mathf.Clamp(transform.position.z, -8, 8)), pos, ref velocity, smoothness);
+        // Follow the player but stop at the border
+        transform.position = Vector3.SmoothDamp(new Vector3(Mathf.Clamp(transform.position.x, -8, 8), transform.position.y, Mathf.Clamp(transform.position.z, -8, 8)), 
+                                                new Vector3(Mathf.Clamp(pos.x, -8, 8), 
+                                                pos.y, Mathf.Clamp(pos.z, -8, 8)), 
+                                                ref velocity, smoothness);
     }
 }
