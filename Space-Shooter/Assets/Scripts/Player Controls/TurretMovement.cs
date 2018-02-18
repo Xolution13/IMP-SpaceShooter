@@ -57,11 +57,11 @@ public class TurretMovement : MonoBehaviour {
     {
         if (bulletPowerUpActive)
         {
-            Instantiate(bulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.Euler(0, transform.eulerAngles.y, 0));
+            Instantiate(improvedBulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.identity);
         }
         else if (!bulletPowerUpActive)
         {
-            Instantiate(improvedBulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.Euler(0, transform.eulerAngles.y, 0));
+            Instantiate(bulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.identity);
         }
     }
 }

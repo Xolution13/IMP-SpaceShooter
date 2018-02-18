@@ -22,7 +22,7 @@ public class ShieldPowerUp : MonoBehaviour
     }
 
     // Set shield position to player position and destroy it after time
-    private void Start()
+    private void Update()
     {
 		if (powerUpActivated)
         {
