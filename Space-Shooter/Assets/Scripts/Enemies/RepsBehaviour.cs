@@ -15,18 +15,12 @@ public class RepsBehaviour : MonoBehaviour
     private bool onWayToEnd = false;
 
     private AccelerometerMovement player;
-
-    private bool collisionEnabled = false;
-    private float spawnTime = 1.5f;
-    private BoxCollider enemyCollider;
+    private EnemySpawnBehaviour spawnScript;
 
     private void Start()
     {
         player = FindObjectOfType<AccelerometerMovement>();
-
-        // Disable enemy collider so player can not get destroyed during spawn animation
-        enemyCollider = GetComponent<BoxCollider>();
-        enemyCollider.enabled = false;
+        spawnScript = GetComponent<EnemySpawnBehaviour>();
 
         // Border values: x-Min = -23, x-Max = 23, z-Min = -16, z-Max = 16
         startPos = new Vector3(Random.Range(-23, 23), transform.position.y, Random.Range(-16, 16));
@@ -35,18 +29,9 @@ public class RepsBehaviour : MonoBehaviour
 
     private void Update()
     {
-        // Enable collider after spawn animation
-        spawnTime -= Time.deltaTime;
-        if(spawnTime <= 0)
+        // Check: is spawn finished
+        if (spawnScript.spawnIsFinished)
         {
-            collisionEnabled = true;
-            spawnTime = 0;
-        }
-        
-        if (collisionEnabled)
-        {
-            enemyCollider.enabled = true;
-
             // Check which way the enemy is going and change the direction after a specific distance has been reached
             if (onWayToStart && distance <= 1)
             {
@@ -80,7 +65,7 @@ public class RepsBehaviour : MonoBehaviour
     // Check if enemy is colliding with player
     private void OnTriggerEnter(Collider other)
     {
-        if (collisionEnabled)
+        if (spawnScript.spawnIsFinished)
         {
             if (other.gameObject.tag == "Player")
             {

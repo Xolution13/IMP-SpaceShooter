@@ -8,6 +8,7 @@ public class FlyerBehaviour : MonoBehaviour
     public float moveSpeed;
 
     private AccelerometerMovement player;
+    private EnemySpawnBehaviour spawnScript;
 
     private bool collisionEnabled = false;
     private float spawnTime = 1.5f;
@@ -16,25 +17,15 @@ public class FlyerBehaviour : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<AccelerometerMovement>();
-
-        // Disable enemy collider so player can not get destroyed during spawn animation
-        enemyCollider = GetComponent<BoxCollider>();
-        enemyCollider.enabled = false;
+        spawnScript = GetComponent<EnemySpawnBehaviour>();
     }
 
     private void FixedUpdate()
     {
-        // Enable collider after spawn animation and move forwards
-        spawnTime -= Time.deltaTime;
-        if (spawnTime <= 0)
+        // Enemy moves forward when spawn process is finished
+        if (spawnScript.spawnIsFinished)
         {
-            collisionEnabled = true;
-            spawnTime = 0;
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        }
-        if (collisionEnabled)
-        {
-            enemyCollider.enabled = true;
         }
     }
 
@@ -47,7 +38,7 @@ public class FlyerBehaviour : MonoBehaviour
     // Check if enemy is colliding with player
     private void OnTriggerEnter(Collider other)
     {
-        if (collisionEnabled)
+        if (spawnScript.spawnIsFinished)
         {
             if (other.gameObject.tag == "Player")
             {
@@ -56,5 +47,4 @@ public class FlyerBehaviour : MonoBehaviour
             }
         }
     }
-
 }

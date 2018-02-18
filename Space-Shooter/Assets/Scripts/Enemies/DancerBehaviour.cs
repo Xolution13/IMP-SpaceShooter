@@ -5,8 +5,9 @@ using UnityEngine;
 public class DancerBehaviour : MonoBehaviour
 {
     // Variables
-    private GameObject[] bullet;
+    private Bullet[] bullet;
     private AccelerometerMovement player;
+    private EnemySpawnBehaviour spawnScript;
     private Vector3 velocity = Vector3.zero;
     private float distanceToBullet;
     public float moveSpeed = 3;
@@ -18,54 +19,58 @@ public class DancerBehaviour : MonoBehaviour
 
     private void Start()
     {
-        bullet = GameObject.FindGameObjectsWithTag("Bullet");
+        bullet = FindObjectsOfType<Bullet>();
         player = FindObjectOfType<AccelerometerMovement>();
+        spawnScript = GetComponent<EnemySpawnBehaviour>();
         randomNumber = Random.Range(0, 2);
     }
 
     private void Update()
     {
         // Update bullets as they spawn
-        bullet = GameObject.FindGameObjectsWithTag("Bullet");
+        bullet = FindObjectsOfType<Bullet>();
 
-        // Limit position and rotation (so we do not have to use colliders)
-        transform.position = new Vector3((Mathf.Clamp(transform.position.x, -24, 24)),
-                                            transform.position.y,
-                                            Mathf.Clamp(transform.position.z, -16.5f, 16.5f));
-        transform.rotation = Quaternion.Euler(new Vector3(0, transform.eulerAngles.y, 0));
-
-        // If the enemy is not in front of player and the player is not shooting
-        if (isChasingPlayer && !isDodgingBullet && !inBulletLine)
+        if (spawnScript.spawnIsFinished)
         {
-            transform.LookAt(player.transform.position);
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        }
+            // Limit position and rotation (so we do not have to use colliders)
+            transform.position = new Vector3((Mathf.Clamp(transform.position.x, -24, 24)),
+                                                transform.position.y,
+                                                Mathf.Clamp(transform.position.z, -16.5f, 16.5f));
+            transform.rotation = Quaternion.Euler(new Vector3(0, transform.eulerAngles.y, 0));
 
-        // Calculate distance to every bullet and dodge it if enemy is in front of player
-        for (int i = 0; i < bullet.Length; i++)
-        {
-            distanceToBullet = Vector3.Distance(transform.position, bullet[i].transform.position);
-
-            if (inBulletLine)
+            // If the enemy is not in front of player and the player is not shooting
+            if (isChasingPlayer && !isDodgingBullet && !inBulletLine)
             {
-                if (distanceToBullet <= 10)
-                {
-                    isDodgingBullet = true;
-                    transform.LookAt(Vector3.SmoothDamp(transform.position, bullet[i].transform.position, ref velocity, 0.5f));
+                transform.LookAt(player.transform.position);
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            }
 
-                    if (randomNumber == 0)
+            // Calculate distance to every bullet and dodge it if enemy is in front of player
+            for (int i = 0; i < bullet.Length; i++)
+            {
+                distanceToBullet = Vector3.Distance(transform.position, bullet[i].transform.position);
+
+                if (inBulletLine)
+                {
+                    if (distanceToBullet <= 10)
                     {
-                        transform.Translate((Vector3.back + Vector3.right) * dodgeSpeed * Time.deltaTime);
-                    }
-                    else if (randomNumber == 1)
-                    {
-                        transform.Translate((Vector3.back + Vector3.left) * dodgeSpeed * Time.deltaTime);
+                        isDodgingBullet = true;
+                        transform.LookAt(Vector3.SmoothDamp(transform.position, bullet[i].transform.position, ref velocity, 0.5f));
+
+                        if (randomNumber == 0)
+                        {
+                            transform.Translate((Vector3.back + Vector3.right) * dodgeSpeed * Time.deltaTime);
+                        }
+                        else if (randomNumber == 1)
+                        {
+                            transform.Translate((Vector3.back + Vector3.left) * dodgeSpeed * Time.deltaTime);
+                        }
                     }
                 }
-            }
-            else
-            {
-                isDodgingBullet = false;
+                else
+                {
+                    isDodgingBullet = false;
+                }
             }
         }
     }
@@ -76,6 +81,15 @@ public class DancerBehaviour : MonoBehaviour
         if (other.gameObject.tag == "POV")
         {
             inBulletLine = true;
+        }
+
+        if (spawnScript.spawnIsFinished)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                Debug.Log("Booooooom... Player destroyed");
+                Destroy(gameObject);
+            }
         }
     }
     private void OnTriggerExit(Collider other)

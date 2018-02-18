@@ -6,7 +6,7 @@ public class EnemyHealthManager : MonoBehaviour {
 
     // Variables
     public int health;
-    private int currentHealth;
+    public int currentHealth;
 
     private void Start()
     {

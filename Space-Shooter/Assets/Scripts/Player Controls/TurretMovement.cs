@@ -53,6 +53,6 @@ public class TurretMovement : MonoBehaviour {
 
     private void Shoot()
     {
-        Instantiate(bulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.identity);
+        Instantiate(bulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.Euler(0, transform.eulerAngles.y, 0));
     }
 }

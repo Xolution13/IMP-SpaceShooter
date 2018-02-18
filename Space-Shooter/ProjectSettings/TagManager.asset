@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Boundary
   - Explosion
+  - POV
   layers:
   - Default
   - TransparentFX
