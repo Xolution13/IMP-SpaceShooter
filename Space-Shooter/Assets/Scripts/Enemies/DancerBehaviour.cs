@@ -6,7 +6,7 @@ public class DancerBehaviour : MonoBehaviour
 {
     // Variables
     private Bullet[] bullet;
-    private AccelerometerMovement player;
+    private PlayerStatus player;
     private EnemySpawnBehaviour spawnScript;
     private Vector3 velocity = Vector3.zero;
     private float distanceToBullet;
@@ -19,7 +19,7 @@ public class DancerBehaviour : MonoBehaviour
     private void Start()
     {
         bullet = FindObjectsOfType<Bullet>();
-        player = FindObjectOfType<AccelerometerMovement>();
+        player = FindObjectOfType<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
         randomNumber = Random.Range(0, 2);
     }
@@ -86,7 +86,7 @@ public class DancerBehaviour : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                Debug.Log("Booooooom... Player destroyed");
+                player.GetComponent<PlayerStatus>().PlayerHit();
                 Destroy(gameObject);
             }
         }

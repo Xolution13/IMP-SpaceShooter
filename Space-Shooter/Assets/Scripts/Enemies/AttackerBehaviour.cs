@@ -6,7 +6,7 @@ public class AttackerBehaviour : MonoBehaviour
 {
     // Variables
     public GameObject[] destroyedParts;
-    private AccelerometerMovement player;
+    private PlayerStatus player;
     private Bullet[] bullet;
     private EnemyHealthManager healthScript;
     private EnemySpawnBehaviour spawnScript;
@@ -15,7 +15,7 @@ public class AttackerBehaviour : MonoBehaviour
 
     private void Start()
     {
-        player = FindObjectOfType<AccelerometerMovement>();
+        player = FindObjectOfType<PlayerStatus>();
         healthScript = GetComponent<EnemyHealthManager>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
     }
@@ -54,7 +54,7 @@ public class AttackerBehaviour : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                Debug.Log("Booooooom... Player destroyed");
+                player.GetComponent<PlayerStatus>().PlayerHit();
                 Destroy(gameObject);
             }
         }

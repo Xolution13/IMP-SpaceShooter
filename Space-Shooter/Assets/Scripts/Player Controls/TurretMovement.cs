@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurretMovement : MonoBehaviour {
-    
+
     // Variables 
     private float hitDist = 0.0f;
-
     public GameObject bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletFireRate = 0.1f;

@@ -7,7 +7,7 @@ public class FlyerBehaviour : MonoBehaviour
     // Variables
     public float moveSpeed;
 
-    private AccelerometerMovement player;
+    private PlayerStatus player;
     private EnemySpawnBehaviour spawnScript;
 
     private bool collisionEnabled = false;
@@ -16,7 +16,7 @@ public class FlyerBehaviour : MonoBehaviour
     
     private void Start()
     {
-        player = FindObjectOfType<AccelerometerMovement>();
+        player = FindObjectOfType<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
     }
 
@@ -42,7 +42,7 @@ public class FlyerBehaviour : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                Debug.Log("Booooooom... Player destroyed");
+                player.GetComponent<PlayerStatus>().PlayerHit();
                 Destroy(gameObject);
             }
         }

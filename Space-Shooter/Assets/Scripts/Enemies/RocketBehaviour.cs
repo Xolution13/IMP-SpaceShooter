@@ -5,6 +5,7 @@ using UnityEngine;
 public class RocketBehaviour : MonoBehaviour
 {
     // Variables
+    private PlayerStatus player;
     private EnemySpawnBehaviour spawnScript;
 
     public float moveSpeed = 10;
@@ -22,6 +23,7 @@ public class RocketBehaviour : MonoBehaviour
 
     private void Start()
     {
+        player = FindObjectOfType<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
         Physics.IgnoreLayerCollision(10, 9, true);
     }
@@ -137,7 +139,7 @@ public class RocketBehaviour : MonoBehaviour
             }
             if (other.gameObject.tag == "Player")
             {
-                Debug.Log("Booooooom... Player destroyed");
+                player.GetComponent<PlayerStatus>().PlayerHit();
                 Destroy(gameObject);
             }
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackerSmallBehaviour : MonoBehaviour
 {
     // Variables
-    private AccelerometerMovement player;
+    private PlayerStatus player;
     private EnemySpawnBehaviour spawnScript;
     private Vector3 spawnVector;
     private Vector3 movingVector;
@@ -18,7 +18,7 @@ public class AttackerSmallBehaviour : MonoBehaviour
 
     private void Start()
     {
-        player = FindObjectOfType<AccelerometerMovement>();
+        player = FindObjectOfType<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
         spawnVector = transform.position;
         circleWidth = Random.Range(2, 5);
@@ -55,7 +55,7 @@ public class AttackerSmallBehaviour : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                Debug.Log("Booooooom... Player destroyed");
+                player.GetComponent<PlayerStatus>().PlayerHit();
                 Destroy(gameObject);
             }
         }

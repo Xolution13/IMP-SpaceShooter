@@ -14,12 +14,12 @@ public class RepsBehaviour : MonoBehaviour
     private bool onWayToStart = true;
     private bool onWayToEnd = false;
 
-    private AccelerometerMovement player;
+    private PlayerStatus player;
     private EnemySpawnBehaviour spawnScript;
 
     private void Start()
     {
-        player = FindObjectOfType<AccelerometerMovement>();
+        player = FindObjectOfType<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
 
         // Border values: x-Min = -23, x-Max = 23, z-Min = -16, z-Max = 16
@@ -69,7 +69,7 @@ public class RepsBehaviour : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                Debug.Log("Booooooom... Player destroyed");
+                player.GetComponent<PlayerStatus>().PlayerHit();
                 Destroy(gameObject);
             }
         }
