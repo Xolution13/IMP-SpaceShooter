@@ -648,6 +648,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInvulnerable: 0
   playerLifes: 3
+--- !u!1001 &1233298462
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581576531363478, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1325184838
 GameObject:
   m_ObjectHideFlags: 0
