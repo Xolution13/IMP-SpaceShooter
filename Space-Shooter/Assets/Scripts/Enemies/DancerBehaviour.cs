@@ -14,7 +14,6 @@ public class DancerBehaviour : MonoBehaviour
     public float dodgeSpeed = 4;
     private int randomNumber;
     private bool inBulletLine = false;
-    private bool isChasingPlayer = true;
     private bool isDodgingBullet = false;
 
     private void Start()
@@ -39,7 +38,7 @@ public class DancerBehaviour : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, transform.eulerAngles.y, 0));
 
             // If the enemy is not in front of player and the player is not shooting
-            if (isChasingPlayer && !isDodgingBullet && !inBulletLine)
+            if (!isDodgingBullet)
             {
                 transform.LookAt(player.transform.position);
                 transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);

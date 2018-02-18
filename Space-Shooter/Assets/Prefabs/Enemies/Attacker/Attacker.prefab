@@ -9,37 +9,37 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1139626826062392}
+  m_RootGameObject: {fileID: 1778702230236700}
   m_IsPrefabParent: 1
---- !u!1 &1139626826062392
+--- !u!1 &1778702230236700
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4219817548365228}
-  - component: {fileID: 33703923155580078}
-  - component: {fileID: 65992057625970122}
-  - component: {fileID: 23381940626162770}
-  - component: {fileID: 54481428003667100}
-  - component: {fileID: 95775034346772628}
-  - component: {fileID: 114760195621723874}
-  - component: {fileID: 114119794233908818}
-  - component: {fileID: 114647380616505842}
+  - component: {fileID: 4301323239450902}
+  - component: {fileID: 33360630524281560}
+  - component: {fileID: 65269647600654664}
+  - component: {fileID: 23457510897855778}
+  - component: {fileID: 54051591865845038}
+  - component: {fileID: 95435228721207644}
+  - component: {fileID: 114309989860237662}
+  - component: {fileID: 114389218886768284}
+  - component: {fileID: 114563935471264206}
   m_Layer: 9
-  m_Name: Dancer
+  m_Name: Attacker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4219817548365228
+--- !u!4 &4301323239450902
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -47,12 +47,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23381940626162770
+--- !u!23 &23457510897855778
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c31848a5ee7e9b1409b0402a51c24a62, type: 2}
+  - {fileID: 2100000, guid: 35da3380a58bc8a46974c7a4dd5c1fe0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,19 +81,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33703923155580078
+--- !u!33 &33360630524281560
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54481428003667100
+--- !u!54 &54051591865845038
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 100
@@ -103,25 +103,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65992057625970122
+--- !u!65 &65269647600654664
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95775034346772628
+--- !u!95 &95435228721207644
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 98cd052bbed96d9499109f085e78e5e1, type: 2}
@@ -132,12 +132,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114119794233908818
+--- !u!114 &114309989860237662
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2139e72a4b544884aaac51e4c5759633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnIsFinished: 0
+--- !u!114 &114389218886768284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1778702230236700}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
@@ -145,28 +157,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   currentHealth: 0
---- !u!114 &114647380616505842
+--- !u!114 &114563935471264206
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
+  m_GameObject: {fileID: 1778702230236700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f166cf0d2054914295360538f79457b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7838fab830907924f87ff20601b9f686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  dodgeSpeed: 4
---- !u!114 &114760195621723874
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139626826062392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2139e72a4b544884aaac51e4c5759633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnIsFinished: 0
+  destroyedParts: []
+  moveSpeed: 5
