@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23699362374832366}
   - component: {fileID: 114122184550492806}
   m_Layer: 0
-  m_Name: HealthPowerUp
+  m_Name: ExtraLifePowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,3 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340fdc768fb39a24e9850c423b8ee97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpEffect: {fileID: 0}

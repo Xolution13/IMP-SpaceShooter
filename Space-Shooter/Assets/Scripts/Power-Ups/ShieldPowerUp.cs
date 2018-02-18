@@ -22,7 +22,7 @@ public class ShieldPowerUp : MonoBehaviour
     }
 
     // Set shield position to player position and destroy it after time
-    void Update()
+    private void Update()
     {
 		if (powerUpActivated)
         {
@@ -40,7 +40,7 @@ public class ShieldPowerUp : MonoBehaviour
 	}
 
     // Check if the player is picking up
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
 		if (other.gameObject.tag == "Player")
         {
