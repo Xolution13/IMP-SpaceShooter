@@ -23,7 +23,7 @@ public class BlackHolePowerUp : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             //Instantiate(pickUpEffect, transform.position, transform.rotation);
-            Instantiate(blackHole, transform.position, transform.rotation);
+            Instantiate(blackHole, transform.position, Quaternion.Euler(new Vector3(270,0,0)));
             Destroy(gameObject);
         }
     }
