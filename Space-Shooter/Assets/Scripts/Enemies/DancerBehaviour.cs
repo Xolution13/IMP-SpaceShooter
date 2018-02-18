@@ -7,6 +7,7 @@ public class DancerBehaviour : MonoBehaviour
     // Variables
     private GameObject[] bullet;
     private AccelerometerMovement player;
+    private Vector3 velocity = Vector3.zero;
     public float distanceToBullet;
     public float moveSpeed = 3;
     public float dodgeSpeed = 4;
@@ -25,10 +26,9 @@ public class DancerBehaviour : MonoBehaviour
     private void Update()
     {
         bullet = GameObject.FindGameObjectsWithTag("Bullet");
-        // TODO: Math.Clamp -> Min, Max Movement!
-        transform.position = new Vector3((Mathf.Clamp(transform.position.x, -34, 34)),
+        transform.position = new Vector3((Mathf.Clamp(transform.position.x, -24, 24)),
                                             transform.position.y,
-                                            Mathf.Clamp(transform.position.z, -19, 19));
+                                            Mathf.Clamp(transform.position.z, -16.5f, 16.5f));
 
         if (isChasingPlayer && !isDodgingBullet)
         {
@@ -43,16 +43,14 @@ public class DancerBehaviour : MonoBehaviour
             if (distanceToBullet <= 10)
             {
                 isDodgingBullet = true;
-                transform.LookAt(bullet[i].transform.position);
+                transform.LookAt(Vector3.SmoothDamp(transform.position, bullet[i].transform.position, ref velocity, 0.5f));
 
                 if (randomNumber == 0)
                 {
-
                     transform.Translate((Vector3.back + Vector3.right) * dodgeSpeed * Time.deltaTime);
                 }
                 else if (randomNumber == 1)
                 {
-                    // TODO: Math.Clamp -> Min, Max Movement!
                     transform.Translate((Vector3.back + Vector3.left) * dodgeSpeed * Time.deltaTime);
                 }
             }
