@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldPowerUp : MonoBehaviour {
+public class ShieldPowerUp : MonoBehaviour
+{
+    // Variables
+    public GameObject pickUpEffect;
+    private AccelerometerMovement player;
+    private AccelerometerMovement playerScript;
+    private PowerUpSpawner spawnScript;
+    private bool powerUpActivated = false;
+    private float powerUpTime = 10;
 
-	// Variables
-	private GameObject player;
-	private PlayerTestMovement playerScript;
-	private PowerUpSpawner spawner;
-	private bool activated = false;
+    private void Start()
+    {
+        player = FindObjectOfType<AccelerometerMovement>();
+        playerScript = player.GetComponent<AccelerometerMovement>();
+        spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
+    }
 
-	private float powerUpTime = 10;
-
-	void Awake(){
-
-		player = GameObject.FindGameObjectWithTag ("Player");
-		playerScript = player.GetComponent<PlayerTestMovement>();
-		spawner = GameObject.FindGameObjectWithTag("PowerUpSpawner").GetComponent<PowerUpSpawner>();
-
-	}
-	
-	void Update(){
+    void Update(){
 
 		if (activated) {
 			GetComponent<Renderer> ().enabled = false;
