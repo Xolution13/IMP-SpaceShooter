@@ -6,29 +6,33 @@ public class ShieldPowerUp : MonoBehaviour
 {
     // Variables
     public GameObject pickUpEffect;
+    public GameObject shieldEffect;
+    private GameObject shieldObject;
     private PlayerStatus player;
     private PlayerStatus playerScript;
     private PowerUpSpawner spawnScript;
     private bool powerUpActivated = false;
     private float powerUpTime = 10;
 
-    private void Start()
+    private void Awake()
     {
         player = FindObjectOfType<PlayerStatus>();
         playerScript = player.GetComponent<PlayerStatus>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
     }
 
-    // Reset power-up effect after time, destroy power-up and allow next spawn
+    // Set shield position to player position and destroy it after time
     void Update()
     {
 		if (powerUpActivated)
         {
-			powerUpTime -= Time.deltaTime;
-			if (powerUpTime <= 1)
+            shieldObject.transform.position = player.transform.position;
+
+            powerUpTime -= Time.deltaTime;
+			if (powerUpTime <= 0)
             {
                 player.isInvulnerable = false;
-                Debug.Log("Player not invulnerable anymore");
+                Destroy(shieldObject);
                 spawnScript.stop = false;
 				Destroy(gameObject);
 			}
@@ -53,5 +57,6 @@ public class ShieldPowerUp : MonoBehaviour
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
         player.isInvulnerable = true;
+        shieldObject = Instantiate(shieldEffect, player.transform.position, transform.rotation);
     }
 }

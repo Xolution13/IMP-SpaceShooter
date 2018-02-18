@@ -10,6 +10,7 @@ TagManager:
   - Boundary
   - Explosion
   - POV
+  - Shield-Effect
   layers:
   - Default
   - TransparentFX

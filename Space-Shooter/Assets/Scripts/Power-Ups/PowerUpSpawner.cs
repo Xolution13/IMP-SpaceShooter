@@ -12,10 +12,9 @@ public class PowerUpSpawner : MonoBehaviour
 	public float spawnLeastWait;
 	public int startWait;
 	public bool stop;
-	private bool isRunning = true;
-
 	private int randomPowerUP;
 
+    // Start spawn-routine
 	private void Start ()
     {
 		StartCoroutine (waitSpawner ());
@@ -30,17 +29,17 @@ public class PowerUpSpawner : MonoBehaviour
     {
 		yield return new WaitForSeconds (startWait);
 
-		while (isRunning)
+        // Select random power-up and spawn it after random time (between min and max value) - wait if power-up has spawned
+        while (true)
         {
-			randomPowerUP = Random.Range (0, powerUps.Length);
-			Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), 0.5f, Random.Range (-spawnValues.z, spawnValues.z));
-
-				if (!stop) {
-					Instantiate (powerUps [randomPowerUP], spawnPosition + transform.TransformPoint (0, 0, 0), gameObject.transform.rotation);
-					stop = true;
-				}
-
-			yield return new WaitForSeconds (spawnWait);
-		}
+            randomPowerUP = Random.Range(0, powerUps.Length);
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0.5f, Random.Range(-spawnValues.z, spawnValues.z));
+            if (!stop)
+            {
+                Instantiate(powerUps[randomPowerUP], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+                stop = true;
+            }
+            yield return new WaitForSeconds(spawnWait);
+        }
 	}
 }
