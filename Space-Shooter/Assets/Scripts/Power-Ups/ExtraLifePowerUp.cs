@@ -10,7 +10,7 @@ public class ExtraLifePowerUp : MonoBehaviour
     private PlayerStatus playerScript;
     private PowerUpSpawner spawnScript;
 
-    private void Awake()
+    private void Start()
     {
         player = FindObjectOfType<PlayerStatus>();
         playerScript = player.GetComponent<PlayerStatus>();

@@ -8,9 +8,11 @@ public class TurretMovement : MonoBehaviour {
     private float hitDist = 0.0f;
     public GameObject bulletSpawnPoint;
     public GameObject bulletPrefab;
+    public GameObject improvedBulletPrefab;
     public float bulletFireRate = 0.1f;
     private float fireRate;
     private bool shootingActivated = false;
+    public bool bulletPowerUpActive = false;
 
     private void Start()
     {
@@ -49,9 +51,17 @@ public class TurretMovement : MonoBehaviour {
             }
         }
     }
-
+    
+    // CHeck if the player has power up active
     private void Shoot()
     {
-        Instantiate(bulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.Euler(0, transform.eulerAngles.y, 0));
+        if (bulletPowerUpActive)
+        {
+            Instantiate(bulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.Euler(0, transform.eulerAngles.y, 0));
+        }
+        else if (!bulletPowerUpActive)
+        {
+            Instantiate(improvedBulletPrefab.transform, bulletSpawnPoint.transform.position, Quaternion.Euler(0, transform.eulerAngles.y, 0));
+        }
     }
 }
