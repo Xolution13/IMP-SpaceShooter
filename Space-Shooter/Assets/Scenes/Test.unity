@@ -2308,7 +2308,7 @@ MonoBehaviour:
   improvedBulletPrefab: {fileID: 1681279037236354, guid: 54c3df3b92c30624bb5e671742d49e11,
     type: 2}
   bulletFireRate: 0.2
-  bulletPowerUpActive: 0
+  bulletPowerUpActive: 1
 --- !u!23 &1773351671
 MeshRenderer:
   m_ObjectHideFlags: 0

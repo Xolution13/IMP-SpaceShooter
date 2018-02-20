@@ -245,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnEffect: {fileID: 1821511929451208, guid: f7e8d2e66e5a4d4439781db29f06ac61,
     type: 2}
+  hasSpawnEffect: 1
   spawnIsFinished: 0
 --- !u!114 &114717681073714318
 MonoBehaviour:

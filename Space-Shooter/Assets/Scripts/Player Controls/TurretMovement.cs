@@ -40,7 +40,7 @@ public class TurretMovement : MonoBehaviour {
         }
 
         // Activate shooting with set firerate
-        if (shootingActivated)
+        if (shootingActivated || Input.GetKey(KeyCode.M))
         {
             fireRate -= Time.deltaTime;
             if (fireRate <= 0)
@@ -49,6 +49,15 @@ public class TurretMovement : MonoBehaviour {
                 shootingActivated = false;
                 fireRate = bulletFireRate;
             }
+        }
+
+        if (bulletPowerUpActive)
+        {
+            bulletFireRate = 0.05f;
+        }
+        else
+        {
+            bulletFireRate = 0.15f;
         }
     }
     

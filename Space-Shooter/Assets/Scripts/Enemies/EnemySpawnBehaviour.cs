@@ -6,6 +6,7 @@ public class EnemySpawnBehaviour : MonoBehaviour
 {
     // Variables
     public GameObject spawnEffect;
+    public bool hasSpawnEffect = true;
     public bool spawnIsFinished = false;
     private float spawnTime = 1.5f;
     private BoxCollider enemyCollider;
@@ -17,7 +18,10 @@ public class EnemySpawnBehaviour : MonoBehaviour
         enemyCollider.enabled = false;
 
         // Instantiate the spawn effect
-        Instantiate(spawnEffect, transform.position, Quaternion.identity);
+        if (hasSpawnEffect)
+        {
+            Instantiate(spawnEffect, transform.position, Quaternion.identity);
+        }
     }
 
     private void Update () {
