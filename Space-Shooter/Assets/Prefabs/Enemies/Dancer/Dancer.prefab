@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+    type: 2}
   health: 1
   currentHealth: 0
 --- !u!114 &114647380616505842
@@ -169,4 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2139e72a4b544884aaac51e4c5759633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnEffect: {fileID: 1821511929451208, guid: f7e8d2e66e5a4d4439781db29f06ac61,
+    type: 2}
   spawnIsFinished: 0
