@@ -108,5 +108,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpEffect: {fileID: 0}
-  shieldEffect: {fileID: 1275131068269258, guid: aa7973fff9751af4ea7ba13e077bb918,
+  shieldEffect: {fileID: 1512925636155060, guid: 49a6431ad65f8ab469fcc8423ae2ce81,
     type: 2}
