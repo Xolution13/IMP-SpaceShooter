@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 199367698356637612}
   - component: {fileID: 135439078157580302}
   - component: {fileID: 54508029281118398}
+  - component: {fileID: 114567209370182716}
   m_Layer: 0
   m_Name: ImprovedBullet
   m_TagString: Untagged
@@ -151,6 +152,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114567209370182716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1681279037236354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693b718908d59804cb013cc47b50800b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  travelTime: 4
+  damageValue: 1
 --- !u!135 &135439078157580302
 SphereCollider:
   m_ObjectHideFlags: 1

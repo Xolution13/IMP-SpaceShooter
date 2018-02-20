@@ -107,5 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b7031d7e1fb404da309afbbcdddf52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpEffect: {fileID: 0}
+  pickUpEffect: {fileID: 1004113028942578, guid: 949198018c9325c4f97fd3b34fcff86d,
+    type: 2}
   blackHole: {fileID: 1580289222727584, guid: 7017f9b7f3237be4a8bdac1e8a59058a, type: 2}
