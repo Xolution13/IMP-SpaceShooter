@@ -11000,11 +11000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUps:
   - {fileID: 1062844982656684, guid: 816dbe2b2eab1ba46a7bc1107a3cbaf6, type: 2}
-  - {fileID: 1064378313900116, guid: 757fa61788579c64387682397292b926, type: 2}
-  - {fileID: 1733388832783710, guid: 1ae74fe0d3b13ad43803d06f022c32de, type: 2}
-  - {fileID: 1773624522289624, guid: 406861bd4fe6ad041a9b7680b5facca0, type: 2}
   - {fileID: 1265884928030460, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
-  - {fileID: 1986192979057398, guid: 911ed4bab6a95fe45bc272a0110761e4, type: 2}
   spawnValues: {x: 20, y: 0, z: 13}
   spawnMostWait: 5
   spawnLeastWait: 4

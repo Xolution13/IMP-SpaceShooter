@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54136604736377754}
   - component: {fileID: 114546468888752556}
   m_Layer: 0
-  m_Name: improvedBullet
+  m_Name: improvedBullet_Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

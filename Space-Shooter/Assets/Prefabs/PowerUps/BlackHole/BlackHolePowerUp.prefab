@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpEffect: {fileID: 0}
-  blackHole: {fileID: 1746629958503568, guid: 1d02b8fe1cdb6a042821678e26019473, type: 2}
+  blackHole: {fileID: 1580289222727584, guid: 7017f9b7f3237be4a8bdac1e8a59058a, type: 2}
