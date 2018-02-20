@@ -42,8 +42,10 @@ public class FlyerBehaviour : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
+                // Get the current health and substract it from itself to destroy
                 player.GetComponent<PlayerStatus>().PlayerHit();
-                Destroy(gameObject);
+                int enemyHealth = GetComponent<EnemyHealthManager>().currentHealth;
+                GetComponent<EnemyHealthManager>().HurtEnemy(enemyHealth);
             }
         }
     }

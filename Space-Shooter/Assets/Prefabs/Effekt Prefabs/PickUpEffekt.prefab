@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4140140613111628}
   - component: {fileID: 198290143802089472}
   - component: {fileID: 199156239296919094}
+  - component: {fileID: 114191215830294762}
   m_Layer: 0
   m_Name: PickUpEffekt
   m_TagString: FxTemporaire
@@ -103,6 +104,17 @@ Transform:
   m_Father: {fileID: 4140140613111628}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114191215830294762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004113028942578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c69d6983515d14aa8d0ccc36731767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198290143802089472
 ParticleSystem:
   m_ObjectHideFlags: 1

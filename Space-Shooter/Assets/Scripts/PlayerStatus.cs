@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStatus : MonoBehaviour
 {
     // Variables
+    public GameObject deathEffect;
     public bool isInvulnerable = false;
     public int playerLifes = 3;
 
@@ -12,7 +13,9 @@ public class PlayerStatus : MonoBehaviour
     {
         if (playerLifes <= 0)
         {
+            // End game
             Debug.Log("Game-Over!");
+            gameObject.SetActive(false);
         }
     }
 
@@ -21,6 +24,7 @@ public class PlayerStatus : MonoBehaviour
         if (!isInvulnerable)
         {
             playerLifes--;
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Debug.Log(playerLifes);
         }
     }

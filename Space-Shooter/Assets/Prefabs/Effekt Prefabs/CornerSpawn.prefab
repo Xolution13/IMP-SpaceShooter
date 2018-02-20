@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4493581432911918}
   - component: {fileID: 198474229031444018}
   - component: {fileID: 199836909953752796}
+  - component: {fileID: 114404773636236302}
   m_Layer: 0
   m_Name: CornerSpawn
   m_TagString: Untagged
@@ -103,6 +104,17 @@ Transform:
   m_Father: {fileID: 4493581432911918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114404773636236302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551770630496016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c69d6983515d14aa8d0ccc36731767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198289237072558632
 ParticleSystem:
   m_ObjectHideFlags: 1

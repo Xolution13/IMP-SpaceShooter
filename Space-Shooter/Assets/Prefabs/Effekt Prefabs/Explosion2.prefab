@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4333845204406626}
   - component: {fileID: 198899072019347052}
   - component: {fileID: 199551172872661032}
+  - component: {fileID: 114599366403009620}
   m_Layer: 0
   m_Name: Explosion2
   m_TagString: FxTemporaire
@@ -227,6 +228,17 @@ Transform:
   m_Father: {fileID: 4333845204406626}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114599366403009620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892607325742352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c69d6983515d14aa8d0ccc36731767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198120387865862260
 ParticleSystem:
   m_ObjectHideFlags: 1

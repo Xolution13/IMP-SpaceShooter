@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealthManager : MonoBehaviour {
 
     // Variables
+    public GameObject deathEffect;
     public int health;
     public int currentHealth;
 
@@ -17,6 +18,7 @@ public class EnemyHealthManager : MonoBehaviour {
     {
         if (currentHealth <= 0)
         {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
