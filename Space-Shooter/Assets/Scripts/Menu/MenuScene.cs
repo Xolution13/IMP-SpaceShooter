@@ -142,6 +142,10 @@ public class MenuScene : MonoBehaviour
     public void OnBackClick()
     {
         NavigateTo(lastIndex);
+        if (lastIndex == 0)
+        {
+            SaveManager.Instance.Save();
+        }
         lastIndex = 0;
         Debug.Log("BackButton has been clicked");
     }

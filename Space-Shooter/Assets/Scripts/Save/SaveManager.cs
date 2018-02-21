@@ -14,12 +14,15 @@ public class SaveManager : MonoBehaviour
         Load();
 
         Debug.Log(SaveDeserializer.Serialize<SaveState>(state));
+        Debug.Log(state.soundSetting);
+        Debug.Log(state.musicSetting);
     }
 
     // Save the whole state of this script to the player pref
     public void Save()
     {
         PlayerPrefs.SetString("save", SaveDeserializer.Serialize<SaveState>(state));
+        Debug.Log("Game was saved");
     }
 
     // Load the previous saved state from player prefs
@@ -62,6 +65,30 @@ public class SaveManager : MonoBehaviour
     public void UnlockStoryLevel(int index)
     {
         state.storyCompletedLevel |= 1 << index;
+    }
+
+    public float GetMusicVolume(float volume)
+    {
+        volume = state.musicSetting;
+        return volume;
+    }
+
+    public float GetSoundVolume(float volume)
+    {
+        volume = state.soundSetting;
+        return volume;
+    }
+
+    public void SaveMusicVolume(float volume)
+    {
+        state.musicSetting = volume;
+        volume *= 100;
+    }
+
+    public void SaveSoundVolume(float volume)
+    {
+        state.soundSetting = volume;
+        volume *= 100;
     }
 
 }
