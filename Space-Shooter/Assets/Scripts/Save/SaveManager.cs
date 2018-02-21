@@ -9,7 +9,9 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         Instance = this;
+        Load();
     }
 
     // Save the whole state of this script to the player pref
@@ -28,7 +30,9 @@ public class SaveManager : MonoBehaviour
         }
         else
         {
-
+            state = new SaveState();
+            Save();
+            Debug.Log("No save was found. Creating a new one.");
         }
     }
 }
