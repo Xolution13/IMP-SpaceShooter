@@ -91,4 +91,17 @@ public class SaveManager : MonoBehaviour
         volume *= 100;
     }
 
+    public void ChangeControl()
+    {
+        if (!state.useJoystick)
+        {
+            state.useAccelerometer = false;
+            state.useJoystick = true;
+        }
+        else if (!state.useAccelerometer)
+        {
+            state.useJoystick = false;
+            state.useAccelerometer = true;
+        }
+    }
 }

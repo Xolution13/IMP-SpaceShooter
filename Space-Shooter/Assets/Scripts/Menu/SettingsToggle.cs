@@ -5,12 +5,8 @@ using UnityEngine.Experimental.UIElements;
 
 public class SettingsToggle : MonoBehaviour
 {
-    public GameObject ToggleAccelerometer;
-    public GameObject ToggleJoystick;
-
-    private void Start()
+    public void ChangeValue()
     {
-        ToggleAccelerometer.GetComponent<Toggle>().on = false;
-        ToggleJoystick.GetComponent<Toggle>().on = true;
+        SaveManager.Instance.ChangeControl();
     }
 }
