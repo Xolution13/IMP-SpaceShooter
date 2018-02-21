@@ -51,6 +51,7 @@ public class TurretMovement : MonoBehaviour {
             }
         }
 
+        // Increase firerate when power up is active
         if (bulletPowerUpActive)
         {
             bulletFireRate = 0.05f;

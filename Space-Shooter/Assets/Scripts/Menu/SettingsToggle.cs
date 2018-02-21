@@ -11,7 +11,7 @@ public class SettingsToggle : MonoBehaviour
     private Toggle accelerometerStatus;
     private Toggle joystickStatus;
 
-    public void Start()
+    private void Start()
     {
         // Get the Toggle-Components
         accelerometerStatus = accelerometerToggle.GetComponent<Toggle>();

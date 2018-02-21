@@ -13,9 +13,9 @@ public class SettingSliderValue : MonoBehaviour
     private TextMeshProUGUI valueText;
     public GameObject slider;
 
+    // Get the component and set it according to the save file
     private void Start()
     {
-        // Get the component and set it according to the save file
         valueText = GetComponent<TextMeshProUGUI>();
         if (isSoundSetting)
         {
