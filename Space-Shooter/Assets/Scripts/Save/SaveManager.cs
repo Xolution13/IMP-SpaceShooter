@@ -12,6 +12,8 @@ public class SaveManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Instance = this;
         Load();
+
+        Debug.Log(SaveDeserializer.Serialize<SaveState>(state));
     }
 
     // Save the whole state of this script to the player pref
