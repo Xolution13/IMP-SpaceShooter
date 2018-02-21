@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1341767254196074, guid: 9f61d8cf81dfe014e8d6f6a51e112326,
     type: 2}
-  isInvulnerable: 1
+  isInvulnerable: 0
   playerLifes: 3
 --- !u!1 &1141041263
 GameObject:

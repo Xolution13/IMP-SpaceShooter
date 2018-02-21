@@ -104,4 +104,16 @@ public class SaveManager : MonoBehaviour
             state.useAccelerometer = true;
         }
     }
+
+    public bool GetControlStatus(bool status)
+    {
+        if (state.useAccelerometer)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
