@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
+    // Variables
     public static SaveManager Instance { set; get; }
     public SaveState state;
 
+    // Load previous save and keep this GameObject alive for references
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -67,30 +69,48 @@ public class SaveManager : MonoBehaviour
         state.storyCompletedLevel |= 1 << index;
     }
 
+    // Get the saved music volume 
     public float GetMusicVolume(float volume)
     {
         volume = state.musicSetting;
         return volume;
     }
 
+    // Get the saved sound volume
     public float GetSoundVolume(float volume)
     {
         volume = state.soundSetting;
         return volume;
     }
 
+    // Save the music volume to SaveState
     public void SaveMusicVolume(float volume)
     {
         state.musicSetting = volume;
         volume *= 100;
     }
 
+    // Save the sound volume to SaveState
     public void SaveSoundVolume(float volume)
     {
         state.soundSetting = volume;
         volume *= 100;
     }
 
+    // Get the saved control state
+    public bool GetControlStatus(bool status)
+    {
+        if (state.useAccelerometer)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Change the control state when toggle changes
     public void ChangeControl()
     {
         if (!state.useJoystick)
@@ -102,18 +122,6 @@ public class SaveManager : MonoBehaviour
         {
             state.useJoystick = false;
             state.useAccelerometer = true;
-        }
-    }
-
-    public bool GetControlStatus(bool status)
-    {
-        if (state.useAccelerometer)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
         }
     }
 }

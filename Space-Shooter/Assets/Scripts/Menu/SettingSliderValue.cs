@@ -6,6 +6,7 @@ using TMPro;
 
 public class SettingSliderValue : MonoBehaviour
 {
+    // Variables
     public bool isSoundSetting = false;
     public bool isMusicSetting = false;
     public float volumeValue;
@@ -14,6 +15,7 @@ public class SettingSliderValue : MonoBehaviour
 
     private void Start()
     {
+        // Get the component and set it according to the save file
         valueText = GetComponent<TextMeshProUGUI>();
         if (isSoundSetting)
         {
@@ -25,7 +27,7 @@ public class SettingSliderValue : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // Call textUpdate when slider changes
     public void textUpdate(float value)
     {
         valueText.text = value.ToString();
