@@ -6557,8 +6557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSoundSetting: 1
   isMusicSetting: 0
-  soundValue: 0
-  musicValue: 0
+  volumeValue: 0
   slider: {fileID: 1429391555}
 --- !u!114 &1089774383
 MonoBehaviour:
@@ -9338,6 +9337,66 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
   m_IsPrefabParent: 0
@@ -11210,6 +11269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521494983}
   - component: {fileID: 1521494984}
+  - component: {fileID: 1521494985}
   m_Layer: 0
   m_Name: Toggle_Group
   m_TagString: Untagged
@@ -11249,6 +11309,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!114 &1521494985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1521494982}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f85b11253c65748945c973cb40f5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToggleAccelerometer: {fileID: 87145587}
+  ToggleJoystick: {fileID: 673144286}
 --- !u!1 &1547261727
 GameObject:
   m_ObjectHideFlags: 0
@@ -14605,8 +14678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSoundSetting: 0
   isMusicSetting: 1
-  soundValue: 0
-  musicValue: 0
+  volumeValue: 0
   slider: {fileID: 612985962}
 --- !u!114 &2049829292
 MonoBehaviour:
