@@ -6,11 +6,14 @@ public class EnemyHealthManager : MonoBehaviour {
 
     // Variables
     public GameObject deathEffect;
+    private GameState gameState;
     public int health;
+    public int points;
     public int currentHealth;
 
     private void Start()
     {
+        gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
         currentHealth = health;
     }
 
@@ -19,6 +22,8 @@ public class EnemyHealthManager : MonoBehaviour {
         if (currentHealth <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
+            gameState.destroyedEnemies++;
+            gameState.levelScore += points;
             Destroy(gameObject);
         }
     }
