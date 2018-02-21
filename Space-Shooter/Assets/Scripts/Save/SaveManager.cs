@@ -17,7 +17,7 @@ public class SaveManager : MonoBehaviour
     // Save the whole state of this script to the player pref
     public void Save()
     {
-       // PlayerPrefs.SetString("save",);
+        PlayerPrefs.SetString("save", SaveDeserializer.Serialize<SaveState>(state));
     }
 
     // Load the previous saved state from player prefs
@@ -26,7 +26,7 @@ public class SaveManager : MonoBehaviour
         // Check if there is a save
         if (PlayerPrefs.HasKey("save"))
         {
-            //state = 
+            state = SaveDeserializer.Deserialize<SaveState>(PlayerPrefs.GetString("save"));
         }
         else
         {
