@@ -9,8 +9,6 @@ public class BlackHolePowerUp : MonoBehaviour {
     public GameObject blackHole;
 
     private PowerUpSpawner spawnScript;
-    private bool powerUpActivated = false;
-    private float powerUpTime = 10;
 
     private void Start()
     {
