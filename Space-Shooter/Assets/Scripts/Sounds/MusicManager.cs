@@ -8,9 +8,11 @@ public class MusicManager : MonoBehaviour
     private float volume;
     private AudioSource musicSource;
 
-    private void Start()
+    private void Awake()
     {
         volume = SaveManager.Instance.GetMusicVolume(volume);
+        //volume /= 100;
+        Debug.Log(volume);
         musicSource = GetComponent<AudioSource>();
 
         musicSource.volume = volume;

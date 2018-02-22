@@ -120,6 +120,7 @@ public class MenuScene : MonoBehaviour
         NavigateTo(5);
         lastIndex = 1;
         Debug.Log("EndlessButton has been clicked");
+        SceneManager.LoadScene("Test");
     }
 
     public void OnStoryClick()
@@ -135,7 +136,7 @@ public class MenuScene : MonoBehaviour
     public void OnExitClick()
     {
         NavigateTo(0);
-        //Application.Quit();
+        Application.Quit();
         Debug.Log("ExitButton has been clicked");
     }
 
