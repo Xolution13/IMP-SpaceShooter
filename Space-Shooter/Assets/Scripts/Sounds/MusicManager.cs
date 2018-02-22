@@ -8,10 +8,11 @@ public class MusicManager : MonoBehaviour
     private float volume;
     private AudioSource musicSource;
 
-    private void Awake()
+    // Get the saved volume of the background music and set it as volume
+    private void Start()
     {
         volume = SaveManager.Instance.GetMusicVolume(volume);
-        //volume /= 100;
+        volume /= 100;
         Debug.Log(volume);
         musicSource = GetComponent<AudioSource>();
 
