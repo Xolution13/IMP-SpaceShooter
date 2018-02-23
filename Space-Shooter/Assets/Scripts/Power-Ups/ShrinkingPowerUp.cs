@@ -29,7 +29,7 @@ public class ShrinkingPowerUp : MonoBehaviour {
             powerUpTime -= Time.deltaTime;
             if (powerUpTime <= 0)
             {
-                //Instantiate(pickUpEffect, transform.position, transform.rotation);
+                Instantiate(pickUpEffect, transform.position, transform.rotation);
                 player.transform.localScale = originalScale;
                 spawnScript.stop = false;
                 Destroy(gameObject);
@@ -50,7 +50,7 @@ public class ShrinkingPowerUp : MonoBehaviour {
     // Instantiate pick-up effect and enable power-up effect
     private void PickUp()
     {
-        //Instantiate(pickUpEffect, transform.position, transform.rotation);
+        Instantiate(pickUpEffect, transform.position, transform.rotation);
         player.transform.localScale *= 0.5f;
         Debug.Log("Power-Up picked up!");
         GetComponent<Renderer>().enabled = false;

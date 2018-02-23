@@ -6,12 +6,8 @@ public class FlyerBehaviour : MonoBehaviour
 {
     // Variables
     public float moveSpeed;
-
     private PlayerStatus player;
     private EnemySpawnBehaviour spawnScript;
-
-    private bool collisionEnabled = false;
-    private float spawnTime = 1.5f;
     private BoxCollider enemyCollider;
     
     private void Start()

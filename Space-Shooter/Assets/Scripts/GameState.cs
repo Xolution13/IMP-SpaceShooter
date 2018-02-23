@@ -30,4 +30,9 @@ public class GameState : MonoBehaviour
             timeText.text = timeText.text.Substring(0, 5);
         }
     }
+
+    public void SaveGame()
+    {
+
+    }
 }

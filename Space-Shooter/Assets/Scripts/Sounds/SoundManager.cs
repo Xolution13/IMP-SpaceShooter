@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     {
         volume = SaveManager.Instance.GetSoundVolume(volume);
         volume /= 100;
+        volume /= 2;
         soundSource = GetComponent<AudioSource>();
 
         soundSource.volume = volume;
