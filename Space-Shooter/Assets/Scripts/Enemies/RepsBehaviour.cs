@@ -15,11 +15,13 @@ public class RepsBehaviour : MonoBehaviour
     private bool onWayToEnd = false;
 
     private PlayerStatus player;
+    private PlayerStatus status;
     private EnemySpawnBehaviour spawnScript;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerStatus>();
+        status = player.GetComponent<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
 
         // Border values: x-Min = -23, x-Max = 23, z-Min = -16, z-Max = 16
@@ -30,7 +32,7 @@ public class RepsBehaviour : MonoBehaviour
     private void Update()
     {
         // Check: is spawn finished
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             // Check which way the enemy is going and change the direction after a specific distance has been reached
             if (onWayToStart && distance <= 1)
@@ -65,7 +67,7 @@ public class RepsBehaviour : MonoBehaviour
     // Check if enemy is colliding with player
     private void OnTriggerEnter(Collider other)
     {
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             if (other.gameObject.tag == "Player")
             {
