@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Test.unity
     guid: 59075a2d9809e974dbd567ad8a520774
   - enabled: 1
-    path: Assets/Scenes/SurvivalLevel0.unity
+    path: Assets/Scenes/Survival/SurvivalLevel.unity
     guid: 7e5c0ab538c922242ba484024071cc13
   - enabled: 1
-    path: Assets/Scenes/SurvivalLevel1.unity
-    guid: 88c2dd29219f524499aec9d7db9f9eea
+    path: Assets/Scenes/Survival/SurvivalLevel0.unity
+    guid: 105a6ef63a3fcfa4c8bf4fe345d39b1b

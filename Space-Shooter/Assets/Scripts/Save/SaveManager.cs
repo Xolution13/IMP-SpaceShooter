@@ -11,7 +11,7 @@ public class SaveManager : MonoBehaviour
     // Load previous save and keep this GameObject alive for references
     private void Awake()
     {
-        ResetSave();
+        //ResetSave();
         DontDestroyOnLoad(gameObject);
         Instance = this;
         Load();

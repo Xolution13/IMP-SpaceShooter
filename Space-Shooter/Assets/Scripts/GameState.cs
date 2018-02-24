@@ -10,14 +10,16 @@ public class GameState : MonoBehaviour
     public int levelScore = 0;
     public int playerLifes = 0;
     public float timeAlive = 0;
+    public bool gameOver;
+    public bool countPlayTime = true;
 
     private GameScene gameSceneScript;
     public GameObject scoreUI;
     private Text scoreText;
     public GameObject timeUI;
     private Text timeText;
-    public bool countPlayTime;
-    public bool gameOver;
+
+
 
     private void Start()
     {
@@ -42,17 +44,19 @@ public class GameState : MonoBehaviour
             {
                 timeAlive += Time.deltaTime;
             }
-
-            if (gameOver)
-            {
-                SaveArchivements();
-            }
-        }        
+        }
+        SaveArchivements();
     }
 
     private void SaveArchivements()
     {
-        SaveManager.Instance.SaveDestroyedEnemies(destroyedEnemies);
-        SaveManager.Instance.SaveTimeAlive(timeAlive);
+        if (gameOver)
+        {
+            SaveManager.Instance.SaveDestroyedEnemies(destroyedEnemies);
+            SaveManager.Instance.SaveTimeAlive(timeAlive);
+            SaveManager.Instance.Save();
+            gameOver = false;
+        }
+        
     }
 }
