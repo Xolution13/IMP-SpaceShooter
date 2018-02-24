@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,9 +11,9 @@ public class MenuScene : MonoBehaviour
 
     public RectTransform menuContainer;
 
-    public GameObject SURVIVAL;
-    public GameObject ENDLESS;
-    public GameObject STORY;
+    public GameObject Survival;
+    public GameObject Endless;
+    public GameObject Story;
 
     private int lastIndex = 0;
     private Vector3 desiredMenuPosition;
@@ -22,9 +23,12 @@ public class MenuScene : MonoBehaviour
         // Grab the only CanvasGroup in the scene
         fadeGroup = FindObjectOfType<CanvasGroup>();
 
-        // Start with a white screen
+        // Start with a white/ black screen
         fadeGroup.alpha = 1;
-}
+
+        // Add button on-click events to levels
+        InitLevel();
+    }
 
     private void Update()
     {
@@ -80,6 +84,11 @@ public class MenuScene : MonoBehaviour
         }
     }
 
+    private void InitLevel()
+    {
+        Debug.Log("Test");
+    }
+
     // Buttons
     public void OnStartClick()
     {
@@ -104,9 +113,9 @@ public class MenuScene : MonoBehaviour
 
     public void OnSurvivalClick()
     {
-        SURVIVAL.SetActive(true);
-        ENDLESS.SetActive(false);
-        STORY.SetActive(false);
+        Survival.SetActive(true);
+        Endless.SetActive(false);
+        Story.SetActive(false);
         NavigateTo(4);
         lastIndex = 1;
         Debug.Log("SurvivaButton has been clicked");
@@ -114,9 +123,9 @@ public class MenuScene : MonoBehaviour
 
     public void OnEndlessClick()
     {
-        ENDLESS.SetActive(true);
-        SURVIVAL.SetActive(false);
-        STORY.SetActive(false);
+        Endless.SetActive(true);
+        Survival.SetActive(false);
+        Story.SetActive(false);
         NavigateTo(5);
         lastIndex = 1;
         Debug.Log("EndlessButton has been clicked");
@@ -125,9 +134,9 @@ public class MenuScene : MonoBehaviour
 
     public void OnStoryClick()
     {
-        STORY.SetActive(true);
-        SURVIVAL.SetActive(false);
-        ENDLESS.SetActive(false);
+        Story.SetActive(true);
+        Survival.SetActive(false);
+        Endless.SetActive(false);
         NavigateTo(6);
         lastIndex = 1;
         Debug.Log("StoryButton has been clicked");
@@ -143,6 +152,8 @@ public class MenuScene : MonoBehaviour
     public void OnBackClick()
     {
         NavigateTo(lastIndex);
+
+        // Save when exiting settings
         if (lastIndex == 0)
         {
             SaveManager.Instance.Save();
