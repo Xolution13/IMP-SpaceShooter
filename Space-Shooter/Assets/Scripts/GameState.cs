@@ -20,8 +20,6 @@ public class GameState : MonoBehaviour
     public GameObject timeUI;
     private Text timeText;
 
-
-
     private void Start()
     {
         scoreText = scoreUI.GetComponent<Text>();
