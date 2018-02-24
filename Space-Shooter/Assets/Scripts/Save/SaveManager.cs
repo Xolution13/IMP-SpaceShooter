@@ -161,7 +161,7 @@ public class SaveManager : MonoBehaviour
     }
 
     // Get player alive time
-    public float TimeAlive(float timeAlive)
+    public float GetTimeAlive(float timeAlive)
     {
         timeAlive = state.timeAlive;
         return timeAlive;
