@@ -7,7 +7,7 @@
 
     // State of unlocked levels
     public int survivalCompletedLevel = 0;
-    public int pickUpAvailable = 0;
+    public int powerUpUnlocked = 0;
 
     // State for setting
     public float soundSetting = 100;

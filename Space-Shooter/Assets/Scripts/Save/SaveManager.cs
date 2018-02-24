@@ -55,12 +55,12 @@ public class SaveManager : MonoBehaviour
         return (state.survivalCompletedLevel & (1 << index)) != 0;
     }
 
-    // Check if the story level was completed
-   /* public bool IsStoryCompleted(int index)
+    // Check if the powerUp was completed
+    public bool IsPowerUpUnlocked(int index)
     {
         // Check if the bit is set, if so the survival-level is completed
-        return (state.storyCompletedLevel & (1 << index)) != 0;
-    } */
+        return (state.powerUpUnlocked & (1 << index)) != 0;
+    } 
 
     // Unlock the survival level
     public void UnlockSurvivalLevel(int index)
@@ -68,11 +68,11 @@ public class SaveManager : MonoBehaviour
         state.survivalCompletedLevel |= 1 << index;
     }
 
-    // Unlock the story level
-    /*public void UnlockStoryLevel(int index)
+    // Unlock the powerUp
+    public void UnlockPowerUP(int index)
     {
-        state.storyCompletedLevel |= 1 << index;
-    }*/
+        state.powerUpUnlocked |= 1 << index;
+    }
 
     // Get the saved music volume 
     public float GetMusicVolume(float volume)
