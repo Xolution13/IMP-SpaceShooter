@@ -7,6 +7,7 @@ public class DancerBehaviour : MonoBehaviour
     // Variables
     private Bullet[] bullet;
     private PlayerStatus player;
+    private PlayerStatus status;
     private EnemySpawnBehaviour spawnScript;
     private Vector3 velocity = Vector3.zero;
     private float distanceToBullet;
@@ -20,6 +21,7 @@ public class DancerBehaviour : MonoBehaviour
     {
         bullet = FindObjectsOfType<Bullet>();
         player = FindObjectOfType<PlayerStatus>();
+        status = player.GetComponent<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
         randomNumber = Random.Range(0, 2);
     }
@@ -29,7 +31,7 @@ public class DancerBehaviour : MonoBehaviour
         // Update bullets as they spawn
         bullet = FindObjectsOfType<Bullet>();
 
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             // Limit position and rotation (so we do not have to use colliders)
             transform.position = new Vector3((Mathf.Clamp(transform.position.x, -24, 24)),
@@ -82,7 +84,7 @@ public class DancerBehaviour : MonoBehaviour
             inBulletLine = true;
         }
 
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             if (other.gameObject.tag == "Player")
             {
