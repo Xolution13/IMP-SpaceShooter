@@ -7,7 +7,7 @@ public class GameScene : MonoBehaviour
 {
     private CanvasGroup fadeGroup;
     private float fadeInDuration = 2;
-    private bool gameStarted;
+    public bool gameStarted;
 
     private void Start()
     {
