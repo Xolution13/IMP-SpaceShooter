@@ -157,7 +157,10 @@ public class SaveManager : MonoBehaviour
     // Save player alive time
     public void SaveTimeAlive(float timeAlive)
     {
-        state.timeAlive += timeAlive;
+        if (state.timeAlive <= timeAlive)
+        {
+            state.timeAlive = timeAlive;
+        }
     }
 
     // Get player alive time

@@ -20,6 +20,11 @@ public class PowerUpUnlocker : MonoBehaviour
     private float WPneededAmount;
     private float timeAlive;
 
+    public Transform speedSymbol;
+    public Transform speedActualAmount;
+    public Transform speedNeededAmount;
+    private int SUneededAmount;
+
     private void Start()
     {
         /* Extra Life Power Up:
@@ -58,6 +63,23 @@ public class PowerUpUnlocker : MonoBehaviour
             SaveManager.Instance.UnlockPowerUP(1);
         }
         Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(1));
+
+        /* Speed Power Up:
+         * Set image to grey, show the loaded destroyed enemy amount in text,
+         * get the needed amount and check if the needed amount was reached,
+         * if needed amount was reached - unlock speed power up (index 2) 
+         */
+        speedSymbol.GetComponent<Image>().color = Color.grey;
+        speedActualAmount.GetComponent<TextMeshProUGUI>().text = destroyedEnemies.ToString();
+        SUneededAmount = Int32.Parse(speedNeededAmount.GetComponent<TextMeshProUGUI>().text);
+
+        if (destroyedEnemies >= SUneededAmount)
+        {
+            speedSymbol.GetComponent<Image>().color = Color.green;
+            speedActualAmount.GetComponent<TextMeshProUGUI>().text = SUneededAmount.ToString();
+            SaveManager.Instance.UnlockPowerUP(2);
+        }
+        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(2));
     }
 
 }
