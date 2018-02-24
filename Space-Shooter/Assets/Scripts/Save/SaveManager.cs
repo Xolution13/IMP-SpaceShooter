@@ -17,8 +17,6 @@ public class SaveManager : MonoBehaviour
         Load();
 
         Debug.Log(SaveDeserializer.Serialize<SaveState>(state));
-        Debug.Log(state.soundSetting);
-        Debug.Log(state.musicSetting);
     }
 
     // Save the whole state of this script to the player pref
@@ -58,11 +56,11 @@ public class SaveManager : MonoBehaviour
     }
 
     // Check if the story level was completed
-    public bool IsStoryCompleted(int index)
+   /* public bool IsStoryCompleted(int index)
     {
         // Check if the bit is set, if so the survival-level is completed
         return (state.storyCompletedLevel & (1 << index)) != 0;
-    }
+    } */
 
     // Unlock the survival level
     public void UnlockSurvivalLevel(int index)
@@ -71,10 +69,10 @@ public class SaveManager : MonoBehaviour
     }
 
     // Unlock the story level
-    public void UnlockStoryLevel(int index)
+    /*public void UnlockStoryLevel(int index)
     {
         state.storyCompletedLevel |= 1 << index;
-    }
+    }*/
 
     // Get the saved music volume 
     public float GetMusicVolume(float volume)
@@ -141,5 +139,31 @@ public class SaveManager : MonoBehaviour
             state.survivalCompletedLevel++;
             Save();
         }
+    }
+
+    // Save destroyed enemies
+    public void SaveDestroyedEnemies(int destroyedEnemies)
+    {
+        state.destroyedEnemies += destroyedEnemies;
+    }
+
+    // Get destroyed enemies for menu
+    public int GetDestroyedEnemies(int destroyedEnemies)
+    {
+        destroyedEnemies = state.destroyedEnemies;
+        return destroyedEnemies;
+    }
+
+    // Save player alive time
+    public void SaveTimeAlive(float timeAlive)
+    {
+        state.timeAlive += timeAlive;
+    }
+
+    // Get player alive time
+    public float TimeAlive(float timeAlive)
+    {
+        timeAlive = state.timeAlive;
+        return timeAlive;
     }
 }

@@ -16,7 +16,8 @@ public class GameState : MonoBehaviour
     private Text scoreText;
     public GameObject timeUI;
     private Text timeText;
-    private bool playerAlive;
+    public bool countPlayTime;
+    public bool gameOver;
 
     private void Start()
     {
@@ -37,15 +38,21 @@ public class GameState : MonoBehaviour
             }
 
             // Check if the player is alive
-            if (playerAlive)
+            if (countPlayTime)
             {
                 timeAlive += Time.deltaTime;
+            }
+
+            if (gameOver)
+            {
+                SaveArchivements();
             }
         }        
     }
 
-    public void SaveGame()
+    private void SaveArchivements()
     {
-
+        SaveManager.Instance.SaveDestroyedEnemies(destroyedEnemies);
+        SaveManager.Instance.SaveTimeAlive(timeAlive);
     }
 }

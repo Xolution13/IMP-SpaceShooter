@@ -2,10 +2,11 @@
 {
     // State of current highscore
     public int highScore = 0;
+    public int destroyedEnemies = 0;
+    public float timeAlive = 0;
 
     // State of unlocked levels
     public int survivalCompletedLevel = 0;
-    public int storyCompletedLevel = 0;
     public int pickUpAvailable = 0;
 
     // State for setting
