@@ -9,8 +9,8 @@
     public int pickUpAvailable = 0;
 
     // State for setting
-    public float soundSetting = 1f;
-    public float musicSetting = 1f;
+    public float soundSetting = 100;
+    public float musicSetting = 100;
     public bool useJoystick = false;
     public bool useAccelerometer = true;
 }

@@ -169,7 +169,7 @@ public class MenuScene : MonoBehaviour
     private void OnLevelSelect(int currentIndex)
     {
         Manager.Instance.currentLevel = currentIndex;
-        SceneManager.LoadScene("SurvivalLevel");
+        SceneManager.LoadScene("SurvivalLevel" + currentIndex);
         Debug.Log("Selecting level: " + currentIndex);
     }
 
