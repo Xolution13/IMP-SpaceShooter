@@ -134,7 +134,7 @@ public class MenuScene : MonoBehaviour
 
     private void OnLevelSelect(int currentIndex)
     {
-
+        Debug.Log("Selecting level: " + currentIndex);
     }
 
     public void OnEndlessClick()
