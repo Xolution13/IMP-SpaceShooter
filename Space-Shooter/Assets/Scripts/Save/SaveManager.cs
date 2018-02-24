@@ -124,4 +124,15 @@ public class SaveManager : MonoBehaviour
             state.useAccelerometer = true;
         }
     }
+
+    // Complete Level
+    public void CompleteLevel(int index)
+    {
+        // Check if the level is the current active level
+        if (state.survivalCompletedLevel == index)
+        {
+            state.survivalCompletedLevel++;
+            Save();
+        }
+    }
 }
