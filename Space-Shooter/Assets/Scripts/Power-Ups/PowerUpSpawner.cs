@@ -12,7 +12,7 @@ public class PowerUpSpawner : MonoBehaviour
     public GameObject shrinkPowerUp;
     public GameObject blackHolePowerUp;
     private List<GameObject> unlockedPowerUpList = new List<GameObject>();
-    public GameObject[] unlockedPowerUps;
+    private GameObject[] unlockedPowerUps;
 	public Vector3 spawnValues;
 	private float spawnWait;
 	public float spawnMostWait;
