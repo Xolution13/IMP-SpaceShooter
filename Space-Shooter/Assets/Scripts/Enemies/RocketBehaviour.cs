@@ -6,6 +6,7 @@ public class RocketBehaviour : MonoBehaviour
 {
     // Variables
     private PlayerStatus player;
+    private PlayerStatus statusScript;
     private EnemySpawnBehaviour spawnScript;
 
     public float moveSpeed = 10;
@@ -24,13 +25,14 @@ public class RocketBehaviour : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<PlayerStatus>();
+        statusScript = player.GetComponent<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
         Physics.IgnoreLayerCollision(10, 9, true);
     }
 
     private void Update()
     {
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !statusScript.isRespawning)
         {
             // Limit position and rotation (so we do not have to use colliders)
             transform.position = new Vector3((Mathf.Clamp(transform.position.x, -34, 34)),
@@ -131,7 +133,7 @@ public class RocketBehaviour : MonoBehaviour
     // Check if we are colliding with the player or the boundary (boundary -> rotate 180)
     private void OnTriggerEnter(Collider other)
     {
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !statusScript.isRespawning)
         {
             if (other.gameObject.tag == "Boundary")
             {

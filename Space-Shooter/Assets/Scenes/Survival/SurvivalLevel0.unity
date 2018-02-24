@@ -833,6 +833,7 @@ GameObject:
   - component: {fileID: 1095348290}
   - component: {fileID: 1095348289}
   - component: {fileID: 1095348292}
+  - component: {fileID: 1095348293}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Player
@@ -894,8 +895,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1341767254196074, guid: 9f61d8cf81dfe014e8d6f6a51e112326,
     type: 2}
-  isInvulnerable: 0
+  isInvulnerable: 1
   playerLifes: 3
+  isRespawning: 0
+--- !u!95 &1095348293
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1095348288}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2cfd0c214c6e6b846a5a01d303602735, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1325184838
 GameObject:
   m_ObjectHideFlags: 0

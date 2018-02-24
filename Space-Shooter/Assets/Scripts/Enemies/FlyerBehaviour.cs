@@ -8,18 +8,20 @@ public class FlyerBehaviour : MonoBehaviour
     public float moveSpeed;
     private PlayerStatus player;
     private EnemySpawnBehaviour spawnScript;
+    private PlayerStatus status;
     private BoxCollider enemyCollider;
     
     private void Start()
     {
         player = FindObjectOfType<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
+        status = player.GetComponent<PlayerStatus>();
     }
 
     private void FixedUpdate()
     {
         // Enemy moves forward when spawn process is finished
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
@@ -34,7 +36,7 @@ public class FlyerBehaviour : MonoBehaviour
     // Check if enemy is colliding with player
     private void OnTriggerEnter(Collider other)
     {
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             if (other.gameObject.tag == "Player")
             {
