@@ -2416,12 +2416,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ea19ad96e99634cba001dd2c77e62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUps:
-  - {fileID: 1062844982656684, guid: 816dbe2b2eab1ba46a7bc1107a3cbaf6, type: 2}
-  - {fileID: 1064378313900116, guid: 757fa61788579c64387682397292b926, type: 2}
-  - {fileID: 1986192979057398, guid: 911ed4bab6a95fe45bc272a0110761e4, type: 2}
-  - {fileID: 1733388832783710, guid: 1ae74fe0d3b13ad43803d06f022c32de, type: 2}
-  - {fileID: 1265884928030460, guid: 5c037637820e1ac4087b6efe0311e157, type: 2}
+  extraLifePowerUp: {fileID: 1064378313900116, guid: 757fa61788579c64387682397292b926,
+    type: 2}
+  weaponPowerUp: {fileID: 1986192979057398, guid: 911ed4bab6a95fe45bc272a0110761e4,
+    type: 2}
+  speedPowerUp: {fileID: 1773624522289624, guid: 406861bd4fe6ad041a9b7680b5facca0,
+    type: 2}
+  shieldPowerUp: {fileID: 1062844982656684, guid: 816dbe2b2eab1ba46a7bc1107a3cbaf6,
+    type: 2}
+  shrinkPowerUp: {fileID: 1733388832783710, guid: 1ae74fe0d3b13ad43803d06f022c32de,
+    type: 2}
+  blackHolePowerUp: {fileID: 1580289222727584, guid: 7017f9b7f3237be4a8bdac1e8a59058a,
+    type: 2}
   spawnValues: {x: 20, y: 0, z: 13}
   spawnMostWait: 5
   spawnLeastWait: 4
@@ -3271,6 +3277,9 @@ MonoBehaviour:
   destroyedEnemies: 0
   levelScore: 0
   playerLifes: 0
+  timeAlive: 0
+  gameOver: 0
+  countPlayTime: 1
   scoreUI: {fileID: 216549822}
   timeUI: {fileID: 44585129}
 --- !u!4 &1414722746
