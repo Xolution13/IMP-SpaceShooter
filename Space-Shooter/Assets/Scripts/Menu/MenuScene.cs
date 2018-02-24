@@ -88,6 +88,7 @@ public class MenuScene : MonoBehaviour
 
     private void InitLevel()
     {
+        // Add onClick-Event to every Button (children transform)
         int i = 0;
         foreach(Transform t in SurvivalButtonParent)
         {
@@ -95,6 +96,30 @@ public class MenuScene : MonoBehaviour
 
             Button b = t.GetComponent<Button>();
             b.onClick.AddListener(() => OnLevelSelect(currentIndex));
+
+            Image img = t.GetComponent<Image>();
+
+            // Check if level is unlocked
+            if (i <= SaveManager.Instance.state.survivalCompletedLevel)
+            {
+                // Level is unlocked - check if level is completed
+                if (i == SaveManager.Instance.state.survivalCompletedLevel)
+                {
+                    // Level is not completed
+                    img.color = Color.white;
+                }
+                else
+                {
+                    // Level is unlocked and completed
+                    img.color = Color.green;
+                }
+            }
+            else
+            {
+                // Level is not unlocked, button is disabled
+                b.interactable = false;
+                img.color = Color.grey;
+            }
 
             i++;
         }
@@ -134,6 +159,8 @@ public class MenuScene : MonoBehaviour
 
     private void OnLevelSelect(int currentIndex)
     {
+        Manager.Instance.currentLevel = currentIndex;
+        SceneManager.LoadScene("SurvivalLevel");
         Debug.Log("Selecting level: " + currentIndex);
     }
 
