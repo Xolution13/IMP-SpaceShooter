@@ -7,6 +7,7 @@ public class AttackerBehaviour : MonoBehaviour
     // Variables
     public GameObject[] destroyedParts;
     private PlayerStatus player;
+    private PlayerStatus status;
     private Bullet[] bullet;
     private EnemyHealthManager healthScript;
     private EnemySpawnBehaviour spawnScript;
@@ -16,13 +17,14 @@ public class AttackerBehaviour : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<PlayerStatus>();
+        status = player.GetComponent<PlayerStatus>();
         healthScript = GetComponent<EnemyHealthManager>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
     }
 
     private void Update()
     {
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             // Enemy moves towards the player
             transform.LookAt(player.transform.position);
@@ -50,7 +52,7 @@ public class AttackerBehaviour : MonoBehaviour
     // Check if enemy is colliding with player
     private void OnTriggerEnter(Collider other)
     {
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             if (other.gameObject.tag == "Player")
             {

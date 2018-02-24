@@ -6,6 +6,7 @@ public class AttackerSmallBehaviour : MonoBehaviour
 {
     // Variables
     private PlayerStatus player;
+    private PlayerStatus status;
     private EnemySpawnBehaviour spawnScript;
     private Vector3 spawnVector;
     private Vector3 movingVector;
@@ -19,6 +20,7 @@ public class AttackerSmallBehaviour : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<PlayerStatus>();
+        status = player.GetComponent<PlayerStatus>();
         spawnScript = GetComponent<EnemySpawnBehaviour>();
         spawnVector = transform.position;
         circleWidth = Random.Range(2, 5);
@@ -34,24 +36,27 @@ public class AttackerSmallBehaviour : MonoBehaviour
                                                 Mathf.Clamp(transform.position.z, -16.5f, 16.5f));
         transform.rotation = Quaternion.Euler(new Vector3(0, transform.eulerAngles.y, 0));
 
-        if (circleDirection == 1)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
-            timeCounter += Time.deltaTime * moveSpeed;
+            if (circleDirection == 1)
+            {
+                timeCounter += Time.deltaTime * moveSpeed;
+            }
+            else
+            {
+                timeCounter -= Time.deltaTime * moveSpeed;
+            }
+            float x = Mathf.Cos(timeCounter) * circleWidth;
+            float z = Mathf.Sin(timeCounter) * circleHeigth;
+            movingVector = new Vector3(x, 0.5f, z);
+            transform.position = spawnVector + movingVector;
         }
-        else
-        {
-            timeCounter -= Time.deltaTime * moveSpeed;
-        }
-        float x = Mathf.Cos(timeCounter) * circleWidth;
-        float z = Mathf.Sin(timeCounter) * circleHeigth;
-        movingVector = new Vector3(x, 0.5f, z);
-        transform.position = spawnVector + movingVector;
     }
 
     // Check if enemy is colliding with player
     private void OnTriggerEnter(Collider other)
     {
-        if (spawnScript.spawnIsFinished)
+        if (spawnScript.spawnIsFinished && !status.isRespawning)
         {
             if (other.gameObject.tag == "Player")
             {
