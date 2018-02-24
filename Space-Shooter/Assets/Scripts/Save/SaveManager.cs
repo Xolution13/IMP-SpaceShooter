@@ -11,6 +11,7 @@ public class SaveManager : MonoBehaviour
     // Load previous save and keep this GameObject alive for references
     private void Awake()
     {
+        ResetSave();
         DontDestroyOnLoad(gameObject);
         Instance = this;
         Load();
@@ -43,7 +44,13 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    //Check if the survival-level was completed
+    // Reset the save
+    public void ResetSave()
+    {
+        PlayerPrefs.DeleteKey("save");
+    }
+
+    // Check if the survival-level was completed
     public bool IsSurvivalCompleted(int index)
     {
         // Check if the bit is set, if so the survival-level is completed

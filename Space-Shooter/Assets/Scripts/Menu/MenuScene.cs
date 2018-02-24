@@ -30,6 +30,9 @@ public class MenuScene : MonoBehaviour
 
         // Add button on-click events to levels
         InitLevel();
+
+        // Set camera position to the focused menu
+        SetCameraTo(Manager.Instance.menuFocus);
     }
 
     private void Update()
@@ -84,6 +87,12 @@ public class MenuScene : MonoBehaviour
 
             //desiredMenuPosition = (Vector3.right * 2560) + (Vector3.down * 800);
         }
+    }
+
+    private void SetCameraTo(int menuIndex)
+    {
+        NavigateTo(menuIndex);
+        menuContainer.anchoredPosition3D = desiredMenuPosition;
     }
 
     private void InitLevel()
