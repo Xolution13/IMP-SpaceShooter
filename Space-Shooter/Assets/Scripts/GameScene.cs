@@ -46,6 +46,14 @@ public class GameScene : MonoBehaviour
         ExitScene();
     }
 
+    public void LevelFailed()
+    {
+        // Focus the level selection when returning to the menu scene - Case: 4 
+        Manager.Instance.menuFocus = 4;
+
+        ExitScene();
+    }
+
     public void ExitScene()
     {
         SceneManager.LoadScene("Menu");

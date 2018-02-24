@@ -12,6 +12,7 @@ public class GameState : MonoBehaviour
     public float timeAlive = 0;
     public bool gameOver;
     public bool countPlayTime = true;
+    private float gameTime = 30;
 
     private GameScene gameSceneScript;
     public GameObject scoreUI;
@@ -32,8 +33,10 @@ public class GameState : MonoBehaviour
     {
         if (gameSceneScript.gameStarted)
         {
+            gameTime -= Time.deltaTime;
+
             scoreText.text = ("Score:@" + levelScore.ToString()).Replace("@", System.Environment.NewLine);
-            timeText.text = (-Time.time).ToString();
+            timeText.text = gameTime.ToString();
             if (timeText.text.Length > 5)
             {
                 timeText.text = timeText.text.Substring(0, 5);

@@ -6,6 +6,8 @@ public class PlayerStatus : MonoBehaviour
 {
     // Variables
     public GameObject deathEffect;
+    private GameState gameStateScript;
+    private GameScene gameSceneScript;
     private Animator anim;
     public bool isInvulnerable = false;
     public int playerLifes = 3;
@@ -15,6 +17,8 @@ public class PlayerStatus : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        gameStateScript = FindObjectOfType<GameState>().GetComponent<GameState>();
+        gameSceneScript = FindObjectOfType<GameScene>().GetComponent<GameScene>();
     }
 
     private void Update()
@@ -24,6 +28,8 @@ public class PlayerStatus : MonoBehaviour
             // End game
             Debug.Log("Game-Over!");
             gameObject.SetActive(false);
+            gameStateScript.gameOver = true;
+            gameSceneScript.LevelFailed();
         }
 
         if (isRespawning)
@@ -32,6 +38,7 @@ public class PlayerStatus : MonoBehaviour
             if (respawnTime <= 0)
             {
                 respawnTime = 2.5f;
+                gameStateScript.countPlayTime = true;
                 anim.SetBool("playSpawnAnimation", false);
                 isRespawning = false;
             }
@@ -48,6 +55,7 @@ public class PlayerStatus : MonoBehaviour
 
             if (playerLifes > 0)
             {
+                gameStateScript.countPlayTime = false;
                 isRespawning = true;
                 anim.SetBool("playSpawnAnimation", true);                
             }

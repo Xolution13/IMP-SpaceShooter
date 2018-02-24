@@ -90,7 +90,7 @@ public class PowerUpSpawner : MonoBehaviour
         // Select random power-up and spawn it after random time (between min and max value) - wait if power-up has spawned
         while (true)
         {
-            randomPowerUP = Random.Range(0, unlockedPowerUps.Length + 1);
+            randomPowerUP = Random.Range(0, unlockedPowerUps.Length);
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0.5f, Random.Range(-spawnValues.z, spawnValues.z));
             if (!stop)
             {
