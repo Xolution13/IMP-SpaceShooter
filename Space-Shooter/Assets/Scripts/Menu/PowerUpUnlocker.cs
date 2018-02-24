@@ -8,22 +8,29 @@ using System;
 public class PowerUpUnlocker : MonoBehaviour
 {
     // Variables
-    public Transform extraLifeSymbol;
-    public Transform extraLifeActualAmount;
-    public Transform extraLifeNeededAmount;
-    private int ELneededAmount;
     private int destroyedEnemies;
-
-    public Transform weaponSymbol;
-    public Transform weaponActualAmount;
-    public Transform weaponNeededAmount;
-    private float WPneededAmount;
     private float timeAlive;
 
+    public Transform extraLifeSymbol;
+    public Transform extraLifeActualAmountMesh;
+    public Transform extraLifeNeededAmountMesh;
+    private int extraLifeNeededAmount;
+    
+
+    public Transform weaponSymbol;
+    public Transform weaponActualAmountMesh;
+    public Transform weaponNeededAmountMesh;
+    private float weaponNeededAmount;
+
     public Transform speedSymbol;
-    public Transform speedActualAmount;
-    public Transform speedNeededAmount;
-    private int SUneededAmount;
+    public Transform speedActualAmountMesh;
+    public Transform speedNeededAmountMesh;
+    private int speedNeededAmount;
+
+    public Transform shieldSymbol;
+    public Transform shieldActualAmountMesh;
+    public Transform shieldNeededAmountMesh;
+    private float shieldNeededAmount;
 
     private void Start()
     {
@@ -34,13 +41,13 @@ public class PowerUpUnlocker : MonoBehaviour
          */
         extraLifeSymbol.GetComponent<Image>().color = Color.grey;
         destroyedEnemies = SaveManager.Instance.GetDestroyedEnemies(destroyedEnemies);
-        extraLifeActualAmount.GetComponent<TextMeshProUGUI>().text = destroyedEnemies.ToString();
-        ELneededAmount = Int32.Parse(extraLifeNeededAmount.GetComponent<TextMeshProUGUI>().text);
+        extraLifeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = destroyedEnemies.ToString();
+        extraLifeNeededAmount = Int32.Parse(extraLifeNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
 
-        if (destroyedEnemies >= ELneededAmount)
+        if (destroyedEnemies >= extraLifeNeededAmount)
         {
             extraLifeSymbol.GetComponent<Image>().color = Color.green;
-            extraLifeActualAmount.GetComponent<TextMeshProUGUI>().text = ELneededAmount.ToString();
+            extraLifeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = extraLifeNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(0);
         }
         Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(0));
@@ -53,13 +60,13 @@ public class PowerUpUnlocker : MonoBehaviour
         weaponSymbol.GetComponent<Image>().color = Color.grey;
         timeAlive = SaveManager.Instance.GetTimeAlive(timeAlive);
         timeAlive = Mathf.CeilToInt(timeAlive);
-        weaponActualAmount.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString();
-        WPneededAmount = Int32.Parse(weaponNeededAmount.GetComponent<TextMeshProUGUI>().text);
+        weaponActualAmountMesh.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString();
+        weaponNeededAmount = Int32.Parse(weaponNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
 
-        if (timeAlive >= WPneededAmount)
+        if (timeAlive >= weaponNeededAmount)
         {
             weaponSymbol.GetComponent<Image>().color = Color.green;
-            weaponActualAmount.GetComponent<TextMeshProUGUI>().text = WPneededAmount.ToString();
+            weaponActualAmountMesh.GetComponent<TextMeshProUGUI>().text = weaponNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(1);
         }
         Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(1));
@@ -70,16 +77,33 @@ public class PowerUpUnlocker : MonoBehaviour
          * if needed amount was reached - unlock speed power up (index 2) 
          */
         speedSymbol.GetComponent<Image>().color = Color.grey;
-        speedActualAmount.GetComponent<TextMeshProUGUI>().text = destroyedEnemies.ToString();
-        SUneededAmount = Int32.Parse(speedNeededAmount.GetComponent<TextMeshProUGUI>().text);
+        speedActualAmountMesh.GetComponent<TextMeshProUGUI>().text = destroyedEnemies.ToString();
+        speedNeededAmount = Int32.Parse(speedNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
 
-        if (destroyedEnemies >= SUneededAmount)
+        if (destroyedEnemies >= speedNeededAmount)
         {
             speedSymbol.GetComponent<Image>().color = Color.green;
-            speedActualAmount.GetComponent<TextMeshProUGUI>().text = SUneededAmount.ToString();
+            speedActualAmountMesh.GetComponent<TextMeshProUGUI>().text = speedNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(2);
         }
         Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(2));
+
+        /* Shield Power Up:
+         * Set image to grey, show the loaded player alive time in the text,
+         * get the needed amount and check if the needed amount was reached,
+         * if needed amount was reached - unlock weapon power up (index 3) 
+         */
+        shieldSymbol.GetComponent<Image>().color = Color.grey;
+        shieldActualAmountMesh.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString();
+        shieldNeededAmount = Int32.Parse(shieldNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
+
+        if (timeAlive >= shieldNeededAmount)
+        {
+            shieldSymbol.GetComponent<Image>().color = Color.green;
+            shieldActualAmountMesh.GetComponent<TextMeshProUGUI>().text = shieldNeededAmount.ToString();
+            SaveManager.Instance.UnlockPowerUP(3);
+        }
+        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(3));
     }
 
 }
