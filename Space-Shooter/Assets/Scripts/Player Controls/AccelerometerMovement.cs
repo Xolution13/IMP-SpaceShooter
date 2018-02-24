@@ -6,6 +6,7 @@ public class AccelerometerMovement : MonoBehaviour
 {
     // Variables
     public float movementSpeed = 50;
+    private PlayerStatus status;
 
     private Matrix4x4 calibrationMatrix;
     private Vector3 originalTilt = Vector3.zero;
@@ -14,15 +15,19 @@ public class AccelerometerMovement : MonoBehaviour
     // Load accelerometer callibration -> this should be before scene loads
     private void Start()
     {
+        status = GetComponent<PlayerStatus>();
         CalibrateAccelerometer();
     }
 
     // Set calibrated input to new variable and move the player according to new input
     private void Update()
     {
-        _InputDir = GetAccelerometer(Input.acceleration);
-        transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
+        if (!status.isRespawning)
+        {
+            _InputDir = GetAccelerometer(Input.acceleration);
+            transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
+        }
     }
 
     // Method for calibration

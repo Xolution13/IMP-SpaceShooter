@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretMovement : MonoBehaviour {
 
     // Variables 
+    private PlayerStatus status;
     private float hitDist = 0.0f;
     public GameObject bulletSpawnPoint;
     public GameObject bulletPrefab;
@@ -16,6 +17,7 @@ public class TurretMovement : MonoBehaviour {
 
     private void Start()
     {
+        status = FindObjectOfType<PlayerStatus>().GetComponent<PlayerStatus>();
         fireRate = bulletFireRate;
     }
 
@@ -40,7 +42,7 @@ public class TurretMovement : MonoBehaviour {
         }
 
         // Activate shooting with set firerate
-        if (shootingActivated || Input.GetKey(KeyCode.M))
+        if ((shootingActivated || Input.GetKey(KeyCode.M)) && !status.isRespawning)
         {
             fireRate -= Time.deltaTime;
             if (fireRate <= 0)

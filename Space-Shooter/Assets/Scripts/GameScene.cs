@@ -7,7 +7,9 @@ public class GameScene : MonoBehaviour
 {
     private CanvasGroup fadeGroup;
     private float fadeInDuration = 2;
+    private float fadeOutDuration = 2;
     public bool gameStarted;
+    private bool endLevel;
 
     private void Start()
     {
@@ -33,6 +35,17 @@ public class GameScene : MonoBehaviour
             fadeGroup.alpha = 0;
             gameStarted = true;
         }
+
+        // Fade-out when level ends
+        if (endLevel)
+        {
+            fadeGroup.alpha += Time.deltaTime;
+            if (fadeGroup.alpha >= 1)
+            {
+                Debug.Log("Changing the scene!");
+                ExitScene();
+            }
+        }
     }
 
     public void CompleteLevel()
@@ -43,15 +56,14 @@ public class GameScene : MonoBehaviour
         // Focus the level selection when returning to the menu scene - Case: 4 
         Manager.Instance.menuFocus = 4;
 
-        ExitScene();
+        endLevel = true;
     }
 
     public void LevelFailed()
     {
         // Focus the level selection when returning to the menu scene - Case: 4 
         Manager.Instance.menuFocus = 4;
-
-        ExitScene();
+        endLevel = true;
     }
 
     public void ExitScene()
