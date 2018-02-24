@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuScene : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MenuScene : MonoBehaviour
     public RectTransform menuContainer;
 
     public GameObject Survival;
+    public Transform SurvivalButtonParent;
     public GameObject Endless;
     public GameObject Story;
 
@@ -86,7 +88,16 @@ public class MenuScene : MonoBehaviour
 
     private void InitLevel()
     {
-        Debug.Log("Test");
+        int i = 0;
+        foreach(Transform t in SurvivalButtonParent)
+        {
+            int currentIndex = i;
+
+            Button b = t.GetComponent<Button>();
+            b.onClick.AddListener(() => OnLevelSelect(currentIndex));
+
+            i++;
+        }
     }
 
     // Buttons
@@ -119,6 +130,11 @@ public class MenuScene : MonoBehaviour
         NavigateTo(4);
         lastIndex = 1;
         Debug.Log("SurvivaButton has been clicked");
+    }
+
+    private void OnLevelSelect(int currentIndex)
+    {
+
     }
 
     public void OnEndlessClick()
