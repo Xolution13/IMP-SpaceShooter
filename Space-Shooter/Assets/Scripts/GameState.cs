@@ -12,7 +12,7 @@ public class GameState : MonoBehaviour
     public float timeAlive = 0;
     public bool gameOver;
     public bool countPlayTime = true;
-    private float gameTime = 30;
+    public float gameTime = 30;
 
     private GameScene gameSceneScript;
     public GameObject scoreUI;
