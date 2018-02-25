@@ -9,6 +9,7 @@ public class GameScene : MonoBehaviour
     private float fadeInDuration = 2;
     private float fadeOutDuration = 2;
     public bool gameStarted;
+    private float waitTime = 2f;
     private bool endLevel;
 
     private void Start()
@@ -39,12 +40,17 @@ public class GameScene : MonoBehaviour
         // Fade-out when level ends
         if (endLevel)
         {
-            fadeGroup.alpha += Time.deltaTime;
-            if (fadeGroup.alpha >= 1)
+            waitTime -= Time.deltaTime;
+
+            if(waitTime <= 0)
             {
-                Debug.Log("Changing the scene!");
-                ExitScene();
-            }
+                fadeGroup.alpha += Time.deltaTime;
+                if (fadeGroup.alpha >= 1)
+                {
+                    Debug.Log("Changing the scene!");
+                    ExitScene();
+                }
+            }           
         }
     }
 

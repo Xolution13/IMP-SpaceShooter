@@ -25,6 +25,7 @@ public class SurvivalLevel0 : MonoBehaviour
         stateScript = GetComponent<GameState>();
         sceneScript = GetComponent<GameScene>();
         stateScript.gameTime = 30;
+        stateScript.decreaseTime = true;
 
         firstSpawnEnemyAmount = firstSpawn.transform.childCount;
         secondSpawnEnemyAmount = secondSpawn.transform.childCount;
