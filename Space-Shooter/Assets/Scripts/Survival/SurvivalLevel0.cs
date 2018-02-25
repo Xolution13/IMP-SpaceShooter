@@ -25,6 +25,7 @@ public class SurvivalLevel0 : MonoBehaviour
         stateScript = GetComponent<GameState>();
         sceneScript = GetComponent<GameScene>();
         stateScript.gameTime = 30;
+        stateScript.decreaseTime = true;
 
         firstSpawnEnemyAmount = firstSpawn.transform.childCount;
         secondSpawnEnemyAmount = secondSpawn.transform.childCount;
@@ -55,6 +56,7 @@ public class SurvivalLevel0 : MonoBehaviour
         // Level is completed when all enemies are destroyed
         if (stateScript.destroyedEnemies == totalEnemies)
         {
+            stateScript.decreaseTime = false;
             stateScript.gameOver = true;
             sceneScript.CompleteLevel();
         }
@@ -62,6 +64,7 @@ public class SurvivalLevel0 : MonoBehaviour
         // Level failed when time is up
         if (stateScript.gameTime <= 0)
         {
+            stateScript.decreaseTime = false;
             stateScript.gameOver = true;
             sceneScript.LevelFailed();
         }

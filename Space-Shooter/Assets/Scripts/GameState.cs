@@ -19,6 +19,8 @@ public class GameState : MonoBehaviour
     private Text scoreText;
     public GameObject timeUI;
     private Text timeText;
+    public bool decreaseTime = false;
+    public bool increaseTime = false;
 
     private void Start()
     {
@@ -31,7 +33,15 @@ public class GameState : MonoBehaviour
     {
         if (gameSceneScript.gameStarted)
         {
-            gameTime -= Time.deltaTime;
+            if (decreaseTime)
+            {
+                gameTime -= Time.deltaTime;
+            }
+            else if (increaseTime)
+            {
+                gameTime += Time.deltaTime;
+            }
+            
 
             scoreText.text = ("Score:@" + levelScore.ToString()).Replace("@", System.Environment.NewLine);
             timeText.text = gameTime.ToString();
