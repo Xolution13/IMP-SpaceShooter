@@ -77,7 +77,7 @@ public class MenuScene : MonoBehaviour
 
             // 5 = Endless Menu
             case 5:
-                desiredMenuPosition = Vector3.right * 2560;
+                //desiredMenuPosition = Vector3.right * 2560;
                 break;
 
             // 6 = Story Menu

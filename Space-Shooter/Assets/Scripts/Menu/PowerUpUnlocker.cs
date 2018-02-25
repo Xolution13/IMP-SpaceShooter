@@ -32,6 +32,16 @@ public class PowerUpUnlocker : MonoBehaviour
     public Transform shieldNeededAmountMesh;
     private float shieldNeededAmount;
 
+    public Transform shrinkSymbol;
+    public Transform shrinkActualAmountMesh;
+    public Transform shrinkNeededAmountMesh;
+    private float shrinkNeededAmount;
+
+    public Transform holeSymbol;
+    public Transform holeActualAmountMesh;
+    public Transform holeNeededAmountMesh;
+    private float holeNeededAmount;
+
     private void Start()
     {
         /* Extra Life Power Up:
@@ -91,7 +101,7 @@ public class PowerUpUnlocker : MonoBehaviour
         /* Shield Power Up:
          * Set image to grey, show the loaded player alive time in the text,
          * get the needed amount and check if the needed amount was reached,
-         * if needed amount was reached - unlock weapon power up (index 3) 
+         * if needed amount was reached - unlock shield power up (index 3) 
          */
         shieldSymbol.GetComponent<Image>().color = Color.grey;
         shieldActualAmountMesh.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString();
@@ -104,6 +114,40 @@ public class PowerUpUnlocker : MonoBehaviour
             SaveManager.Instance.UnlockPowerUP(3);
         }
         Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(3));
+
+        /* Shrink Power Up:
+         * Set image to grey, show the loaded player alive time in the text,
+         * get the needed amount and check if the needed amount was reached,
+         * if needed amount was reached - unlock shrink power up (index 4) 
+         */
+        shrinkSymbol.GetComponent<Image>().color = Color.grey;
+        shrinkActualAmountMesh.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString(); //## create Unlock Item for finishing Survival Lvl 12 ## 
+        shrinkNeededAmount = Int32.Parse(shrinkNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
+
+        if (timeAlive >= shieldNeededAmount)
+        {
+            shrinkSymbol.GetComponent<Image>().color = Color.green;
+            shrinkActualAmountMesh.GetComponent<TextMeshProUGUI>().text = shrinkNeededAmount.ToString();
+            SaveManager.Instance.UnlockPowerUP(4);
+        }
+        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(4));
+
+        /* Black Hole Power Up:
+         * Set image to grey, show the loaded player alive time in the text,
+         * get the needed amount and check if the needed amount was reached,
+         * if needed amount was reached - unlock black hole power up (index 5) 
+         */
+        holeSymbol.GetComponent<Image>().color = Color.grey;
+        holeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString(); //## create Unlock Item for picked up Power Ups ## 
+        holeNeededAmount = Int32.Parse(holeNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
+
+        if (timeAlive >= holeNeededAmount)
+        {
+            holeSymbol.GetComponent<Image>().color = Color.green;
+            holeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = holeNeededAmount.ToString();
+            SaveManager.Instance.UnlockPowerUP(5);
+        }
+        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(5));
     }
 
 }
