@@ -41,7 +41,6 @@ public class GameState : MonoBehaviour
             {
                 gameTime += Time.deltaTime;
             }
-            
 
             scoreText.text = ("Score:@" + levelScore.ToString()).Replace("@", System.Environment.NewLine);
             timeText.text = gameTime.ToString();
@@ -63,11 +62,12 @@ public class GameState : MonoBehaviour
     {
         if (gameOver)
         {
+            increaseTime = false;
+            decreaseTime = false;
             SaveManager.Instance.SaveDestroyedEnemies(destroyedEnemies);
             SaveManager.Instance.SaveTimeAlive(timeAlive);
             SaveManager.Instance.Save();
             gameOver = false;
         }
-        
     }
 }
