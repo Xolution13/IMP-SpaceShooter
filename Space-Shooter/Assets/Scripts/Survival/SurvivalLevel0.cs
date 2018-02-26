@@ -14,7 +14,7 @@ public class SurvivalLevel0 : MonoBehaviour
     private bool firstSpawnOnce = false;
 
     public GameObject secondSpawn;
-    private float waitTime = 2f;
+    private float waitTime = 1f;
     private bool secondSpawnOnce = false;
     private int secondSpawnEnemyAmount;
 
@@ -34,8 +34,8 @@ public class SurvivalLevel0 : MonoBehaviour
 
     private void Update()
     {
-        // Spawn first wave after 2 seconds
-        if (stateScript.gameTime <= 28 && !firstSpawnOnce)
+        // Spawn first wave after 1 seconds
+        if (stateScript.gameTime <= 29 && !firstSpawnOnce)
         {
             Instantiate(firstSpawn, transform.position, Quaternion.identity);
             firstSpawnOnce = true;
