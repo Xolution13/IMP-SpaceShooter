@@ -16,7 +16,6 @@ public class PowerUpUnlocker : MonoBehaviour
     public Transform extraLifeNeededAmountMesh;
     private int extraLifeNeededAmount;
     
-
     public Transform weaponSymbol;
     public Transform weaponActualAmountMesh;
     public Transform weaponNeededAmountMesh;
@@ -121,13 +120,12 @@ public class PowerUpUnlocker : MonoBehaviour
          * if needed amount was reached - unlock shrink power up (index 4) 
          */
         shrinkSymbol.GetComponent<Image>().color = Color.grey;
-        shrinkActualAmountMesh.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString(); //## create Unlock Item for finishing Survival Lvl 12 ## 
-        shrinkNeededAmount = Int32.Parse(shrinkNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
+        shrinkActualAmountMesh.GetComponent<TextMeshProUGUI>().text = "0"; 
 
-        if (timeAlive >= shieldNeededAmount)
+        if (SaveManager.Instance.IsSurvivalCompleted(11))
         {
             shrinkSymbol.GetComponent<Image>().color = Color.green;
-            shrinkActualAmountMesh.GetComponent<TextMeshProUGUI>().text = shrinkNeededAmount.ToString();
+            shrinkActualAmountMesh.GetComponent<TextMeshProUGUI>().text = "1";
             SaveManager.Instance.UnlockPowerUP(4);
         }
         Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(4));
