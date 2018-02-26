@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 114180445045326512}
   m_Layer: 9
   m_Name: Dancer (6)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 114006024096703592}
   m_Layer: 9
   m_Name: Dancer (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 114142461540687462}
   m_Layer: 9
   m_Name: Dancer (4)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 114882910117380856}
   m_Layer: 9
   m_Name: Dancer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1481,7 +1481,7 @@ GameObject:
   - component: {fileID: 114981109122048386}
   m_Layer: 9
   m_Name: Dancer (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1551,7 +1551,7 @@ GameObject:
   - component: {fileID: 114132137586639648}
   m_Layer: 9
   m_Name: Dancer (7)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2311,7 +2311,7 @@ GameObject:
   - component: {fileID: 114024685766613656}
   m_Layer: 9
   m_Name: Dancer (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,7 +3229,7 @@ GameObject:
   - component: {fileID: 114562318991595068}
   m_Layer: 9
   m_Name: Dancer (8)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3354,7 +3354,7 @@ GameObject:
   - component: {fileID: 114116517664419962}
   m_Layer: 9
   m_Name: Dancer (5)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
