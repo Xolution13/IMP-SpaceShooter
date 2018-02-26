@@ -35,7 +35,7 @@ public class DancerBehaviour : MonoBehaviour
         {
             // Limit position and rotation (so we do not have to use colliders)
             transform.position = new Vector3((Mathf.Clamp(transform.position.x, -24, 24)),
-                                                transform.position.y,
+                                                0.5f,
                                                 Mathf.Clamp(transform.position.z, -16.5f, 16.5f));
             transform.rotation = Quaternion.Euler(new Vector3(0, transform.eulerAngles.y, 0));
 
