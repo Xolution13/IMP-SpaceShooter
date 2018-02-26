@@ -21,6 +21,8 @@ public class GameState : MonoBehaviour
     private Text timeText;
     public bool decreaseTime = false;
     public bool increaseTime = false;
+    public bool redColor = false;
+    public bool greenColor = false;
 
     private void Start()
     {
@@ -31,6 +33,15 @@ public class GameState : MonoBehaviour
 
     private void Update()
     {
+        if (redColor)
+        {
+            timeText.color = Color.red;
+        }
+        else if (greenColor)
+        {
+            timeText.color = Color.green;
+        }
+
         if (gameSceneScript.gameStarted)
         {
             if (decreaseTime)

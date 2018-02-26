@@ -959,7 +959,6 @@ GameObject:
   - component: {fileID: 1414722744}
   - component: {fileID: 1414722743}
   - component: {fileID: 1414722745}
-  - component: {fileID: 1414722747}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -989,6 +988,8 @@ MonoBehaviour:
   timeUI: {fileID: 44585129}
   decreaseTime: 0
   increaseTime: 0
+  redColor: 0
+  greenColor: 0
 --- !u!114 &1414722744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,8 +1013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde8f7ba8bc4cc34384721a94ab4dfd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: {fileID: 1454583425461278, guid: 9fdb37c1d7ec94148afc8321078af7e6, type: 2}
-  secondSpawn: {fileID: 1647047579775276, guid: d7d5f3f64a77fea4491d52c739a3c6d1,
+  firstSpawn: {fileID: 1421737066660108, guid: 7013582a9f83e9b45bd658d953b6e8ce, type: 2}
+  secondSpawn: {fileID: 1376280280854294, guid: e34f569c6a91ce04983fc4f354484844,
     type: 2}
 --- !u!4 &1414722746
 Transform:
@@ -1028,34 +1029,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1414722747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1414722742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ea19ad96e99634cba001dd2c77e62c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  extraLifePowerUp: {fileID: 1064378313900116, guid: 757fa61788579c64387682397292b926,
-    type: 2}
-  weaponPowerUp: {fileID: 1986192979057398, guid: 911ed4bab6a95fe45bc272a0110761e4,
-    type: 2}
-  speedPowerUp: {fileID: 1773624522289624, guid: 406861bd4fe6ad041a9b7680b5facca0,
-    type: 2}
-  shieldPowerUp: {fileID: 1062844982656684, guid: 816dbe2b2eab1ba46a7bc1107a3cbaf6,
-    type: 2}
-  shrinkPowerUp: {fileID: 1733388832783710, guid: 1ae74fe0d3b13ad43803d06f022c32de,
-    type: 2}
-  blackHolePowerUp: {fileID: 1580289222727584, guid: 7017f9b7f3237be4a8bdac1e8a59058a,
-    type: 2}
-  spawnValues: {x: 20, y: 0, z: 13}
-  spawnMostWait: 5
-  spawnLeastWait: 4
-  startWait: 3
-  stop: 0
 --- !u!1 &1593409115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,7 +1200,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4ee205cf3b9fc094ab35b46daa9cb692, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 28c158adbda51d847bb99f4a548805a9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1507,7 +1480,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 943c097650bb8b1489b8c07750068312, type: 2}
+  - {fileID: 2100000, guid: 3196b4961a1393943b1ee773a5f48d9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1558,8 +1531,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2113790041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 31.8}
-  m_LocalScale: {x: 20, y: 10, z: 80}
+  m_LocalPosition: {x: 0, y: 1, z: 75}
+  m_LocalScale: {x: 20, y: 10, z: 146}
   m_Children: []
   m_Father: {fileID: 1773351669}
   m_RootOrder: 1

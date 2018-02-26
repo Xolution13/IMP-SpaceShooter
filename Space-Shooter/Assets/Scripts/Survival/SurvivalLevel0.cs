@@ -37,7 +37,6 @@ public class SurvivalLevel0 : MonoBehaviour
         // Spawn first wave after 2 seconds
         if (stateScript.gameTime <= 28 && !firstSpawnOnce)
         {
-            Debug.Log("Spawn 1");
             Instantiate(firstSpawn, transform.position, Quaternion.identity);
             firstSpawnOnce = true;
         }
@@ -56,6 +55,7 @@ public class SurvivalLevel0 : MonoBehaviour
         // Level is completed when all enemies are destroyed
         if (stateScript.destroyedEnemies == totalEnemies)
         {
+            stateScript.greenColor = true;
             stateScript.gameOver = true;
             sceneScript.CompleteLevel();
         }
@@ -63,6 +63,8 @@ public class SurvivalLevel0 : MonoBehaviour
         // Level failed when time is up
         if (stateScript.gameTime <= 0)
         {
+            stateScript.gameTime = 0;
+            stateScript.redColor = true;
             stateScript.gameOver = true;
             sceneScript.LevelFailed();
         }
