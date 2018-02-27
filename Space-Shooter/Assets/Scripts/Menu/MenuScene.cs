@@ -230,4 +230,11 @@ public class MenuScene : MonoBehaviour
         SceneManager.LoadScene("Test");
         Debug.Log("Loading Play Test");
     }
+
+    public void OnCalibrateClick()
+    {
+        UIFader canvas = FindObjectOfType<Canvas>().GetComponent<UIFader>();
+        AccelerometerMovement.Instance.CalibrateAccelerometer();
+        canvas.FadeOut();
+    }
 }

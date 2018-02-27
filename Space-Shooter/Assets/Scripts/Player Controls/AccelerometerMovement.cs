@@ -5,6 +5,7 @@ using UnityEngine;
 public class AccelerometerMovement : MonoBehaviour
 {
     // Variables
+    public static AccelerometerMovement Instance { set; get; }
     public float movementSpeed = 50;
     private PlayerStatus status;
 
@@ -16,7 +17,7 @@ public class AccelerometerMovement : MonoBehaviour
     private void Start()
     {
         status = GetComponent<PlayerStatus>();
-        CalibrateAccelerometer();
+        Instance = this;
     }
 
     // Set calibrated input to new variable and move the player according to new input
@@ -31,7 +32,7 @@ public class AccelerometerMovement : MonoBehaviour
     }
 
     // Method for calibration
-    private void CalibrateAccelerometer()
+    public void CalibrateAccelerometer()
     {
         originalTilt = Input.acceleration;
         Quaternion rotateQuaternion = Quaternion.FromToRotation(new Vector3(0f, 0f, -1f), originalTilt);
