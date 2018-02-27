@@ -2263,7 +2263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -603}
+  m_AnchoredPosition: {x: 0, y: -631.46}
   m_SizeDelta: {x: 363.58, y: 108.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254985465
@@ -6040,7 +6040,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803356671}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -12091,6 +12091,16 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
   m_IsPrefabParent: 0
@@ -12913,8 +12923,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211.5, y: 64}
-  m_SizeDelta: {x: 423, y: 143}
+  m_AnchoredPosition: {x: -0.000012159, y: -9.646912}
+  m_SizeDelta: {x: 1034.4, y: 334.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1341570951
 MonoBehaviour:
@@ -12935,7 +12945,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Hold your Phone in a comfortable position and confirm
+  m_text: 'to play you need to calibrate your device
+
+
+    the way your device is tilted when you press the button will be the idle state
+    of your space ship'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c41b030de4f89a45b11f472e6a213c9, type: 2}
   m_sharedMaterial: {fileID: 21579660170702652, guid: 3c41b030de4f89a45b11f472e6a213c9,
@@ -12963,8 +12977,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 75
-  m_fontSizeBase: 75
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12981,7 +12995,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 46
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_enableKerning: 0
@@ -13000,15 +13014,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -429.82675, y: 0, z: 0, w: -52.502525}
+  m_margin: {x: -0.25629196, y: 0, z: 0, w: -0.23130961}
   m_textInfo:
     textComponent: {fileID: 1341570951}
-    characterCount: 53
+    characterCount: 140
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 9
+    spaceCount: 28
+    wordCount: 28
     linkCount: 0
-    lineCount: 3
+    lineCount: 5
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
