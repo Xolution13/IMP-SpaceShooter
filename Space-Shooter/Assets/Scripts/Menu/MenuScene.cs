@@ -230,4 +230,9 @@ public class MenuScene : MonoBehaviour
         SceneManager.LoadScene("Test");
         Debug.Log("Loading Play Test");
     }
+
+    public void OnCalibrateClick()
+    {
+        AccelerometerMovement.Instance.CalibrateAccelerometer();
+    }
 }
