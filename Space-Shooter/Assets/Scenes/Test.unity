@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1814,68 +1814,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: -112.79301, z: 0}
---- !u!1 &893365845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 893365848}
-  - component: {fileID: 893365847}
-  - component: {fileID: 893365846}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &893365846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 893365845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &893365847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 893365845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &893365848
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 893365845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894770361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,17 +2354,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ea19ad96e99634cba001dd2c77e62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extraLifePowerUp: {fileID: 1132803557649528, guid: 74c9cf4567b5b654db77ba268878fb66,
+  extraLifePowerUp: {fileID: 1369587633964066, guid: ed3d0f7f38306f0499384ad692a0ca13,
     type: 2}
-  weaponPowerUp: {fileID: 1629097015625272, guid: 3029066eec429ba4a9c46ecc2e0b6801,
+  weaponPowerUp: {fileID: 1192203556080466, guid: 5adb958e90fffb548a6a4fbc4a65a6a8,
     type: 2}
-  speedPowerUp: {fileID: 1897944389036732, guid: cbec47ab91e6fa040a9a6090a5380b46,
+  speedPowerUp: {fileID: 1800497427465524, guid: 7a3d23d7e7b3d424288b7d5e1ac4c880,
     type: 2}
-  shieldPowerUp: {fileID: 1024834415250910, guid: 61c6832419d6d78409280e88621c1f56,
+  shieldPowerUp: {fileID: 1189042408782148, guid: 0594ae8e20ebbdd48bb6febbe1f93e44,
     type: 2}
-  shrinkPowerUp: {fileID: 1263293440778460, guid: 7be8c94c863b8624aa255ea121d89fd2,
+  shrinkPowerUp: {fileID: 1475989745489140, guid: 14ac2ca0a717fd141af11038c3f69f2e,
     type: 2}
-  blackHolePowerUp: {fileID: 1932084191047398, guid: fc2661aeae8815044b83637e47dfc1a7,
+  blackHolePowerUp: {fileID: 1361663854940184, guid: e212a79673b7b324dbb3e5c7a3d0f7d5,
     type: 2}
   spawnValues: {x: 25, y: 0, z: 13}
   spawnMostWait: 5
@@ -2478,6 +2416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 50
+  inManuScene: 0
 --- !u!54 &1095348290
 Rigidbody:
   m_ObjectHideFlags: 0
