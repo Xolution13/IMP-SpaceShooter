@@ -233,6 +233,8 @@ public class MenuScene : MonoBehaviour
 
     public void OnCalibrateClick()
     {
+        UIFader canvas = FindObjectOfType<Canvas>().GetComponent<UIFader>();
         AccelerometerMovement.Instance.CalibrateAccelerometer();
+        canvas.FadeOut();
     }
 }
