@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2416,19 +2416,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ea19ad96e99634cba001dd2c77e62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extraLifePowerUp: {fileID: 1064378313900116, guid: 757fa61788579c64387682397292b926,
+  extraLifePowerUp: {fileID: 1132803557649528, guid: 74c9cf4567b5b654db77ba268878fb66,
     type: 2}
-  weaponPowerUp: {fileID: 1986192979057398, guid: 911ed4bab6a95fe45bc272a0110761e4,
+  weaponPowerUp: {fileID: 1629097015625272, guid: 3029066eec429ba4a9c46ecc2e0b6801,
     type: 2}
-  speedPowerUp: {fileID: 1773624522289624, guid: 406861bd4fe6ad041a9b7680b5facca0,
+  speedPowerUp: {fileID: 1897944389036732, guid: cbec47ab91e6fa040a9a6090a5380b46,
     type: 2}
-  shieldPowerUp: {fileID: 1062844982656684, guid: 816dbe2b2eab1ba46a7bc1107a3cbaf6,
+  shieldPowerUp: {fileID: 1024834415250910, guid: 61c6832419d6d78409280e88621c1f56,
     type: 2}
-  shrinkPowerUp: {fileID: 1733388832783710, guid: 1ae74fe0d3b13ad43803d06f022c32de,
+  shrinkPowerUp: {fileID: 1263293440778460, guid: 7be8c94c863b8624aa255ea121d89fd2,
     type: 2}
-  blackHolePowerUp: {fileID: 1580289222727584, guid: 7017f9b7f3237be4a8bdac1e8a59058a,
+  blackHolePowerUp: {fileID: 1932084191047398, guid: fc2661aeae8815044b83637e47dfc1a7,
     type: 2}
-  spawnValues: {x: 20, y: 0, z: 13}
+  spawnValues: {x: 25, y: 0, z: 13}
   spawnMostWait: 5
   spawnLeastWait: 4
   startWait: 3
