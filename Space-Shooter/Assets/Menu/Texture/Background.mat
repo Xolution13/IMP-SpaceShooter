@@ -64,12 +64,12 @@ Material:
     - _DstBlend: 10
     - _FaceDilate: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.715
+    - _Glossiness: 0.45
     - _GlossyReflections: 1
     - _GradientScale: 5
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
-    - _Metallic: 1
+    - _Metallic: 0
     - _Mode: 2
     - _OcclusionStrength: 1
     - _OutlineSoftness: 0
