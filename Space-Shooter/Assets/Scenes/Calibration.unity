@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2983,6 +2983,16 @@ Prefab:
       propertyPath: RotationModule.separateAxes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
   m_IsPrefabParent: 0
@@ -3430,10 +3440,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07388c2bd77dae64e8eea6d8ecc23351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startFade: {fileID: 0}
   menuContainer: {fileID: 0}
-  SURVIVAL: {fileID: 0}
-  ENDLESS: {fileID: 0}
-  STORY: {fileID: 0}
+  Survival: {fileID: 0}
+  SurvivalButtonParent: {fileID: 0}
+  Endless: {fileID: 0}
+  Story: {fileID: 0}
 --- !u!4 &2019018241
 Transform:
   m_ObjectHideFlags: 0
