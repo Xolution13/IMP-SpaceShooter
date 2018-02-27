@@ -7,8 +7,10 @@ using UnityEngine.UI;
 
 public class MenuScene : MonoBehaviour
 {
-    private CanvasGroup fadeGroup;
+    public CanvasGroup startFade;
+
     private float fadeInSpeed = 0.33f;
+    private float fadeAlpha = 0.02f;
 
     public RectTransform menuContainer;
 
@@ -16,29 +18,29 @@ public class MenuScene : MonoBehaviour
     public Transform SurvivalButtonParent;
     public GameObject Endless;
     public GameObject Story;
+    private bool calibrationFadeUsed = false;
 
     private int lastIndex = 0;
     private Vector3 desiredMenuPosition;
 
     private void Start()
     {
-        // Grab the only CanvasGroup in the scene
-        fadeGroup = FindObjectOfType<CanvasGroup>();
-
-        // Start with a white/ black screen
-        fadeGroup.alpha = 1;
+        // Set Start Alpha of startFade to 1
+        startFade.alpha = 1;
 
         // Add button on-click events to levels
         InitLevel();
 
         // Set camera position to the focused menu
         SetCameraTo(Manager.Instance.menuFocus);
+
     }
 
     private void Update()
     {
+
         // Fade-in
-        fadeGroup.alpha = 1 - Time.timeSinceLevelLoad * fadeInSpeed;
+        startFade.alpha = 1 - Time.timeSinceLevelLoad * fadeInSpeed;
 
         // Menu navigation (smooth)
         menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.1f);
@@ -137,6 +139,15 @@ public class MenuScene : MonoBehaviour
     // Buttons
     public void OnStartClick()
     {
+        StartCoroutine(CoStartClick());
+    }
+    IEnumerator CoStartClick()
+    {
+        if (!calibrationFadeUsed)
+        {
+            yield return new WaitForSeconds(0.5f);
+            calibrationFadeUsed = true;
+        }
         NavigateTo(1);
         lastIndex = 0;
         Debug.Log("StartButton has been clicked");

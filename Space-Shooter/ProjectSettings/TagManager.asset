@@ -11,6 +11,8 @@ TagManager:
   - Explosion
   - POV
   - Shield-Effect
+  - FxTemporaire
+  - Canvas
   layers:
   - Default
   - TransparentFX
