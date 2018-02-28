@@ -12,6 +12,8 @@ public class GameScene : MonoBehaviour
     private float waitTime = 2f;
     private bool endLevel;
 
+    public bool isEndless = false;
+
     private void Start()
     {
         // Get the canvas group in the scene
@@ -68,7 +70,14 @@ public class GameScene : MonoBehaviour
     public void LevelFailed()
     {
         // Focus the level selection when returning to the menu scene - Case: 4 
-        Manager.Instance.menuFocus = 4;
+        if (isEndless)
+        {
+            Manager.Instance.menuFocus = 1;
+        }
+        else
+        {
+            Manager.Instance.menuFocus = 4;
+        }
         endLevel = true;
     }
 

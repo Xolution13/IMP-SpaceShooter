@@ -68,46 +68,46 @@ public class Intro : MonoBehaviour
         }
 
         // Spawn flyer
-        if (stateScript.gameTime >= 8 && fourthSpawn)
+        if (stateScript.gameTime >= 13 && fourthSpawn)
         {
             Instantiate(flyerSpawnOne, transform.position, Quaternion.identity);
             fourthSpawn = false;
         }
-        if (stateScript.gameTime >= 13 && fivthSpawn)
+        if (stateScript.gameTime >= 18 && fivthSpawn)
         {
             Instantiate(flyerSpawnTwo, transform.position, Quaternion.identity);
             fivthSpawn = false;
         }
-        if (stateScript.gameTime >= 15 && sixthSpawn)
+        if (stateScript.gameTime >= 21 && sixthSpawn)
         {
             Instantiate(flyerSpawnThree, transform.position, Quaternion.identity);
             sixthSpawn = false;
         }
 
         // Spawn dancer
-        if (stateScript.gameTime >= 17 && seventhSpawn)
+        if (stateScript.gameTime >= 24 && seventhSpawn)
         {
             Instantiate(dancerSpawnOne, transform.position, Quaternion.identity);
             seventhSpawn = false;
         }
-        if (stateScript.gameTime >= 20 && eigthSpawn)
+        if (stateScript.gameTime >= 28 && eigthSpawn)
         {
             Instantiate(dancerSpawnTwo, transform.position, Quaternion.identity);
             eigthSpawn = false;
         }
-        if (stateScript.gameTime >= 23 && ninethSpawn)
+        if (stateScript.gameTime >= 32 && ninethSpawn)
         {
             Instantiate(dancerSpawnThree, transform.position, Quaternion.identity);
             ninethSpawn = false;
         }
 
         // Spawn attacker
-        if (stateScript.gameTime >= 26 && tenthSpawn)
+        if (stateScript.gameTime >= 35 && tenthSpawn)
         {
             Instantiate(attackerSpawnOne, transform.position, Quaternion.identity);
             tenthSpawn = false;
         }
-        if (stateScript.gameTime >= 28 && eleventhSpawn)
+        if (stateScript.gameTime >= 39 && eleventhSpawn)
         {
             Instantiate(attackerSpawnTwo, transform.position, Quaternion.identity);
             introIsDone = true;
@@ -115,19 +115,19 @@ public class Intro : MonoBehaviour
         }
 
         // Spawn rocktets
-        if (stateScript.gameTime >= 31 && twelvethSpawn)
+        if (stateScript.gameTime >= 44 && twelvethSpawn)
         {
             Instantiate(rocketSpawnOne, transform.position, Quaternion.identity);
             twelvethSpawn = false;
         }
-        if (stateScript.gameTime >= 34 && thriteenthSpawn)
+        if (stateScript.gameTime >= 49 && thriteenthSpawn)
         {
             Instantiate(rocketSpawnTwo, transform.position, Quaternion.identity);
             thriteenthSpawn = false;
         }
 
         // Spawn last intro
-        if (stateScript.gameTime >= 38 && fourteenthSpawn)
+        if (stateScript.gameTime >= 52 && fourteenthSpawn)
         {
             Instantiate(finalEntrySpawn, transform.position, Quaternion.identity);
             fourteenthSpawn = false;
