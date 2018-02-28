@@ -6,6 +6,7 @@ public class SaveState
     public int highScore = 0;
     public int destroyedEnemies = 0;
     public float timeAlive = 0;
+    public int powerUpsCollected = 0;
 
     // State of unlocked levels
     public int survivalCompletedLevel = 0;
