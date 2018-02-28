@@ -34,6 +34,7 @@ public class TurretMovement : MonoBehaviour {
 
         if (SaveManager.Instance.GetControlStatus(true))
         {
+            joystickImage.enabled = false;
             // Rotate the player to the position
             if (Input.touchCount == 1)
             {
