@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     private Vector3 center;
     private Vector3 size;
     private Vector3 pos;
+    public bool spawnEnemies = false;
 
     private int randomEnemyType;
     private int randomEnemyAmount;
@@ -23,10 +24,11 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        // TODO: Spawn Logic (when do the enemies spawn?)
-        if (Input.GetKeyUp(KeyCode.X))
+       
+        if (spawnEnemies)
         {
             SpawnEnemy();
+            spawnEnemies = false;
         }
     }
 
