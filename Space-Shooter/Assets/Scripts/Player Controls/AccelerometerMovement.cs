@@ -68,6 +68,7 @@ public class AccelerometerMovement : MonoBehaviour
         // Get the inverse of the matrix
         calibrationMatrix = matrix.inverse;
 
+        Debug.Log("Accelerometer was calibrated");
     }
 
     // Method to get the calibrated input

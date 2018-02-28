@@ -138,6 +138,8 @@ public class MenuScene : MonoBehaviour
     // Buttons
     public void OnStartClick()
     {
+        calibrationFadeUsed = false;
+
         // Check if accelerometer as selected
         if (SaveManager.Instance.GetControlStatus(true))
         {
@@ -194,16 +196,6 @@ public class MenuScene : MonoBehaviour
         Debug.Log("Selecting level: " + currentIndex);
     }
 
-    public void OnEndlessClick()
-    {
-        Endless.SetActive(true);
-        Survival.SetActive(false);
-        Story.SetActive(false);
-        NavigateTo(5);
-        lastIndex = 1;
-        Debug.Log("EndlessButton has been clicked");
-        SceneManager.LoadScene("Test");
-    }
 
     public void OnStoryClick()
     {
@@ -235,9 +227,18 @@ public class MenuScene : MonoBehaviour
         Debug.Log("BackButton has been clicked");
     }
 
-    public void OnPlayTestClick()
+    public void OnEndlessClick()
     {
-        SceneManager.LoadScene("Test");
-        Debug.Log("Loading Play Test");
+        SceneManager.LoadScene("Endless");
+        Debug.Log("Loading Endless-Level");
+    }
+
+    public void OnResetClick()
+    {
+        SaveManager.Instance.ResetSave();
+        SaveManager.Instance.Load();
+        Debug.Log("Reset was pressed");
+        NavigateTo(0);
+        lastIndex = 0;
     }
 }
