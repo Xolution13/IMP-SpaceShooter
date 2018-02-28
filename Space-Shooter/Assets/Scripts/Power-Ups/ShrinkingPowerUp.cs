@@ -6,6 +6,7 @@ public class ShrinkingPowerUp : MonoBehaviour {
 
     // Variables
     public GameObject pickUpEffect;
+    private GameState gameState;
     private PlayerStatus player;
     private PlayerStatus playerScript;
     private PowerUpSpawner spawnScript;
@@ -15,6 +16,7 @@ public class ShrinkingPowerUp : MonoBehaviour {
 
     private void Start()
     {
+        gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
         player = FindObjectOfType<PlayerStatus>();
         playerScript = player.GetComponent<PlayerStatus>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
@@ -53,6 +55,7 @@ public class ShrinkingPowerUp : MonoBehaviour {
         Instantiate(pickUpEffect, transform.position, transform.rotation);
         player.transform.localScale *= 0.5f;
         Debug.Log("Power-Up picked up!");
+        gameState.powerUpsCollected++;
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
     }

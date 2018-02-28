@@ -10,6 +10,7 @@ public class PowerUpUnlocker : MonoBehaviour
     // Variables
     private int destroyedEnemies;
     private float timeAlive;
+    private int pickUpAmount;
 
     public Transform extraLifeSymbol;
     public Transform extraLifeActualAmountMesh;
@@ -126,15 +127,16 @@ public class PowerUpUnlocker : MonoBehaviour
         }
 
         /* Black Hole Power Up:
-         * Set image to grey, show the loaded player alive time in the text,
+         * Set image to grey, show the pick up amount in the text,
          * get the needed amount and check if the needed amount was reached,
          * if needed amount was reached - unlock black hole power up (index 5) 
          */
         holeSymbol.GetComponent<Image>().color = Color.grey;
-        holeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = timeAlive.ToString(); //## create Unlock Item for picked up Power Ups ## 
+        pickUpAmount = SaveManager.Instance.GetPickUpAmount(pickUpAmount);
+        holeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = pickUpAmount.ToString();
         holeNeededAmount = Int32.Parse(holeNeededAmountMesh.GetComponent<TextMeshProUGUI>().text);
 
-        if (timeAlive >= holeNeededAmount)
+        if (pickUpAmount >= holeNeededAmount)
         {
             holeSymbol.GetComponent<Image>().color = Color.green;
             holeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = holeNeededAmount.ToString();

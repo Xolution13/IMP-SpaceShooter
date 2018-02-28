@@ -190,4 +190,33 @@ public class SaveManager : MonoBehaviour
         timeAlive = state.timeAlive;
         return timeAlive;
     }
+
+    // Save player highscore
+    public void SaveHighScore(int highScore)
+    {
+        if (state.highScore <= highScore)
+        {
+            state.highScore = highScore;
+        }
+    }
+
+    // Get player highscore
+    public int GetHighScore(int highScore)
+    {
+        highScore = state.highScore;
+        return highScore;
+    }
+
+    // Save power-up pick up amount
+    public void SavePickUpAmount(int amount)
+    {
+            state.powerUpsCollected += amount;
+    }
+
+    // Get power-up pick up amount
+    public int GetPickUpAmount(int amount)
+    {
+        amount = state.powerUpsCollected;
+        return amount;
+    }
 }
