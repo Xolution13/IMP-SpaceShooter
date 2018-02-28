@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1517,105 +1517,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158580109}
---- !u!1 &165975631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 165975632}
-  - component: {fileID: 165975636}
-  - component: {fileID: 165975635}
-  - component: {fileID: 165975634}
-  - component: {fileID: 165975633}
-  m_Layer: 5
-  m_Name: Background_more_Stars_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &165975632
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 165975631}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.99996, y: -632, z: 866.9999}
-  m_LocalScale: {x: 6222.1343, y: 3500.3875, z: 2.0736902}
-  m_Children: []
-  m_Father: {fileID: 1151414262}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &165975633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 165975631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0edf2fb4b923b0a4a8bf8840319dddfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parralax: 1
---- !u!23 &165975634
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 165975631}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 36e811a7d7003aa4187e97e585d79123, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!64 &165975635
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 165975631}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &165975636
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 165975631}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &186892930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,7 +1615,7 @@ RectTransform:
   - {fileID: 1566209310}
   - {fileID: 439486819}
   m_Father: {fileID: 1151414262}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1767,7 +1668,7 @@ GameObject:
   - component: {fileID: 227082206}
   - component: {fileID: 227082205}
   m_Layer: 5
-  m_Name: Background_more_Stars
+  m_Name: Background_Strips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1780,11 +1681,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227082203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -325, y: -196.99994, z: 866.999}
+  m_LocalPosition: {x: -965, y: -597, z: 982}
   m_LocalScale: {x: 8771.619, y: 2870.712, z: 3.465348}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1151414262}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &227082205
 MonoBehaviour:
@@ -2435,11 +2336,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259923116}
---- !u!4 &275273127 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1181597654}
 --- !u!1 &276587857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,105 +2576,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 280047022}
---- !u!1 &281811090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 281811091}
-  - component: {fileID: 281811095}
-  - component: {fileID: 281811094}
-  - component: {fileID: 281811093}
-  - component: {fileID: 281811092}
-  m_Layer: 5
-  m_Name: Background_more_Stars_4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &281811091
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 281811090}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -429, y: -306, z: 866.9997}
-  m_LocalScale: {x: 6222.133, y: 3500.3867, z: 2.0736895}
-  m_Children: []
-  m_Father: {fileID: 1151414262}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &281811092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 281811090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0edf2fb4b923b0a4a8bf8840319dddfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parralax: 0.5
---- !u!23 &281811093
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 281811090}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 36e811a7d7003aa4187e97e585d79123, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!64 &281811094
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 281811090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &281811095
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 281811090}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &293407991
 GameObject:
   m_ObjectHideFlags: 0
@@ -6020,7 +5817,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 47e0809133a72294fa0e9fe3f4413980, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf6c0889ee8c5074ca24ae1a9db103a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6213,7 +6010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -87.65}
+  m_AnchoredPosition: {x: 0, y: -84.5}
   m_SizeDelta: {x: 363.58, y: 108.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808558227
@@ -6331,7 +6128,7 @@ RectTransform:
   - {fileID: 242108536}
   - {fileID: 1433933138}
   m_Father: {fileID: 1151414262}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6864,7 +6661,7 @@ RectTransform:
   - {fileID: 1110085319}
   - {fileID: 86650273}
   m_Father: {fileID: 1151414262}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7658,105 +7455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiElement: {fileID: 803356675}
---- !u!1 &1059575104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1059575105}
-  - component: {fileID: 1059575108}
-  - component: {fileID: 1059575107}
-  - component: {fileID: 1059575106}
-  - component: {fileID: 1059575110}
-  m_Layer: 5
-  m_Name: Background_Stars
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1059575105
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1059575104}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -651.99994, y: -356.99997, z: 866.9999}
-  m_LocalScale: {x: 5269.871, y: 2720.5977, z: 1.5294182}
-  m_Children: []
-  m_Father: {fileID: 1151414262}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1059575106
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1059575104}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: c1f691ab3740a0649b8d8982efaf01fa, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!64 &1059575107
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1059575104}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1059575108
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1059575104}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1059575110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1059575104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0edf2fb4b923b0a4a8bf8840319dddfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parralax: 3
 --- !u!1 &1089774380
 GameObject:
   m_ObjectHideFlags: 0
@@ -8457,7 +8155,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Stay 1:30 minutes alive
+  m_text: Stay 90 Secounds alive
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c41b030de4f89a45b11f472e6a213c9, type: 2}
   m_sharedMaterial: {fileID: 21579660170702652, guid: 3c41b030de4f89a45b11f472e6a213c9,
@@ -8525,10 +8223,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -52.502525}
   m_textInfo:
     textComponent: {fileID: 1144526262}
-    characterCount: 23
+    characterCount: 22
     spriteCount: 0
     spaceCount: 3
-    wordCount: 5
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -8584,11 +8282,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1059575105}
-  - {fileID: 1897800755}
-  - {fileID: 165975632}
-  - {fileID: 281811091}
-  - {fileID: 275273127}
   - {fileID: 1889742706}
   - {fileID: 825115869}
   - {fileID: 2106268948}
@@ -8596,6 +8289,7 @@ RectTransform:
   - {fileID: 1221411631}
   - {fileID: 1819509955}
   - {fileID: 894559442}
+  - {fileID: 227082204}
   m_Father: {fileID: 1050322997}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8642,7 +8336,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1151414262}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
@@ -8671,19 +8365,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -627
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -247
+      value: 153.00006
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 980
+      value: 787
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_LocalRotation.y
@@ -8691,7 +8385,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_LocalRotation.w
@@ -8699,7 +8393,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4393498566918100, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
@@ -10398,1782 +10092,1892 @@ Prefab:
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
-      value: 20.0000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198982722561064974, guid: 9c0d27e718033bd4893578b016f64b8e,
         type: 2}
@@ -12248,86 +12052,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c0d27e718033bd4893578b016f64b8e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1185883740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1185883741}
-  - component: {fileID: 1185883743}
-  - component: {fileID: 1185883742}
-  - component: {fileID: 1185883744}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1185883741
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185883740}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 640, y: 400.00006}
-  m_SizeDelta: {x: 8005, y: 4499}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1185883742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185883740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 172e43e12e178f44a810ac019b2eb8ba, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1185883743
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185883740}
---- !u!225 &1185883744
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185883740}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &1188430306
 GameObject:
   m_ObjectHideFlags: 0
@@ -12502,7 +12226,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1217821426
 GameObject:
@@ -12690,7 +12414,7 @@ RectTransform:
   - {fileID: 329940191}
   - {fileID: 953224299}
   m_Father: {fileID: 1151414262}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15290,7 +15014,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Stay 3 minutes alive
+  m_text: Stay 180 Secounds alive
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c41b030de4f89a45b11f472e6a213c9, type: 2}
   m_sharedMaterial: {fileID: 21579660170702652, guid: 3c41b030de4f89a45b11f472e6a213c9,
@@ -15358,7 +15082,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -52.502525}
   m_textInfo:
     textComponent: {fileID: 1685299045}
-    characterCount: 20
+    characterCount: 23
     spriteCount: 0
     spaceCount: 3
     wordCount: 4
@@ -16042,86 +15766,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1788810580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1788810581}
-  - component: {fileID: 1788810584}
-  - component: {fileID: 1788810583}
-  - component: {fileID: 1788810582}
-  m_Layer: 5
-  m_Name: Image (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1788810581
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788810580}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 640, y: 400.00006}
-  m_SizeDelta: {x: 8005, y: 4499}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &1788810582
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788810580}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
---- !u!114 &1788810583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788810580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 172e43e12e178f44a810ac019b2eb8ba, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1788810584
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788810580}
 --- !u!1 &1793363655
 GameObject:
   m_ObjectHideFlags: 0
@@ -16971,7 +16615,7 @@ RectTransform:
   - {fileID: 761564864}
   - {fileID: 57186538}
   m_Father: {fileID: 1151414262}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17562,7 +17206,7 @@ RectTransform:
   - {fileID: 749724756}
   - {fileID: 1809368849}
   m_Father: {fileID: 1151414262}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17602,105 +17246,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1889742705}
---- !u!1 &1897800754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1897800755}
-  - component: {fileID: 1897800759}
-  - component: {fileID: 1897800758}
-  - component: {fileID: 1897800757}
-  - component: {fileID: 1897800756}
-  m_Layer: 5
-  m_Name: Background_more_Stars_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1897800755
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1897800754}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -525.99994, y: 459.99997, z: 866.9999}
-  m_LocalScale: {x: 6519.6562, y: 3667.7644, z: 2.172847}
-  m_Children: []
-  m_Father: {fileID: 1151414262}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1897800756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1897800754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0edf2fb4b923b0a4a8bf8840319dddfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parralax: 1
---- !u!23 &1897800757
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1897800754}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 36e811a7d7003aa4187e97e585d79123, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!64 &1897800758
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1897800754}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1897800759
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1897800754}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1908923584
 GameObject:
   m_ObjectHideFlags: 0
@@ -18057,7 +17602,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 5
+  m_text: 150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c41b030de4f89a45b11f472e6a213c9, type: 2}
   m_sharedMaterial: {fileID: 21579660170702652, guid: 3c41b030de4f89a45b11f472e6a213c9,
@@ -18125,7 +17670,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0.29844454, z: 0, w: -0.4014917}
   m_textInfo:
     textComponent: {fileID: 1967361629}
-    characterCount: 1
+    characterCount: 3
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -18211,7 +17756,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Kill 250 enemy's
+  m_text: Kill 150 enemy's
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c41b030de4f89a45b11f472e6a213c9, type: 2}
   m_sharedMaterial: {fileID: 21579660170702652, guid: 3c41b030de4f89a45b11f472e6a213c9,
@@ -18501,7 +18046,7 @@ GameObject:
   - component: {fileID: 2019650536}
   - component: {fileID: 2019650535}
   m_Layer: 0
-  m_Name: Calibration_Discription (1)
+  m_Name: Reset_Duration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18544,7 +18089,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\rIf you press this button, you lose your progress."
+  m_text: "\rIf you press this button, you lose your progress and the Game will Close."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c41b030de4f89a45b11f472e6a213c9, type: 2}
   m_sharedMaterial: {fileID: 21579660170702652, guid: 3c41b030de4f89a45b11f472e6a213c9,
@@ -18590,7 +18135,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 54
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_enableKerning: 0
@@ -18612,12 +18157,12 @@ MonoBehaviour:
   m_margin: {x: -429.82675, y: 0, z: 0, w: -52.502525}
   m_textInfo:
     textComponent: {fileID: 2019650535}
-    characterCount: 50
+    characterCount: 74
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 10
+    spaceCount: 13
+    wordCount: 15
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -18844,7 +18389,7 @@ RectTransform:
   - {fileID: 1939385506}
   - {fileID: 1355915190}
   m_Father: {fileID: 1151414262}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
