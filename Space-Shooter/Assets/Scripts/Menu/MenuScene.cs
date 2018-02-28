@@ -58,7 +58,6 @@ public class MenuScene : MonoBehaviour
                 desiredMenuPosition = Vector3.zero;
                 break;
 
-
             // 1 = Play Menu
             case 1:
                 desiredMenuPosition = Vector3.right * 1280;
@@ -139,7 +138,17 @@ public class MenuScene : MonoBehaviour
     // Buttons
     public void OnStartClick()
     {
-        StartCoroutine(CoStartClick());
+        // Check if accelerometer as selected
+        if (SaveManager.Instance.GetControlStatus(true))
+        {
+            StartCoroutine(CoStartClick());
+        }
+        // If joystick was selected -> no need to calibrate accelerometer
+        else
+        {
+            NavigateTo(1);
+            lastIndex = 0;
+        }
     }
     IEnumerator CoStartClick()
     {
