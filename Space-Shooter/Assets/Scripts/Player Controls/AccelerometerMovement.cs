@@ -20,7 +20,7 @@ public class AccelerometerMovement : MonoBehaviour
     private void Start()
     {
         // Load the calibration matrix for the accelerometer
-        SaveManager.Instance.GetAccelerometerCalibration(calibrationMatrix);
+        calibrationMatrix = SaveManager.Instance.GetAccelerometerCalibration(calibrationMatrix);
 
         status = GetComponent<PlayerStatus>();
         if (!inMenuScene)
@@ -57,6 +57,11 @@ public class AccelerometerMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void OnCalibrationClick()
+    {
+        SaveManager.Instance.CalibrateAccelerometer(calibrationMatrix);
     }
 
     // Method to get the calibrated input
