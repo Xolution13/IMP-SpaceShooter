@@ -25,7 +25,7 @@ public class TurretMovement : MonoBehaviour {
         fireRate = bulletFireRate;
 
         shootJoystick = GameObject.FindGameObjectWithTag("ShootingJoystick").GetComponent<VirtualJoystick>();
-        joystickImage = GameObject.FindGameObjectWithTag("MovementJoystick").GetComponent<Image>();
+        joystickImage = GameObject.FindGameObjectWithTag("ShootingJoystick").GetComponent<Image>();
     }
 
     private void Update()
@@ -34,6 +34,7 @@ public class TurretMovement : MonoBehaviour {
 
         if (SaveManager.Instance.GetControlStatus(true))
         {
+            joystickImage.enabled = false;
             // Rotate the player to the position
             if (Input.touchCount == 1)
             {
