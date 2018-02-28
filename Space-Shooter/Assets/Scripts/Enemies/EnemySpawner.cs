@@ -19,7 +19,6 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<AccelerometerMovement>();
-        //spawnArea = gameObject;
     }
 
     private void Update()
