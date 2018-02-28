@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AccelerometerMovement : MonoBehaviour
 {
@@ -8,17 +9,19 @@ public class AccelerometerMovement : MonoBehaviour
     public float movementSpeed = 50;
     private PlayerStatus status;
     private VirtualJoystick moveJoystick;
+    private Image joystickImage;
 
     private Matrix4x4 calibrationMatrix;
     private Vector3 originalTilt = Vector3.zero;
     private Vector3 _InputDir;
     public bool inMenuScene = false;
 
-    // Load accelerometer callibration -> this should be before scene loads
+    // Get references
     private void Start()
     {
         status = GetComponent<PlayerStatus>();
         moveJoystick = FindObjectOfType<VirtualJoystick>();
+        joystickImage = FindObjectOfType<VirtualJoystick>().GetComponent<Image>();
     }
 
     // Set calibrated input to new variable and move the player according to new input
@@ -31,6 +34,7 @@ public class AccelerometerMovement : MonoBehaviour
                 // Set the status according to the save file
                 if (SaveManager.Instance.GetControlStatus(true))
                 {
+                    joystickImage.enabled = false;
                     _InputDir = GetAccelerometer(Input.acceleration);
                     transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
                     transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
@@ -39,6 +43,7 @@ public class AccelerometerMovement : MonoBehaviour
                 {
                     if (moveJoystick.InputDirection != Vector3.zero)
                     {
+                        joystickImage.enabled = true;
                         _InputDir = moveJoystick.InputDirection;
                         transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
                         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
