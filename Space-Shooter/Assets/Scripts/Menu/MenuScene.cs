@@ -146,6 +146,7 @@ public class MenuScene : MonoBehaviour
         // If joystick was selected -> no need to calibrate accelerometer
         else
         {
+            calibrationFadeUsed = true;
             NavigateTo(1);
             lastIndex = 0;
         }

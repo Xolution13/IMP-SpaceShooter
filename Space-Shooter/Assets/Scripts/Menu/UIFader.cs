@@ -9,13 +9,16 @@ public class UIFader : MonoBehaviour {
 
     public void FadeIn()
     {
-        if(!fadeUsed)
+        // Only fade in, if we need calibration
+        if (SaveManager.Instance.GetControlStatus(true))
         {
-            StartCoroutine(FadeCanvasGroup(uiElement, uiElement.alpha, 1));
-            uiElement.blocksRaycasts = true;
-            fadeUsed = true;
+            if (!fadeUsed)
+            {
+                StartCoroutine(FadeCanvasGroup(uiElement, uiElement.alpha, 1));
+                uiElement.blocksRaycasts = true;
+                fadeUsed = true;
+            }
         }
-
     }
 
     public void FadeOut()
