@@ -25,8 +25,8 @@ public class AccelerometerMovement : MonoBehaviour
         status = GetComponent<PlayerStatus>();
         if (!inMenuScene)
         {
-            moveJoystick = FindObjectOfType<VirtualJoystick>().GetComponent<VirtualJoystick>();
-            joystickImage = FindObjectOfType<VirtualJoystick>().GetComponent<Image>();
+            moveJoystick = GameObject.FindGameObjectWithTag("MovementJoystick").GetComponent<VirtualJoystick>();
+            joystickImage = GameObject.FindGameObjectWithTag("MovementJoystick").GetComponent<Image>();
         }
     }
 

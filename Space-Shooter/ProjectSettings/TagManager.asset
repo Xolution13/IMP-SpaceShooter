@@ -13,6 +13,8 @@ TagManager:
   - Shield-Effect
   - FxTemporaire
   - Canvas
+  - MovementJoystick
+  - ShootingJoystick
   layers:
   - Default
   - TransparentFX

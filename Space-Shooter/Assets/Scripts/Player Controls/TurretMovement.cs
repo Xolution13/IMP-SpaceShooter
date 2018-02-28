@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurretMovement : MonoBehaviour {
 
@@ -15,25 +16,46 @@ public class TurretMovement : MonoBehaviour {
     private bool shootingActivated = false;
     public bool bulletPowerUpActive = false;
 
+    private VirtualJoystick shootJoystick;
+    private Image joystickImage;
+
     private void Start()
     {
         status = FindObjectOfType<PlayerStatus>().GetComponent<PlayerStatus>();
         fireRate = bulletFireRate;
+
+        shootJoystick = GameObject.FindGameObjectWithTag("ShootingJoystick").GetComponent<VirtualJoystick>();
+        joystickImage = GameObject.FindGameObjectWithTag("MovementJoystick").GetComponent<Image>();
     }
 
     private void Update()
     {
         Plane playerPlane = new Plane(Vector3.up, transform.position);
 
-        // Rotate the player to the position
-        if (Input.touchCount == 1)
+        if (SaveManager.Instance.GetControlStatus(true))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-
-            if (playerPlane.Raycast(ray, out hitDist))
+            // Rotate the player to the position
+            if (Input.touchCount == 1)
             {
-                Vector3 targetPoint = ray.GetPoint(hitDist);
-                Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+
+                if (playerPlane.Raycast(ray, out hitDist))
+                {
+                    Vector3 targetPoint = ray.GetPoint(hitDist);
+                    Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+                    targetRotation.x = 0;
+                    targetRotation.z = 0;
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 9f * Time.deltaTime);
+                    shootingActivated = true;
+                }
+            }
+        }
+        else
+        {
+            if (shootJoystick.InputDirection != Vector3.zero)
+            {
+                joystickImage.enabled = true;
+                Quaternion targetRotation = Quaternion.LookRotation(shootJoystick.InputDirection, Vector3.zero);
                 targetRotation.x = 0;
                 targetRotation.z = 0;
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 7f * Time.deltaTime);
