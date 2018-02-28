@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -915,11 +915,13 @@ MonoBehaviour:
   levelScore: 0
   playerLifes: 0
   timeAlive: 0
+  powerUpsCollected: 0
   gameOver: 0
   countPlayTime: 1
   gameTime: 30
   scoreUI: {fileID: 216549822}
   timeUI: {fileID: 44585129}
+  highScoreUI: {fileID: 0}
   decreaseTime: 0
   increaseTime: 0
   redColor: 0
@@ -948,8 +950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde8f7ba8bc4cc34384721a94ab4dfd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: {fileID: 1399290685776034, guid: 9fdb37c1d7ec94148afc8321078af7e6, type: 2}
-  secondSpawn: {fileID: 1073192523324862, guid: d7d5f3f64a77fea4491d52c739a3c6d1,
+  firstSpawn: {fileID: 1399290685776034, guid: 7e481e1fbf877484f8abd16c4fd349bf, type: 2}
+  secondSpawn: {fileID: 1073192523324862, guid: 3182c5695afda3b4d9cebcb7d29d6304,
     type: 2}
 --- !u!4 &1414722746
 Transform:

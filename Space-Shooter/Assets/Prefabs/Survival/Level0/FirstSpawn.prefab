@@ -3051,7 +3051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+  deathEffect: {fileID: 1281720627697908, guid: 9b6aa0a0d5848164ca3407b49c78ef73,
     type: 2}
   health: 1
   points: 10
@@ -3082,7 +3082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+  deathEffect: {fileID: 1281720627697908, guid: 9b6aa0a0d5848164ca3407b49c78ef73,
     type: 2}
   health: 1
   points: 10
@@ -3098,7 +3098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+  deathEffect: {fileID: 1281720627697908, guid: 9b6aa0a0d5848164ca3407b49c78ef73,
     type: 2}
   health: 1
   points: 10
@@ -3114,7 +3114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+  deathEffect: {fileID: 1281720627697908, guid: 9b6aa0a0d5848164ca3407b49c78ef73,
     type: 2}
   health: 1
   points: 10
@@ -3169,7 +3169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+  deathEffect: {fileID: 1281720627697908, guid: 9b6aa0a0d5848164ca3407b49c78ef73,
     type: 2}
   health: 1
   points: 10
@@ -3224,7 +3224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+  deathEffect: {fileID: 1281720627697908, guid: 9b6aa0a0d5848164ca3407b49c78ef73,
     type: 2}
   health: 1
   points: 10
@@ -3321,7 +3321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b07093454fa7ce428ffdd991746fe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1412985128309870, guid: e54db04b64ec46a4e9accbb14c567318,
+  deathEffect: {fileID: 1281720627697908, guid: 9b6aa0a0d5848164ca3407b49c78ef73,
     type: 2}
   health: 1
   points: 10
