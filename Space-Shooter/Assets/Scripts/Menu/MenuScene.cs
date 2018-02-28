@@ -196,7 +196,6 @@ public class MenuScene : MonoBehaviour
         Debug.Log("Selecting level: " + currentIndex);
     }
 
-
     public void OnStoryClick()
     {
         Story.SetActive(true);
@@ -236,9 +235,6 @@ public class MenuScene : MonoBehaviour
     public void OnResetClick()
     {
         SaveManager.Instance.ResetSave();
-        SaveManager.Instance.Load();
-        Debug.Log("Reset was pressed");
-        NavigateTo(0);
-        lastIndex = 0;
+        Application.Quit();
     }
 }

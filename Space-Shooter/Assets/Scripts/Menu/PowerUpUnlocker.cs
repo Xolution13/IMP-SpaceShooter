@@ -59,7 +59,6 @@ public class PowerUpUnlocker : MonoBehaviour
             extraLifeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = extraLifeNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(0);
         }
-        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(0));
 
         /* Weapon Power Up:
          * Set image to grey, load the player alive time and show it in the text,
@@ -78,7 +77,6 @@ public class PowerUpUnlocker : MonoBehaviour
             weaponActualAmountMesh.GetComponent<TextMeshProUGUI>().text = weaponNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(1);
         }
-        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(1));
 
         /* Speed Power Up:
          * Set image to grey, show the loaded destroyed enemy amount in text,
@@ -95,7 +93,6 @@ public class PowerUpUnlocker : MonoBehaviour
             speedActualAmountMesh.GetComponent<TextMeshProUGUI>().text = speedNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(2);
         }
-        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(2));
 
         /* Shield Power Up:
          * Set image to grey, show the loaded player alive time in the text,
@@ -112,7 +109,6 @@ public class PowerUpUnlocker : MonoBehaviour
             shieldActualAmountMesh.GetComponent<TextMeshProUGUI>().text = shieldNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(3);
         }
-        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(3));
 
         /* Shrink Power Up:
          * Set image to grey, show the loaded player alive time in the text,
@@ -128,7 +124,6 @@ public class PowerUpUnlocker : MonoBehaviour
             shrinkActualAmountMesh.GetComponent<TextMeshProUGUI>().text = "1";
             SaveManager.Instance.UnlockPowerUP(4);
         }
-        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(4));
 
         /* Black Hole Power Up:
          * Set image to grey, show the loaded player alive time in the text,
@@ -145,7 +140,5 @@ public class PowerUpUnlocker : MonoBehaviour
             holeActualAmountMesh.GetComponent<TextMeshProUGUI>().text = holeNeededAmount.ToString();
             SaveManager.Instance.UnlockPowerUP(5);
         }
-        Debug.Log(SaveManager.Instance.IsPowerUpUnlocked(5));
     }
-
 }
