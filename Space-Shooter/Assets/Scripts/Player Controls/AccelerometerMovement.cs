@@ -51,7 +51,7 @@ public class AccelerometerMovement : MonoBehaviour
                     {
                         joystickImage.enabled = true;
                         _InputDir = moveJoystick.InputDirection;
-                        transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * (movementSpeed / 2)), 0.0f, ((_InputDir.y) * Time.deltaTime * (movementSpeed / 2))));
+                        transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * (movementSpeed -30)), 0.0f, ((_InputDir.y) * Time.deltaTime * (movementSpeed -30))));
                         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
                     }
                 }
