@@ -319,7 +319,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 95355525066903798, guid: 1c72997f2d6770b4b9483ca8f5641e10,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95355525066903798, guid: 1c72997f2d6770b4b9483ca8f5641e10, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1c72997f2d6770b4b9483ca8f5641e10, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &216549822
@@ -1101,7 +1107,7 @@ MonoBehaviour:
     type: 2}
   blackHolePowerUp: {fileID: 1361663854940184, guid: e212a79673b7b324dbb3e5c7a3d0f7d5,
     type: 2}
-  spawnValues: {x: 16, y: 0, z: 23}
+  spawnValues: {x: 23, y: 0, z: 16}
   spawnMostWait: 75
   spawnLeastWait: 30
   startWait: 30
@@ -1157,6 +1163,28 @@ MonoBehaviour:
   finalEntrySpawn: {fileID: 1409823226830274, guid: 607cbd4b92ca4b54082a9d375286f1d3,
     type: 2}
   introIsDone: 0
+--- !u!1 &1445286293 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1163130564786374, guid: 1c72997f2d6770b4b9483ca8f5641e10,
+    type: 2}
+  m_PrefabInternal: {fileID: 179635558}
+--- !u!95 &1445286294
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1445286293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 758d12fd1a7658c4c8d5e9ea2e16c8e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1593409115
 GameObject:
   m_ObjectHideFlags: 0
