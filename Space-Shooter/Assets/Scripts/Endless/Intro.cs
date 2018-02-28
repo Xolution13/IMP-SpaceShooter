@@ -127,7 +127,7 @@ public class Intro : MonoBehaviour
         }
 
         // Spawn last intro
-        if (stateScript.gameTime >= 34 && fourteenthSpawn)
+        if (stateScript.gameTime >= 38 && fourteenthSpawn)
         {
             Instantiate(finalEntrySpawn, transform.position, Quaternion.identity);
             fourteenthSpawn = false;
