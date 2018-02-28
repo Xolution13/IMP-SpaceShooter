@@ -1,6 +1,8 @@
 # IMP-SpaceShooter
 Space-Shooter Unity Project for Image Processing
 
+To start the game, either start PreLoader-scene in Unity Editor or build the game!
+
 also known as:
 ![logo_zeichenflache_1](https://user-images.githubusercontent.com/22793787/36817014-f053d33e-1cdf-11e8-9c59-8088d6945282.png)
 
