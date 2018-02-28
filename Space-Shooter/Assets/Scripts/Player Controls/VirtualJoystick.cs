@@ -26,8 +26,8 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             pos.x = (pos.x / joystickImg.rectTransform.sizeDelta.x);
             pos.y = (pos.y / joystickImg.rectTransform.sizeDelta.y);
 
-            float x = (joystickImg.rectTransform.pivot.x == 1) ? pos.x * 2 + 1 : pos.x * 2 - 1;
-            float y = (joystickImg.rectTransform.pivot.y == 1) ? pos.y * 2 + 1 : pos.y * 2 - 1;
+            float x = (joystickImg.rectTransform.pivot.x == 1) ? pos.x * 2 + 1 : pos.x * 2;
+            float y = (joystickImg.rectTransform.pivot.y == 1) ? pos.y * 2 + 1 : pos.y * 2;
 
             InputDirection = new Vector3(x, y, 0);
             InputDirection = (InputDirection.magnitude > 1) ? InputDirection.normalized : InputDirection;
