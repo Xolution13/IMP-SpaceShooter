@@ -10,6 +10,7 @@ public class GameState : MonoBehaviour
     public int levelScore = 0;
     public int playerLifes = 0;
     public float timeAlive = 0;
+    public int powerUpsCollected = 0;
     public bool gameOver;
     public bool countPlayTime = true;
     public float gameTime = 30;
@@ -75,6 +76,8 @@ public class GameState : MonoBehaviour
         {
             increaseTime = false;
             decreaseTime = false;
+            SaveManager.Instance.SaveHighScore(levelScore);
+            SaveManager.Instance.SavePickUpAmount(powerUpsCollected);
             SaveManager.Instance.SaveDestroyedEnemies(destroyedEnemies);
             SaveManager.Instance.SaveTimeAlive(timeAlive);
             SaveManager.Instance.Save();

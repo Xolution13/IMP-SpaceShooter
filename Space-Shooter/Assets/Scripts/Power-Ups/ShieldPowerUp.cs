@@ -7,6 +7,7 @@ public class ShieldPowerUp : MonoBehaviour
     // Variables
     public GameObject pickUpEffect;
     public GameObject shieldEffect;
+    private GameState gameState;
     private GameObject shieldObject;
     private PlayerStatus player;
     private PlayerStatus playerScript;
@@ -16,6 +17,7 @@ public class ShieldPowerUp : MonoBehaviour
 
     private void Awake()
     {
+        gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
         player = FindObjectOfType<PlayerStatus>();
         playerScript = player.GetComponent<PlayerStatus>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
@@ -52,8 +54,9 @@ public class ShieldPowerUp : MonoBehaviour
     // Instantiate pick-up effect and enable power-up effect
     private void PickUp()
     {
-        //Instantiate(pickUpEffect, transform.position, transform.rotation);
+        Instantiate(pickUpEffect, transform.position, transform.rotation);
         Debug.Log("Power-Up picked up!");
+        gameState.powerUpsCollected++;
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
         player.isInvulnerable = true;

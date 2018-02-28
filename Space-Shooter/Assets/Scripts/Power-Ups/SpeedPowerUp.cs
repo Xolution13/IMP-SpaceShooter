@@ -6,6 +6,7 @@ public class SpeedPowerUp : MonoBehaviour
 {
     // Variables
 	public GameObject pickUpEffect;
+    private GameState gameState;
 	private AccelerometerMovement player;
 	private AccelerometerMovement playerScript;
 	private PowerUpSpawner spawnScript;
@@ -14,7 +15,8 @@ public class SpeedPowerUp : MonoBehaviour
 
 	private void Start()
     {
-		player = FindObjectOfType<AccelerometerMovement>();
+        gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
+        player = FindObjectOfType<AccelerometerMovement>();
 		playerScript = player.GetComponent<AccelerometerMovement>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
 	}
@@ -48,8 +50,9 @@ public class SpeedPowerUp : MonoBehaviour
     // Instantiate pick-up effect and enable power-up effect
     private void PickUp()
     {
-        //Instantiate(pickUpEffect, transform.position, transform.rotation);
+        Instantiate(pickUpEffect, transform.position, transform.rotation);
         Debug.Log("Power-Up picked up!");
+        gameState.powerUpsCollected++;
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
         playerScript.movementSpeed = 80;

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletsPowerUp : MonoBehaviour {
-
+public class BulletsPowerUp : MonoBehaviour
+{
     // Variables
     public GameObject pickUpEffect;
+    private GameState gameState;
     private PlayerStatus player;
     private TurretMovement playerScript;
     private PowerUpSpawner spawnScript;
@@ -14,6 +15,7 @@ public class BulletsPowerUp : MonoBehaviour {
 
     private void Start()
     {
+        gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
         player = FindObjectOfType<PlayerStatus>();
         playerScript = FindObjectOfType<TurretMovement>().GetComponent<TurretMovement>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
@@ -47,8 +49,9 @@ public class BulletsPowerUp : MonoBehaviour {
     // Instantiate pick-up effect and enable power-up effect
     private void PickUp()
     {
-        //Instantiate(pickUpEffect, transform.position, transform.rotation);
+        Instantiate(pickUpEffect, transform.position, transform.rotation);
         Debug.Log("Power-Up picked up!");
+        gameState.powerUpsCollected++;
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
         playerScript.bulletPowerUpActive = true;

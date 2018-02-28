@@ -6,12 +6,14 @@ public class ExtraLifePowerUp : MonoBehaviour
 {
     // Variables
     public GameObject pickUpEffect;
+    private GameState gameState;
     private PlayerStatus player;
     private PlayerStatus playerScript;
     private PowerUpSpawner spawnScript;
 
     private void Start()
     {
+        gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
         player = FindObjectOfType<PlayerStatus>();
         playerScript = player.GetComponent<PlayerStatus>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
@@ -22,7 +24,8 @@ public class ExtraLifePowerUp : MonoBehaviour
     {
 		if (other.gameObject.tag == "Player")
         {
-            //Instantiate(pickUpEffect, transform.position, transform.rotation);
+            Instantiate(pickUpEffect, transform.position, transform.rotation);
+            gameState.powerUpsCollected++;
             playerScript.playerLifes++;
 			spawnScript.stop = false;
 			Destroy(gameObject);
