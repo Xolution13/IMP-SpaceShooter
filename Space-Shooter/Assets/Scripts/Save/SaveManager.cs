@@ -101,6 +101,28 @@ public class SaveManager : MonoBehaviour
         volume *= 100;
     }
 
+    // Save the calibration
+    public void CalibrateAccelerometer(Matrix4x4 calibrationMatrix)
+    {
+        Vector3 originalTilt = Input.acceleration;
+        Quaternion rotateQuaternion = Quaternion.FromToRotation(new Vector3(0f, 0f, -1f), originalTilt);
+
+        // Create identity matrix and rotate our matrix to match up with down vec
+        Matrix4x4 matrix = Matrix4x4.TRS(Vector3.zero, rotateQuaternion, new Vector3(1f, 1f, 1f));
+
+        // Get the inverse of the matrix
+        calibrationMatrix = matrix.inverse;
+        state.calibrationMatrix = calibrationMatrix;
+        Debug.Log("Accelerometer was calibrated");
+    }
+
+    // Get the calibration
+    public Matrix4x4 GetAccelerometerCalibration(Matrix4x4 calibrationMatrix)
+    {
+        calibrationMatrix = state.calibrationMatrix;
+        return calibrationMatrix;
+    }
+
     // Get the saved control state
     public bool GetControlStatus(bool status)
     {

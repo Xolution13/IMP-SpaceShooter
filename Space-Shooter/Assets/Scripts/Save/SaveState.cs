@@ -1,4 +1,6 @@
-﻿public class SaveState
+﻿using UnityEngine;
+
+public class SaveState
 {
     // State of current highscore
     public int highScore = 0;
@@ -14,4 +16,5 @@
     public float musicSetting = 100;
     public bool useJoystick = false;
     public bool useAccelerometer = true;
+    public Matrix4x4 calibrationMatrix;
 }

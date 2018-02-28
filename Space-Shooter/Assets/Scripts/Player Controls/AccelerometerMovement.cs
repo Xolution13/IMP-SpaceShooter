@@ -19,6 +19,9 @@ public class AccelerometerMovement : MonoBehaviour
     // Get references
     private void Start()
     {
+        // Load the calibration matrix for the accelerometer
+        SaveManager.Instance.GetAccelerometerCalibration(calibrationMatrix);
+
         status = GetComponent<PlayerStatus>();
         if (!inMenuScene)
         {
@@ -56,25 +59,10 @@ public class AccelerometerMovement : MonoBehaviour
         }
     }
 
-    // Method for calibration
-    public void CalibrateAccelerometer()
-    {
-        originalTilt = Input.acceleration;
-        Quaternion rotateQuaternion = Quaternion.FromToRotation(new Vector3(0f, 0f, -1f), originalTilt);
-
-        // Create identity matrix and rotate our matrix to match up with down vec
-        Matrix4x4 matrix = Matrix4x4.TRS(Vector3.zero, rotateQuaternion, new Vector3(1f, 1f, 1f));
-
-        // Get the inverse of the matrix
-        calibrationMatrix = matrix.inverse;
-
-        Debug.Log("Accelerometer was calibrated");
-    }
-
     // Method to get the calibrated input
     private Vector3 GetAccelerometer(Vector3 accelerator)
     {
-        Vector3 accel = this.calibrationMatrix.MultiplyVector(accelerator);
+        Vector3 accel = calibrationMatrix.MultiplyVector(accelerator);
         return accel;
     }
 }
