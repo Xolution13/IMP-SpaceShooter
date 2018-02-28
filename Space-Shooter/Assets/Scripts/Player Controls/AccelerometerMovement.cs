@@ -5,9 +5,9 @@ using UnityEngine;
 public class AccelerometerMovement : MonoBehaviour
 {
     // Variables
-    public static AccelerometerMovement Instance { set; get; }
     public float movementSpeed = 50;
     private PlayerStatus status;
+    private VirtualJoystick moveJoystick;
 
     private Matrix4x4 calibrationMatrix;
     private Vector3 originalTilt = Vector3.zero;
@@ -18,7 +18,7 @@ public class AccelerometerMovement : MonoBehaviour
     private void Start()
     {
         status = GetComponent<PlayerStatus>();
-        Instance = this;
+        moveJoystick = FindObjectOfType<VirtualJoystick>();
     }
 
     // Set calibrated input to new variable and move the player according to new input
@@ -28,12 +28,24 @@ public class AccelerometerMovement : MonoBehaviour
         {
             if (!status.isRespawning)
             {
-                _InputDir = GetAccelerometer(Input.acceleration);
-                transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
-                transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
+                // Set the status according to the save file
+                if (SaveManager.Instance.GetControlStatus(true))
+                {
+                    _InputDir = GetAccelerometer(Input.acceleration);
+                    transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
+                    transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
+                }
+                else
+                {
+                    if (moveJoystick.InputDirection != Vector3.zero)
+                    {
+                        _InputDir = moveJoystick.InputDirection;
+                        transform.Translate(new Vector3(((_InputDir.x) * Time.deltaTime * movementSpeed), 0.0f, ((_InputDir.y) * Time.deltaTime * movementSpeed)));
+                        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -23.5f, 23.5f), 0.5f, Mathf.Clamp(transform.position.z, -16, 16));
+                    }
+                }
             }
         }
-        
     }
 
     // Method for calibration
