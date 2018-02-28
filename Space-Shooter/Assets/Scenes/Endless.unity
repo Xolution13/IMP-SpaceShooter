@@ -918,6 +918,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1414722746}
+  - component: {fileID: 1414722749}
   - component: {fileID: 1414722748}
   - component: {fileID: 1414722744}
   - component: {fileID: 1414722743}
@@ -1038,6 +1039,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b45b020e60e0a4e8270858957f768b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1414722749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414722742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0585d8b767aa5154a8673d1d6f3a4bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repSpawnOne: {fileID: 1843962578133284, guid: 538e3acc89aa5734f8db022881c91c96,
+    type: 2}
+  repSpawnTwo: {fileID: 1806511719311438, guid: 1645a9a6541172e46aab5540ed9dc371,
+    type: 2}
+  repSpawnThree: {fileID: 1605433063879084, guid: 81ec65befb6d30e41adeadf815c6d489,
+    type: 2}
+  flyerSpawnOne: {fileID: 1958240561133906, guid: 9963b4661aa797c428d4ca7363ee2f20,
+    type: 2}
+  flyerSpawnTwo: {fileID: 1949456048118270, guid: b11fe2c362904c248a481077b013394d,
+    type: 2}
+  flyerSpawnThree: {fileID: 1569030724233906, guid: 80c93f0fba9e2214199091344a4949a3,
+    type: 2}
+  dancerSpawnOne: {fileID: 1560718358104590, guid: 917b12818c6e1bf4d8bfe08c7b465a6a,
+    type: 2}
+  dancerSpawnTwo: {fileID: 1989318633566212, guid: af15a27ad009a4d429d4a2acafa23dc6,
+    type: 2}
+  dancerSpawnThree: {fileID: 1397271927094864, guid: 72470d2fb70fcc04f95747116906cb5a,
+    type: 2}
+  attackerSpawnOne: {fileID: 1079075593097398, guid: 81f4c09d2dae00143997a33323110d71,
+    type: 2}
+  attackerSpawnTwo: {fileID: 1194626752388974, guid: 6c59b7baac622a04faa59988649fca9f,
+    type: 2}
+  rocketSpawnOne: {fileID: 1623819750142506, guid: af1987d498a49c549b18a4a57ba2a55a,
+    type: 2}
+  rocketSpawnTwo: {fileID: 1089070495485006, guid: 92c8c1ce9f91b24498968d0a7335803b,
+    type: 2}
+  finalEntrySpawn: {fileID: 1409823226830274, guid: 607cbd4b92ca4b54082a9d375286f1d3,
+    type: 2}
+  introIsDone: 0
 --- !u!1 &1593409115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1511,48 @@ Transform:
   m_Father: {fileID: 1365534529}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &1910350939
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029173309465002, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 92c8c1ce9f91b24498968d0a7335803b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2106812944
 GameObject:
   m_ObjectHideFlags: 0
