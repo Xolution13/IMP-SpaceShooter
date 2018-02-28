@@ -8,7 +8,6 @@ using UnityEngine.EventSystems;
 public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
     private Image joystickImg;
-
     public Vector3 InputDirection { set; get; }
 
     private void Start()
@@ -31,10 +30,7 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 
             InputDirection = new Vector3(x, y, 0);
             InputDirection = (InputDirection.magnitude > 1) ? InputDirection.normalized : InputDirection;
-
-            Debug.Log(InputDirection);
         }
-
     }
 
     public virtual void OnPointerDown(PointerEventData ped)
