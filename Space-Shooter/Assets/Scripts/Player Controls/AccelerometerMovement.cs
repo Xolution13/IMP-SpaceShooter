@@ -20,8 +20,11 @@ public class AccelerometerMovement : MonoBehaviour
     private void Start()
     {
         status = GetComponent<PlayerStatus>();
-        moveJoystick = FindObjectOfType<VirtualJoystick>();
-        joystickImage = FindObjectOfType<VirtualJoystick>().GetComponent<Image>();
+        if (!inMenuScene)
+        {
+            moveJoystick = FindObjectOfType<VirtualJoystick>();
+            joystickImage = FindObjectOfType<VirtualJoystick>().GetComponent<Image>();
+        }
     }
 
     // Set calibrated input to new variable and move the player according to new input
