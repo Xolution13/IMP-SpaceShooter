@@ -1124,6 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b45b020e60e0a4e8270858957f768b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  borderSpawnTime: 45
 --- !u!114 &1414722749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,7 +1182,6 @@ MonoBehaviour:
     type: 2}
   rocketSpawner: {fileID: 1843646293217178, guid: eb5bd7d4b217e0d48b0d3fbe03b009d3,
     type: 2}
-  dancerSpawner: {fileID: 0}
   spawnAttacker: 0
   spawnFlyer: 0
   spawnRocket: 0

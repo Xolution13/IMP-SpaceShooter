@@ -12,7 +12,7 @@ public class EndlessLevel : MonoBehaviour
     private EnemySpawner enemySpawner;
     private Intro endlessIntro;
     private float waitTime = 5;
-    private float borderSpawnTime = 45;
+    public float borderSpawnTime = 45;
     private bool spawnAttacker = true;
     private bool spawnFlyer = true;
     private bool spawnRockets = true;
@@ -40,7 +40,7 @@ public class EndlessLevel : MonoBehaviour
             }
         }
 
-        if(stateScript.gameTime >= 60)
+        if(stateScript.gameTime >= 15)
         {
             borderSpawnTime -= Time.deltaTime;
             if(borderSpawnTime <= 45 && spawnFlyer)
