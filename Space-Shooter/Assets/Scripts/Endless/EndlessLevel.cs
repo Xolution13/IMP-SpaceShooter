@@ -8,9 +8,14 @@ public class EndlessLevel : MonoBehaviour
     private GameState stateScript;
     private GameScene sceneScript;
     private PlayerStatus status;
+    private BorderSpawner borderSpawner;
     private EnemySpawner enemySpawner;
     private Intro endlessIntro;
     private float waitTime = 5;
+    private float borderSpawnTime = 45;
+    private bool spawnAttacker = true;
+    private bool spawnFlyer = true;
+    private bool spawnRockets = true;
 
     private void Start()
     {
@@ -32,6 +37,33 @@ public class EndlessLevel : MonoBehaviour
             {
                 enemySpawner.spawnEnemies = true;
                 waitTime = 5;
+            }
+        }
+
+        if(stateScript.gameTime >= 60)
+        {
+            borderSpawnTime -= Time.deltaTime;
+            if(borderSpawnTime <= 45 && spawnFlyer)
+            {
+                borderSpawner.spawnFlyer = true;
+                spawnFlyer = false;
+            }
+            if (borderSpawnTime <= 30 && spawnAttacker)
+            {
+                borderSpawner.spawnAttacker = true;
+                spawnAttacker = false;
+            }
+            if (borderSpawnTime <= 15 && spawnRockets)
+            {
+                borderSpawner.spawnRocket = true;
+                spawnRockets = false;
+            }
+            if(borderSpawnTime <= 0)
+            {
+                spawnFlyer = true;
+                spawnAttacker = true;
+                spawnRockets = true;
+                borderSpawnTime = Random.Range(16, 46);
             }
         }
     }

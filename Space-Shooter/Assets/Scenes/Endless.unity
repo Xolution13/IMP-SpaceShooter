@@ -1005,6 +1005,7 @@ GameObject:
   - component: {fileID: 1414722743}
   - component: {fileID: 1414722747}
   - component: {fileID: 1414722745}
+  - component: {fileID: 1414722750}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1163,6 +1164,27 @@ MonoBehaviour:
   finalEntrySpawn: {fileID: 1409823226830274, guid: 607cbd4b92ca4b54082a9d375286f1d3,
     type: 2}
   introIsDone: 0
+--- !u!114 &1414722750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414722742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943035ff66ac9f7498462b73dd535ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackerSpawner: {fileID: 1827053710614964, guid: c42d39b6c7132b54cb87676a27de7518,
+    type: 2}
+  flyerSpawner: {fileID: 1429835944658910, guid: 73152d2911cce81499307acebe89d77d,
+    type: 2}
+  rocketSpawner: {fileID: 1843646293217178, guid: eb5bd7d4b217e0d48b0d3fbe03b009d3,
+    type: 2}
+  dancerSpawner: {fileID: 0}
+  spawnAttacker: 0
+  spawnFlyer: 0
+  spawnRocket: 0
 --- !u!1 &1445286293 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1163130564786374, guid: 1c72997f2d6770b4b9483ca8f5641e10,
