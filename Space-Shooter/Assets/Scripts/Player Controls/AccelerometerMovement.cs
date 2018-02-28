@@ -12,7 +12,7 @@ public class AccelerometerMovement : MonoBehaviour
     private Matrix4x4 calibrationMatrix;
     private Vector3 originalTilt = Vector3.zero;
     private Vector3 _InputDir;
-    public bool inManuScene = false;
+    public bool inMenuScene = false;
 
     // Load accelerometer callibration -> this should be before scene loads
     private void Start()
@@ -24,7 +24,7 @@ public class AccelerometerMovement : MonoBehaviour
     // Set calibrated input to new variable and move the player according to new input
     private void Update()
     {
-        if (!inManuScene)
+        if (!inMenuScene)
         {
             if (!status.isRespawning)
             {
