@@ -14,12 +14,15 @@ public class GameState : MonoBehaviour
     public bool gameOver;
     public bool countPlayTime = true;
     public float gameTime = 30;
+    private int highScore;
 
     private GameScene gameSceneScript;
     public GameObject scoreUI;
     private Text scoreText;
     public GameObject timeUI;
     private Text timeText;
+    public GameObject highScoreUI;
+    private Text highScoreText;
     public bool decreaseTime = false;
     public bool increaseTime = false;
     public bool redColor = false;
@@ -27,13 +30,22 @@ public class GameState : MonoBehaviour
 
     private void Start()
     {
+        highScore = SaveManager.Instance.GetHighScore(highScore);
         scoreText = scoreUI.GetComponent<Text>();
         timeText = timeUI.GetComponent<Text>();
         gameSceneScript = FindObjectOfType<GameScene>().GetComponent<GameScene>();
+        
+        // Only show highscore in endless mode
+        if (gameSceneScript.isEndless)
+        {
+            highScoreText = highScoreUI.GetComponent<Text>();
+            highScoreText.text = ("Personal Best:@" + highScore.ToString()).Replace("@", System.Environment.NewLine);
+        }
     }
 
     private void Update()
     {
+        // Change color of time text
         if (redColor)
         {
             timeText.color = Color.red;
@@ -70,6 +82,7 @@ public class GameState : MonoBehaviour
         SaveArchivements();
     }
 
+    // Save all aquired stats during this level
     private void SaveArchivements()
     {
         if (gameOver)
