@@ -56,7 +56,6 @@ public class PlayerStatus : MonoBehaviour
         {
             playerLifes--;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Debug.Log(playerLifes);
 
             if (playerLifes > 0)
             {

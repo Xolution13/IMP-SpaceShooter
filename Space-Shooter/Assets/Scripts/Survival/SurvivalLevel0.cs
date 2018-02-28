@@ -17,7 +17,7 @@ public class SurvivalLevel0 : MonoBehaviour
     private float waitTime = 1f;
     private bool secondSpawnOnce = false;
     private int secondSpawnEnemyAmount;
-    private bool gameOverOnce = false;
+    private bool gameOverOnce = true;
 
     private int totalEnemies;
 
