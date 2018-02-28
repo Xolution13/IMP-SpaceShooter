@@ -13,6 +13,7 @@ public class PlayerStatus : MonoBehaviour
     public int playerLifes = 3;
     public bool isRespawning = false;
     private float respawnTime = 2.5f;
+    private bool doOnce = true;
 
     private void Start()
     {
@@ -28,7 +29,11 @@ public class PlayerStatus : MonoBehaviour
             // End game
             Debug.Log("Game-Over!");
             gameObject.SetActive(false);
-            gameStateScript.gameOver = true;
+            if (doOnce)
+            {
+                gameStateScript.gameOver = true;
+                doOnce = false;
+            }
             gameSceneScript.LevelFailed();
         }
 

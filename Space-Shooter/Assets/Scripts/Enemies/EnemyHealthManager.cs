@@ -10,6 +10,7 @@ public class EnemyHealthManager : MonoBehaviour {
     public int health;
     public int points;
     public int currentHealth;
+    private bool doOnce = true;
 
     private void Start()
     {
@@ -22,8 +23,12 @@ public class EnemyHealthManager : MonoBehaviour {
         if (currentHealth <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            gameState.destroyedEnemies++;
-            gameState.levelScore += points;
+            if (doOnce)
+            {
+                gameState.destroyedEnemies++;
+                gameState.levelScore += points;
+                doOnce = false;
+            }
             Destroy(gameObject);
         }
     }
