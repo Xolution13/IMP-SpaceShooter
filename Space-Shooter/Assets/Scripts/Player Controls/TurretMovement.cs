@@ -46,7 +46,7 @@ public class TurretMovement : MonoBehaviour {
                     Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
                     targetRotation.x = 0;
                     targetRotation.z = 0;
-                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 9f * Time.deltaTime);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 15 * Time.deltaTime);
                     shootingActivated = true;
                 }
             }
@@ -59,7 +59,7 @@ public class TurretMovement : MonoBehaviour {
                 Quaternion targetRotation = Quaternion.LookRotation(shootJoystick.InputDirection, Vector3.zero);
                 targetRotation.x = 0;
                 targetRotation.z = 0;
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 7f * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 7 * Time.deltaTime);
                 shootingActivated = true;
             }
         }
