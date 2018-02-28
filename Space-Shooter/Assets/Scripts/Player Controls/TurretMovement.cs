@@ -25,7 +25,7 @@ public class TurretMovement : MonoBehaviour {
         fireRate = bulletFireRate;
 
         shootJoystick = GameObject.FindGameObjectWithTag("ShootingJoystick").GetComponent<VirtualJoystick>();
-        joystickImage = GameObject.FindGameObjectWithTag("MovementJoystick").GetComponent<Image>();
+        joystickImage = GameObject.FindGameObjectWithTag("ShootingJoystick").GetComponent<Image>();
     }
 
     private void Update()
