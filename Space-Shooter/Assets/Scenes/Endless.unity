@@ -918,6 +918,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1414722746}
+  - component: {fileID: 1414722748}
   - component: {fileID: 1414722744}
   - component: {fileID: 1414722743}
   - component: {fileID: 1414722747}
@@ -983,6 +984,7 @@ MonoBehaviour:
   - {fileID: 1377067669608604, guid: fc3ecae5e6802b0489ab7015e2a6de4a, type: 2}
   - {fileID: 1184653993088110, guid: edace2f112cd5474083a69cc29b85e10, type: 2}
   spawnArea: {fileID: 56138507}
+  spawnEnemies: 0
 --- !u!4 &1414722746
 Transform:
   m_ObjectHideFlags: 0
@@ -1025,6 +1027,17 @@ MonoBehaviour:
   spawnLeastWait: 30
   startWait: 30
   stop: 0
+--- !u!114 &1414722748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414722742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b45b020e60e0a4e8270858957f768b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593409115
 GameObject:
   m_ObjectHideFlags: 0
