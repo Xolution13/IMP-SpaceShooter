@@ -17,6 +17,7 @@ public class SurvivalLevel0 : MonoBehaviour
     private float waitTime = 1f;
     private bool secondSpawnOnce = false;
     private int secondSpawnEnemyAmount;
+    private bool gameOverOnce = false;
 
     private int totalEnemies;
 
@@ -56,7 +57,11 @@ public class SurvivalLevel0 : MonoBehaviour
         if (stateScript.destroyedEnemies == totalEnemies)
         {
             stateScript.greenColor = true;
-            stateScript.gameOver = true;
+            if (gameOverOnce)
+            {
+                stateScript.gameOver = true;
+                gameOverOnce = false;
+            }
             sceneScript.CompleteLevel();
         }
 
@@ -65,7 +70,11 @@ public class SurvivalLevel0 : MonoBehaviour
         {
             stateScript.gameTime = 0;
             stateScript.redColor = true;
-            stateScript.gameOver = true;
+            if (gameOverOnce)
+            {
+                stateScript.gameOver = true;
+                gameOverOnce = false;
+            }
             sceneScript.LevelFailed();
         }
     }
