@@ -22,6 +22,7 @@ public class EndlessLevel : MonoBehaviour
         stateScript = GetComponent<GameState>();
         sceneScript = GetComponent<GameScene>();
         enemySpawner = GetComponent<EnemySpawner>();
+        borderSpawner = GetComponent<BorderSpawner>();
         endlessIntro = GetComponent<Intro>();
         stateScript.gameTime = 0;
         stateScript.increaseTime = true;
@@ -40,7 +41,7 @@ public class EndlessLevel : MonoBehaviour
             }
         }
 
-        if(stateScript.gameTime >= 15)
+        if(stateScript.gameTime >= 60)
         {
             borderSpawnTime -= Time.deltaTime;
             if(borderSpawnTime <= 45 && spawnFlyer)
@@ -48,17 +49,17 @@ public class EndlessLevel : MonoBehaviour
                 borderSpawner.spawnFlyer = true;
                 spawnFlyer = false;
             }
-            if (borderSpawnTime <= 30 && spawnAttacker)
+            else if (borderSpawnTime <= 30 && spawnAttacker)
             {
                 borderSpawner.spawnAttacker = true;
                 spawnAttacker = false;
             }
-            if (borderSpawnTime <= 15 && spawnRockets)
+            else if (borderSpawnTime <= 15 && spawnRockets)
             {
                 borderSpawner.spawnRocket = true;
                 spawnRockets = false;
             }
-            if(borderSpawnTime <= 0)
+            else if(borderSpawnTime <= 0)
             {
                 spawnFlyer = true;
                 spawnAttacker = true;
