@@ -19,6 +19,7 @@ public class MenuScene : MonoBehaviour
     public GameObject Endless;
     public GameObject Story;
     private bool calibrationFadeUsed = false;
+    private bool doOnce = true;
 
     private int lastIndex = 0;
     private Vector3 desiredMenuPosition;
@@ -138,12 +139,19 @@ public class MenuScene : MonoBehaviour
     // Buttons
     public void OnStartClick()
     {
-        calibrationFadeUsed = false;
-
         // Check if accelerometer as selected
         if (SaveManager.Instance.GetControlStatus(true))
         {
-            StartCoroutine(CoStartClick());
+            if (doOnce)
+            {
+                StartCoroutine(CoStartClick());
+                doOnce = false;
+            }
+            else if (!doOnce)
+            {
+                NavigateTo(1);
+                lastIndex = 0;
+            }
         }
         // If joystick was selected -> no need to calibrate accelerometer
         else
