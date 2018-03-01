@@ -54,12 +54,15 @@ public class TurretMovement : MonoBehaviour {
         else
         {
             if (shootJoystick.InputDirection != Vector3.zero)
-            {
+            {   // x Direction von InputDorection muss mit in die Rota! Umwandlung von x,y direction in Grad um dann mit Grad y zu rotieren.
+                // Momentan wird nur zwischen x=0 und y= -7 bis 7 rotiert... was x= -7 bis 7 ausschließt
                 joystickImage.enabled = true;
                 Quaternion targetRotation = Quaternion.LookRotation(shootJoystick.InputDirection, Vector3.zero);
+                Debug.Log("Before" + targetRotation);
                 targetRotation.x = 0;
                 targetRotation.z = 0;
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 7 * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 7 * Time.deltaTime); 
+                Debug.Log("After" + targetRotation);
                 shootingActivated = true;
             }
         }
