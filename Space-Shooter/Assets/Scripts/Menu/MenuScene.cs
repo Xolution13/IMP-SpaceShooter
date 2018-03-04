@@ -10,7 +10,6 @@ public class MenuScene : MonoBehaviour
     public CanvasGroup startFade;
 
     private float fadeInSpeed = 0.33f;
-    private float fadeAlpha = 0.02f;
 
     public RectTransform menuContainer;
 

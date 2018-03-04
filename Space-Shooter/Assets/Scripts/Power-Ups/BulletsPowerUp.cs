@@ -7,7 +7,6 @@ public class BulletsPowerUp : MonoBehaviour
     // Variables
     public GameObject pickUpEffect;
     private GameState gameState;
-    private PlayerStatus player;
     private TurretMovement playerScript;
     private PowerUpSpawner spawnScript;
     private bool powerUpActivated = false;
@@ -16,7 +15,6 @@ public class BulletsPowerUp : MonoBehaviour
     private void Start()
     {
         gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
-        player = FindObjectOfType<PlayerStatus>();
         playerScript = FindObjectOfType<TurretMovement>().GetComponent<TurretMovement>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
     }

@@ -10,7 +10,6 @@ public class ShieldPowerUp : MonoBehaviour
     private GameState gameState;
     private GameObject shieldObject;
     private PlayerStatus player;
-    private PlayerStatus playerScript;
     private PowerUpSpawner spawnScript;
     private bool powerUpActivated = false;
     private float powerUpTime = 10;
@@ -19,7 +18,6 @@ public class ShieldPowerUp : MonoBehaviour
     {
         gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
         player = FindObjectOfType<PlayerStatus>();
-        playerScript = player.GetComponent<PlayerStatus>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
     }
 

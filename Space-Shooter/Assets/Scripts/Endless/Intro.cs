@@ -21,8 +21,6 @@ public class Intro : MonoBehaviour
     public GameObject finalEntrySpawn;
 
     private GameState stateScript;
-    private GameScene sceneScript;
-    private EnemySpawner enemySpawner;
     public bool introIsDone = false;
 
     private bool firstSpawn = true;
@@ -44,8 +42,6 @@ public class Intro : MonoBehaviour
     private void Start()
     {
         stateScript = GetComponent<GameState>();
-        sceneScript = GetComponent<GameScene>();
-        enemySpawner = GetComponent<EnemySpawner>();
     }
 
     private void Update()

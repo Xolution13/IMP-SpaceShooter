@@ -8,7 +8,6 @@ public class ShrinkingPowerUp : MonoBehaviour {
     public GameObject pickUpEffect;
     private GameState gameState;
     private PlayerStatus player;
-    private PlayerStatus playerScript;
     private PowerUpSpawner spawnScript;
     private bool powerUpActivated = false;
     private Vector3 originalScale;
@@ -18,7 +17,6 @@ public class ShrinkingPowerUp : MonoBehaviour {
     {
         gameState = FindObjectOfType<GameState>().GetComponent<GameState>();
         player = FindObjectOfType<PlayerStatus>();
-        playerScript = player.GetComponent<PlayerStatus>();
         spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
         originalScale = transform.localScale;
     }

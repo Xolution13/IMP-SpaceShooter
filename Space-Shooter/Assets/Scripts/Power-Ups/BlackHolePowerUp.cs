@@ -8,13 +8,6 @@ public class BlackHolePowerUp : MonoBehaviour {
     public GameObject pickUpEffect;
     public GameObject blackHole;
 
-    private PowerUpSpawner spawnScript;
-
-    private void Start()
-    {
-        spawnScript = FindObjectOfType<PowerUpSpawner>().GetComponent<PowerUpSpawner>();
-    }
-
     // Spawn black hole if player is picking up
     private void OnTriggerEnter(Collider other)
     {

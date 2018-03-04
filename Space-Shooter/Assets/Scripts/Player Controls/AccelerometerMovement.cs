@@ -12,7 +12,6 @@ public class AccelerometerMovement : MonoBehaviour
     private Image joystickImage;
 
     private Matrix4x4 calibrationMatrix;
-    private Vector3 originalTilt = Vector3.zero;
     private Vector3 _InputDir;
     public bool inMenuScene = false;
 

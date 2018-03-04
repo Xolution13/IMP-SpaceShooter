@@ -6,7 +6,6 @@ public class EndlessLevel : MonoBehaviour
 {
     // Variables
     private GameState stateScript;
-    private GameScene sceneScript;
     private PlayerStatus status;
     private BorderSpawner borderSpawner;
     private EnemySpawner enemySpawner;
@@ -20,7 +19,6 @@ public class EndlessLevel : MonoBehaviour
     private void Start()
     {
         stateScript = GetComponent<GameState>();
-        sceneScript = GetComponent<GameScene>();
         enemySpawner = GetComponent<EnemySpawner>();
         borderSpawner = GetComponent<BorderSpawner>();
         endlessIntro = GetComponent<Intro>();
