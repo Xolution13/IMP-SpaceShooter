@@ -1107,8 +1107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde8f7ba8bc4cc34384721a94ab4dfd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSpawn: {fileID: 1505757245883070, guid: 7013582a9f83e9b45bd658d953b6e8ce, type: 2}
-  secondSpawn: {fileID: 1410669430283538, guid: e34f569c6a91ce04983fc4f354484844,
+  firstSpawn: {fileID: 1505757245883070, guid: 47f7e54b0861ee54ba31b655230ac5a9, type: 2}
+  secondSpawn: {fileID: 1410669430283538, guid: 4eb218da8f6351f4a8cd57175b6ddce1,
     type: 2}
 --- !u!4 &1414722746
 Transform:
